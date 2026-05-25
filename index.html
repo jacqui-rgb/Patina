@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patina Design Studio | Interior Architectural Design</title>
-    <meta name="description" content="High-end boutique interior architectural design studio specializing in bespoke residential projects.">
+    <meta name="description" content="High-end boutique interior architectural design studio specialising in bespoke residential projects.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Preload data files -->
+    <link rel="preload" href="_data/hero.json" as="fetch" crossorigin>
+    <link rel="preload" href="_data/projects.json" as="fetch" crossorigin>
+    <link rel="preload" href="_data/services.json" as="fetch" crossorigin>
+    <link rel="preload" href="_data/studio.json" as="fetch" crossorigin>
+    <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
 </head>
 <body>
     <header id="main-header">
         <div class="logo">
-            <span class="logo-main">PATINA</span>
+            <span class="logo-main" id="cms-studio-name">PATINA</span>
             <span class="logo-sub">DESIGN STUDIO</span>
         </div>
         <nav>
@@ -35,95 +41,88 @@
     </header>
 
     <main>
+        <!-- ── Hero ─────────────────────────────────────────── -->
         <section id="hero" class="full-bleed">
-            <div class="hero-bg" style="background-image: url('https://static.wixstatic.com/media/9dda45_a7a7b219182d460cb354eecb4226d657~mv2.jpg');"></div>
+            <div class="hero-bg" id="cms-hero-bg"></div>
             <div class="hero-content">
-                <h1 class="reveal-text">Timeless. Bespoke. <br><em>Interior Architecture.</em></h1>
-                <p class="fade-in">Crafting spaces that resonate with soul and sophistication.</p>
+                <h1 class="reveal-text">
+                    <span id="cms-hero-headline">Timeless. Bespoke.</span>
+                    <br><em id="cms-hero-headline-em">Interior Architecture.</em>
+                </h1>
+                <p class="fade-in" id="cms-hero-sub">Crafting spaces that resonate with soul and sophistication.</p>
                 <div class="scroll-indicator">
                     <div class="line"></div>
                 </div>
             </div>
         </section>
 
+        <!-- ── Projects ──────────────────────────────────────── -->
         <section id="projects" class="container">
             <div class="section-header">
                 <h2 class="section-title">Selected Projects</h2>
             </div>
-            <div class="projects-grid">
+            <div class="projects-grid" id="cms-projects-grid">
+                <!-- Populated by script.js from _data/projects.json -->
+                <!-- Fallback static cards shown until JS runs -->
                 <div class="project-card large">
                     <img src="https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg" alt="Vaucluse Residence">
-                    <div class="project-info">
-                        <h3>Vaucluse Residence</h3>
-                        <p>Residential Architecture</p>
-                    </div>
+                    <div class="project-info"><h3>Vaucluse Residence</h3><p>Residential Architecture</p></div>
                 </div>
                 <div class="project-card">
                     <img src="https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg" alt="Modern Minimalist">
-                    <div class="project-info">
-                        <h3>Modern Minimalist</h3>
-                        <p>Interior Design</p>
-                    </div>
+                    <div class="project-info"><h3>Modern Minimalist</h3><p>Interior Design</p></div>
                 </div>
                 <div class="project-card">
                     <img src="https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg" alt="Coastal Living">
-                    <div class="project-info">
-                        <h3>Coastal Living</h3>
-                        <p>Kitchen & Joinery</p>
-                    </div>
+                    <div class="project-info"><h3>Coastal Living</h3><p>Kitchen &amp; Joinery</p></div>
                 </div>
             </div>
         </section>
 
+        <!-- ── About / Studio ────────────────────────────────── -->
         <section id="about" class="alternate-bg">
             <div class="container split">
                 <div class="split-content">
-                    <h2 class="section-title">The Studio</h2>
-                    <p class="lead">Patina Design Studio is a boutique interior architecture practice based in Sydney, dedicated to the art of bespoke residential design.</p>
-                    <p>Our philosophy is rooted in the belief that every space should tell a story. We blend textures, light, and form to create interiors that are not only beautiful but deeply personal and functional.</p>
-                    <a href="#process" class="text-link">Our Process →</a>
+                    <h2 class="section-title" id="cms-studio-title">The Studio</h2>
+                    <p class="lead" id="cms-studio-lead">Patina Design Studio is a boutique interior architecture practice based in Sydney, dedicated to the art of bespoke residential design.</p>
+                    <p id="cms-studio-body">Our philosophy is rooted in the belief that every space should tell a story. We blend textures, light, and form to create interiors that are not only beautiful but deeply personal and functional.</p>
+                    <a href="#process" class="text-link" id="cms-studio-cta">Our Process →</a>
                 </div>
                 <div class="split-image reveal">
-                    <img src="https://static.wixstatic.com/media/9dda45_1757b0e6b05f4c6fb346513525d4e3e4~mv2.jpeg" alt="Studio Detail">
+                    <img id="cms-studio-img" src="https://static.wixstatic.com/media/9dda45_1757b0e6b05f4c6fb346513525d4e3e4~mv2.jpeg" alt="Studio Detail">
                 </div>
             </div>
         </section>
 
+        <!-- ── Services ──────────────────────────────────────── -->
         <section id="services" class="container">
             <div class="section-header">
                 <h2 class="section-title">Our Services</h2>
             </div>
-            <div class="services-list">
+            <div class="services-list" id="cms-services-list">
+                <!-- Populated by script.js from _data/services.json -->
                 <div class="service-item">
                     <span class="number">01</span>
-                    <div class="service-content">
-                        <h3>Interior Architecture</h3>
-                        <p>Comprehensive spatial planning, structural modifications, and detailed architectural drawings for luxury residences.</p>
-                    </div>
+                    <div class="service-content"><h3>Interior Architecture</h3><p>Comprehensive spatial planning, structural modifications, and detailed architectural drawings for luxury residences.</p></div>
                 </div>
                 <div class="service-item">
                     <span class="number">02</span>
-                    <div class="service-content">
-                        <h3>Bespoke Joinery</h3>
-                        <p>Custom-designed cabinetry and furniture that maximizes utility while elevating the aesthetic of every room.</p>
-                    </div>
+                    <div class="service-content"><h3>Bespoke Joinery</h3><p>Custom-designed cabinetry and furniture that maximizes utility while elevating the aesthetic of every room.</p></div>
                 </div>
                 <div class="service-item">
                     <span class="number">03</span>
-                    <div class="service-content">
-                        <h3>Material & Finish Selection</h3>
-                        <p>Meticulously curated palettes of stones, timbers, and fabrics that age gracefully and develop their own patina.</p>
-                    </div>
+                    <div class="service-content"><h3>Material &amp; Finish Selection</h3><p>Meticulously curated palettes of stones, timbers, and fabrics that age gracefully and develop their own patina.</p></div>
                 </div>
             </div>
         </section>
 
+        <!-- ── CTA Banner ─────────────────────────────────────── -->
         <section id="cta" class="full-bleed accent-bg">
-            <div class="hero-bg" style="background-image: url('https://static.wixstatic.com/media/9dda45_4d75dc710c164e42811fcfd622ba53d4~mv2.jpeg'); opacity: 0.3;"></div>
+            <div class="hero-bg" id="cms-cta-bg" style="background-image: url('https://static.wixstatic.com/media/9dda45_4d75dc710c164e42811fcfd622ba53d4~mv2.jpeg'); opacity: 0.3;"></div>
             <div class="cta-content container text-center">
-                <h2>Start Your Journey</h2>
-                <p>Begin your bespoke design experience with Patina Design Studio.</p>
-                <a href="#enquiries" class="button">ENQUIRE NOW</a>
+                <h2 id="cms-cta-heading">Start Your Journey</h2>
+                <p id="cms-cta-sub">Begin your bespoke design experience with Patina Design Studio.</p>
+                <a href="#enquiries" class="button" id="cms-cta-btn">ENQUIRE NOW</a>
             </div>
         </section>
     </main>
@@ -132,10 +131,10 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div class="logo">
-                    <span class="logo-main">PATINA</span>
+                    <span class="logo-main" id="cms-footer-name">PATINA</span>
                     <span class="logo-sub">DESIGN STUDIO</span>
                 </div>
-                <p>Bespoke Interior Architecture</p>
+                <p id="cms-footer-tagline">Bespoke Interior Architecture</p>
             </div>
             <div class="footer-links">
                 <h4>Navigation</h4>
@@ -148,17 +147,17 @@
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
-                <p>Sydney, Australia</p>
-                <p>info@patinadesignstudio.com.au</p>
+                <p id="cms-footer-location">Sydney, Australia</p>
+                <p><a id="cms-footer-email" href="mailto:info@patinadesignstudio.com.au">info@patinadesignstudio.com.au</a></p>
             </div>
             <div class="footer-social">
                 <h4>Follow</h4>
-                <p>Instagram</p>
-                <p>Pinterest</p>
+                <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
+                <p><a id="cms-footer-pinterest" href="#">Pinterest</a></p>
             </div>
         </div>
         <div class="footer-bottom container">
-            <p>&copy; 2026 Patina Design Studio. All Rights Reserved.</p>
+            <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
         </div>
     </footer>
 

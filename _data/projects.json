@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Vaucluse Residence",
+      "category": "Residential Architecture",
+      "image": "https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg",
+      "image_alt": "Vaucluse Residence",
+      "featured": true
+    },
+    {
+      "name": "Modern Minimalist",
+      "category": "Interior Design",
+      "image": "https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg",
+      "image_alt": "Modern Minimalist",
+      "featured": false
+    },
+    {
+      "name": "Coastal Living",
+      "category": "Kitchen & Joinery",
+      "image": "https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg",
+      "image_alt": "Coastal Living",
+      "featured": false
+    }
+  ]
+}

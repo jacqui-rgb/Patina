@@ -1,0 +1,168 @@
+# =============================================================
+# Decap CMS Configuration — Patina Design Studio
+# =============================================================
+
+# ── Backend ────────────────────────────────────────────────
+# For LOCAL testing (no auth):
+#   1. Run: npx decap-server   (in project root)
+#   2. Serve site:   npx serve .
+#   3. Uncomment the line below and comment out the github block
+# local_backend: true
+
+backend:
+  name: github
+  repo: danTaler/Patina
+  branch: main
+  # If using Netlify Identity (recommended):
+  # base_url: https://YOUR-NETLIFY-SITE.netlify.app
+
+# ── Media ──────────────────────────────────────────────────
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# ── Locale ─────────────────────────────────────────────────
+locale: "en"
+show_preview_links: true
+
+# ── Collections ────────────────────────────────────────────
+collections:
+
+  # ── Single files grouped under "Site Content" ──
+  - name: "site_content"
+    label: "Site Content"
+    files:
+
+      # Hero Section
+      - name: "hero"
+        label: "Hero Section"
+        file: "_data/hero.json"
+        fields:
+          - label: "Headline"
+            name: "headline"
+            widget: "string"
+            hint: "Main heading text (first line)"
+          - label: "Headline Italic Part"
+            name: "headline_em"
+            widget: "string"
+            hint: "Italic second line of the heading"
+          - label: "Subheadline"
+            name: "subheadline"
+            widget: "string"
+          - label: "Background Image"
+            name: "background_image"
+            widget: "image"
+            hint: "Full-bleed hero background photo"
+
+      # Studio / About Section
+      - name: "studio"
+        label: "About – The Studio"
+        file: "_data/studio.json"
+        fields:
+          - label: "Section Title"
+            name: "title"
+            widget: "string"
+          - label: "Lead Paragraph"
+            name: "lead"
+            widget: "text"
+          - label: "Body Paragraph"
+            name: "body"
+            widget: "text"
+          - label: "CTA Label"
+            name: "cta_label"
+            widget: "string"
+          - label: "CTA Link"
+            name: "cta_href"
+            widget: "string"
+          - label: "Studio Image"
+            name: "image"
+            widget: "image"
+          - label: "Image Alt Text"
+            name: "image_alt"
+            widget: "string"
+
+      # Projects
+      - name: "projects"
+        label: "Projects"
+        file: "_data/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - label: "Project Name"
+                name: "name"
+                widget: "string"
+              - label: "Category"
+                name: "category"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Image Alt Text"
+                name: "image_alt"
+                widget: "string"
+              - label: "Featured (shows large)"
+                name: "featured"
+                widget: "boolean"
+                default: false
+
+      # Services
+      - name: "services"
+        label: "Services"
+        file: "_data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - label: "Number"
+                name: "number"
+                widget: "string"
+                hint: "e.g. 01, 02, 03"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+
+      # Global Settings
+      - name: "settings"
+        label: "Site Settings"
+        file: "_data/settings.json"
+        fields:
+          - label: "Studio Name"
+            name: "studio_name"
+            widget: "string"
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+          - label: "Location"
+            name: "location"
+            widget: "string"
+          - label: "Email Address"
+            name: "email"
+            widget: "string"
+          - label: "Instagram URL"
+            name: "instagram_url"
+            widget: "string"
+            required: false
+          - label: "Pinterest URL"
+            name: "pinterest_url"
+            widget: "string"
+            required: false
+          - label: "CTA Heading"
+            name: "cta_heading"
+            widget: "string"
+          - label: "CTA Subheading"
+            name: "cta_subheading"
+            widget: "string"
+          - label: "CTA Button Label"
+            name: "cta_button_label"
+            widget: "string"
+          - label: "CTA Background Image"
+            name: "cta_background_image"
+            widget: "image"
+          - label: "Copyright Year"
+            name: "copyright_year"
+            widget: "string"

@@ -1,0 +1,19 @@
+{
+  "services": [
+    {
+      "number": "01",
+      "title": "Interior Architecture",
+      "description": "Comprehensive spatial planning, structural modifications, and detailed architectural drawings for luxury residences."
+    },
+    {
+      "number": "02",
+      "title": "Bespoke Joinery",
+      "description": "Custom-designed cabinetry and furniture that maximizes utility while elevating the aesthetic of every room."
+    },
+    {
+      "number": "03",
+      "title": "Material & Finish Selection",
+      "description": "Meticulously curated palettes of stones, timbers, and fabrics that age gracefully and develop their own patina."
+    }
+  ]
+}
