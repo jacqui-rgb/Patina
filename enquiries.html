@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Enquiry | Patina Design Studio</title>
+    <meta name="description" content="Begin your bespoke interior architecture journey by completing our comprehensive project enquiry form.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+</head>
+<body class="subpage">
+    <header id="main-header">
+        <div class="logo">
+            <span class="logo-main" id="cms-studio-name">PATINA</span>
+            <span class="logo-sub">DESIGN STUDIO</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="index.html#services" class="nav-link">SERVICES</a></li>
+                <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+                <li><a href="process.html" class="nav-link">PROCESS</a></li>
+                <li><a href="journal.html" class="nav-link">JOURNAL</a></li>
+                <li><a href="media.html" class="nav-link">MEDIA</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <li><a href="enquiries.html" class="cta-link">ENQUIRIES</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ── Subpage Hero ─────────────────────────────────── -->
+        <section class="subpage-hero">
+            <div class="container">
+                <h1 class="reveal-text">Project Enquiry</h1>
+                <p class="fade-in">This enquiry form is designed to provide an initial understanding of your project, priorities and requirements before arranging a consultation.</p>
+            </div>
+        </section>
+
+        <!-- ── Subpage Content ──────────────────────────────── -->
+        <section class="subpage-content container">
+            <div class="form-container reveal">
+                <form name="enquiries" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Spam Prevention honeypot -->
+                    <p style="display:none">
+                        <label>Don't fill this: <input name="bot-field" /></label>
+                    </p>
+
+                    <!-- SECTION 1: Personal Details -->
+                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">01. Personal Details</h2>
+                    
+                    <div class="form-group">
+                        <label for="enquiry-name">Full Name *</label>
+                        <input type="text" id="enquiry-name" name="name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-email">Email Address *</label>
+                        <input type="email" id="enquiry-email" name="email" class="form-control" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-phone">Phone Number *</label>
+                        <input type="tel" id="enquiry-phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-company">Company (if relevant)</label>
+                        <input type="text" id="enquiry-company" name="company" class="form-control" placeholder="Enter your company name">
+                    </div>
+
+
+                    <!-- SECTION 2: Project Details -->
+                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">02. Project Details</h2>
+
+                    <div class="form-group">
+                        <label for="enquiry-address">Project Address / Location</label>
+                        <input type="text" id="enquiry-address" name="project_address" class="form-control" placeholder="City, Suburb, or Specific Address">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Property Type *</label>
+                        <div class="form-checkbox-group">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Single Residential" class="form-checkbox"> Single Residential
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Multi-Residential" class="form-checkbox"> Multi-Residential
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Apartment" class="form-checkbox"> Apartment
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Development" class="form-checkbox"> Development
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Commercial / Retail" class="form-checkbox"> Commercial / Retail
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Hospitality" class="form-checkbox"> Hospitality
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Health &amp; Wellness" class="form-checkbox"> Health &amp; Wellness
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="property_type" value="Other" class="form-checkbox"> Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Anticipated Services Required *</label>
+                        <div class="form-checkbox-group">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Full Service Design" class="form-checkbox"> Full Service Design
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Curated Furnishing" class="form-checkbox"> Curated Furnishing
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Pre-Purchase Design" class="form-checkbox"> Pre-Purchase Design
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Layout Assessment" class="form-checkbox"> Layout Assessment
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Target Buyer Strategy" class="form-checkbox"> Target Buyer Strategy
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="services" value="Design Consultation" class="form-checkbox"> Design Consultation
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-timing">Approximate Project Timing</label>
+                        <input type="text" id="enquiry-timing" name="project_timing" class="form-control" placeholder="e.g. Immediate, 3-6 months, next year">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you currently have access to the property? *</label>
+                        <div class="form-checkbox-group" style="grid-template-columns: repeat(4, 1fr);">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="property_access" value="Yes" class="form-checkbox" required> Yes
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="property_access" value="No" class="form-checkbox" required> No
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- SECTION 3: Goals & Vision -->
+                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">03. Project Goals &amp; Vision</h2>
+
+                    <div class="form-group">
+                        <label for="enquiry-goals">Your Goals for the Project</label>
+                        <textarea id="enquiry-goals" name="project_goals" class="form-control" rows="4" placeholder="Objectives, key frustrations, style inspirations, level of detail required, and target end-user" style="resize: none;"></textarea>
+                    </div>
+
+
+                    <!-- SECTION 4: Budget & Context -->
+                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">04. Context &amp; Resources</h2>
+
+                    <div class="form-group">
+                        <label for="enquiry-budget">Estimated Project Investment Range</label>
+                        <input type="text" id="enquiry-budget" name="budget_range" class="form-control" placeholder="e.g. $50k - $100k, $100k - $250k, $250k+">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you have an existing engagement with an architect or builder? *</label>
+                        <div class="form-checkbox-group" style="grid-template-columns: repeat(4, 1fr);">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="existing_engagement" value="Yes" class="form-checkbox" required> Yes
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="existing_engagement" value="No" class="form-checkbox" required> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-referral">How did you hear about Patina Design Studio?</label>
+                        <input type="text" id="enquiry-referral" name="referral_source" class="form-control" placeholder="e.g. Instagram, Word of mouth, Referral, Search">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-additional">Other relevant details or constraints</label>
+                        <textarea id="enquiry-additional" name="additional_info" class="form-control" rows="3" placeholder="Any other detail that might help us understand your vision" style="resize: none;"></textarea>
+                    </div>
+
+                    <button type="submit" class="button-submit">Submit Enquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-main" id="cms-footer-name">PATINA</span>
+                    <span class="logo-sub">DESIGN STUDIO</span>
+                </div>
+                <p id="cms-footer-tagline">Bespoke Interior Architecture</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p id="cms-footer-location">Sydney, Australia</p>
+                <p><a id="cms-footer-email" href="mailto:info@patinadesignstudio.com.au">info@patinadesignstudio.com.au</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow</h4>
+                <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
+                <p><a id="cms-footer-pinterest" href="#">Pinterest</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

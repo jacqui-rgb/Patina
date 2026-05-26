@@ -2,23 +2,23 @@
   "projects": [
     {
       "name": "Vaucluse Residence",
-      "category": "Residential Architecture",
-      "image": "https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg",
+      "category": "Interior Architecture",
+      "image": "https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg/v1/fit/w_480,h_361,q_90,enc_avif,quality_auto/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg",
       "image_alt": "Vaucluse Residence",
       "featured": true
     },
     {
-      "name": "Modern Minimalist",
-      "category": "Interior Design",
-      "image": "https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg",
-      "image_alt": "Modern Minimalist",
+      "name": "Dover Heights Duplex",
+      "category": "Bespoke Residential",
+      "image": "https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg/v1/fit/w_480,h_361,q_90,enc_avif,quality_auto/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg",
+      "image_alt": "Dover Heights Duplex",
       "featured": false
     },
     {
-      "name": "Coastal Living",
-      "category": "Kitchen & Joinery",
-      "image": "https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg",
-      "image_alt": "Coastal Living",
+      "name": "LP Residence",
+      "category": "Interior Design",
+      "image": "https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg/v1/fit/w_480,h_361,q_90,enc_avif,quality_auto/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg",
+      "image_alt": "LP Residence",
       "featured": false
     }
   ]

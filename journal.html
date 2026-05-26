@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | Patina Design Studio</title>
+    <meta name="description" content="The Invisible Layer Series. Behind the scenes stories, design secrets, and projects from Patina Design Studio.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+</head>
+<body class="subpage">
+    <header id="main-header">
+        <div class="logo">
+            <span class="logo-main" id="cms-studio-name">PATINA</span>
+            <span class="logo-sub">DESIGN STUDIO</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="index.html#services" class="nav-link">SERVICES</a></li>
+                <li><a href="index.html#about" class="nav-link">ABOUT</a></li>
+                <li><a href="process.html" class="nav-link">PROCESS</a></li>
+                <li><a href="journal.html" class="nav-link">JOURNAL</a></li>
+                <li><a href="media.html" class="nav-link">MEDIA</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <li><a href="enquiries.html" class="cta-link">ENQUIRIES</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ── Subpage Hero ─────────────────────────────────── -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="category-eyebrow">OUR JOURNAL</span>
+                <h1 class="reveal-text">The Invisible Layer Series</h1>
+                <p class="fade-in">Behind the scenes at Patina Design Studio. Our bi-weekly newsletter uncovers the meticulous coordination, choices, and problem-solving that sit beneath each highly resolved residential interior.</p>
+            </div>
+        </section>
+
+        <!-- ── Subpage Content ──────────────────────────────── -->
+        <section class="subpage-content container">
+            <div class="journal-grid">
+                
+                <!-- CARD NO.1 -->
+                <a href="journal-no1-the-ascent-of-the-36m-concrete-table.html" class="journal-card reveal">
+                    <div class="journal-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585728/No1.11_Patina_Design_Studio_yslare.jpg" alt="Custom 3.6m Concrete Table" loading="lazy">
+                    </div>
+                    <div class="journal-card-content">
+                        <span class="journal-issue">NO.1 — Behind the scenes</span>
+                        <h3>The Ascent of the 3.6m Concrete Table</h3>
+                        <p class="journal-excerpt">The story of designing, transporting, and craning a massive, single-piece 200kg concrete dining table into a third-story Sydney penthouse during a rainstorm.</p>
+                        <span class="journal-read-link">Read Article <span>→</span></span>
+                    </div>
+                </a>
+
+                <!-- CARD NO.2 -->
+                <a href="journal-no2-why-a-perfect-floor-plan-can-still-feel-wrong.html" class="journal-card reveal">
+                    <div class="journal-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635075/CONCEPT_PLAN_with_notes_patina_design_studio_q8cbkg.jpg" alt="Floor Plan Layout Review" loading="lazy">
+                    </div>
+                    <div class="journal-card-content">
+                        <span class="journal-issue">NO.2 — Spatial Flow</span>
+                        <h3>Why a Perfect Floor Plan Can Still Feel Wrong</h3>
+                        <p class="journal-excerpt">Critiquing a layout that checked every box on paper but failed in practice, and how we redesigned the master suite for flow, privacy, and true luxury.</p>
+                        <span class="journal-read-link">Read Article <span>→</span></span>
+                    </div>
+                </a>
+
+                <!-- CARD NO.3 -->
+                <a href="journal-no3-what-actually-impacts-time-and-cost-on-a-project.html" class="journal-card reveal">
+                    <div class="journal-card-img-wrapper">
+                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037353/IMG_6986_ufdrp9.jpg" alt="Construction and Detailing" loading="lazy">
+                    </div>
+                    <div class="journal-card-content">
+                        <span class="journal-issue">NO.3 — Timeline &amp; Cost</span>
+                        <h3>What Actually Impacts Time and Cost on a Project</h3>
+                        <p class="journal-excerpt">Comparing two off-plan apartment projects to demonstrate how the timing of designer engagement shapes structural outcomes and budget efficiency.</p>
+                        <span class="journal-read-link">Read Article <span>→</span></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Newsletter Signup Block -->
+            <div class="newsletter-signup-box reveal">
+                <h2>Join The Invisible Layer</h2>
+                <p>Sign up to receive our bi-weekly newsletter. Get behind-the-scenes stories, floor plan critiques, and structural design advice delivered straight to your inbox about a month before they hit our website.</p>
+                <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="newsletter-form">
+                    <!-- Spam Prevention honeypot -->
+                    <input type="hidden" name="form-name" value="newsletter" />
+                    <p style="display:none">
+                        <label>Don't fill this: <input name="bot-field" /></label>
+                    </p>
+                    <input type="email" name="email" class="newsletter-input" placeholder="YOUR EMAIL ADDRESS" required>
+                    <button type="submit" class="newsletter-button">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-main" id="cms-footer-name">PATINA</span>
+                    <span class="logo-sub">DESIGN STUDIO</span>
+                </div>
+                <p id="cms-footer-tagline">Bespoke Interior Architecture</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p id="cms-footer-location">Sydney, Australia</p>
+                <p><a id="cms-footer-email" href="mailto:info@patinadesignstudio.com.au">info@patinadesignstudio.com.au</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow</h4>
+                <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
+                <p><a id="cms-footer-pinterest" href="#">Pinterest</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

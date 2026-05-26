@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function set(id, value) {
         const el = document.getElementById(id);
         if (el && value !== undefined && value !== null && value !== '') {
-            el.textContent = value;
+            if (id === 'cms-studio-body' && value.includes('\n')) {
+                el.innerHTML = value.split('\n\n').map(p => `<p style="margin-bottom: 1.5rem;">${p.replace(/\n/g, '<br>')}</p>`).join('');
+            } else {
+                el.textContent = value;
+            }
         }
     }
 
@@ -55,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const list = document.getElementById('cms-services-list');
         if (!list || !services?.length) return;
         list.innerHTML = services.map(s => `
-            <div class="service-item">
-                <span class="number">${s.number}</span>
+            <a href="${s.link || '#'}" class="service-item">
                 <div class="service-content">
                     <h3>${s.title}</h3>
                     <p>${s.description}</p>
+                    <span class="learn-more">Learn More <span class="arrow">→</span></span>
                 </div>
-            </div>
+            </a>
         `).join('');
     }
 
@@ -198,9 +202,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══════════════════════════════════════════════════════
     // SMOOTH SCROLL
     // ═══════════════════════════════════════════════════════
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"], a[href^="index.html#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
+            let href = this.getAttribute('href');
+            if (href.startsWith('index.html')) {
+                const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '' || !window.location.pathname.includes('.html');
+                if (!isHomePage) {
+                    return;
+                }
+                href = href.substring(10); // strip 'index.html'
+            }
+            const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
                 window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });

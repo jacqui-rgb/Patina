@@ -1,19 +1,34 @@
 {
   "services": [
     {
-      "number": "01",
-      "title": "Interior Architecture",
-      "description": "Comprehensive spatial planning, structural modifications, and detailed architectural drawings for luxury residences."
+      "title": "Full Service Design",
+      "description": "Interior architecture and interior design for new builds, renovations and substantial residential projects, from early planning through to final installation.",
+      "link": "services-full-service-design.html"
     },
     {
-      "number": "02",
-      "title": "Bespoke Joinery",
-      "description": "Custom-designed cabinetry and furniture that maximizes utility while elevating the aesthetic of every room."
+      "title": "Curated Furnishing",
+      "description": "Furniture, lighting, artwork and custom pieces carefully selected, procured and installed to create a cohesive, resolved and highly personal home.",
+      "link": "services-curated-furnishing.html"
     },
     {
-      "number": "03",
-      "title": "Material & Finish Selection",
-      "description": "Meticulously curated palettes of stones, timbers, and fabrics that age gracefully and develop their own patina."
+      "title": "Pre-Purchase Design",
+      "description": "Professional design insight before purchasing a property, helping assess layout potential, renovation opportunities and long term suitability before committing.",
+      "link": "services-pre-purchase-design.html"
+    },
+    {
+      "title": "Layout Assessment",
+      "description": "A focused review of your floor plan to improve functionality, flow, furniture placement, joinery opportunities and daily liveability before key decisions are locked in.",
+      "link": "services-layout-assessment.html"
+    },
+    {
+      "title": "Target Buyer Strategy",
+      "description": "Strategic design guidance for developers, investors and property owners to help align a project with the expectations of its intended buyer and strengthen overall appeal.",
+      "link": "services-target-buyer-strategy.html"
+    },
+    {
+      "title": "Design Consultation",
+      "description": "The first step for all Patina Design Studio services, providing professional guidance, strategic direction and clarity around the most suitable path for your project.",
+      "link": "services-design-consultation.html"
     }
   ]
 }
