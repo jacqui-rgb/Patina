@@ -10,13 +10,14 @@
 local_backend: true
 
 # ── Backend ─────────────────────────────────────────────────
-# Decap CMS v3 requires a backend block even in local mode.
-# For LOCAL development: local_backend above overrides this.
-# For PRODUCTION (Netlify): set local_backend: false and update repo/branch.
+# LOCAL:      local_backend above takes precedence (no auth needed).
+# PRODUCTION: Netlify Identity + Git Gateway handles GitHub OAuth.
+#   → Enable Netlify Identity on your Netlify site dashboard, then
+#     go to Settings → Identity → Services → Enable Git Gateway.
 backend:
-  name: github
-  repo: danTaler/Patina
+  name: git-gateway
   branch: main
+
 
 # ── Media ──────────────────────────────────────────────────
 media_folder: "assets/images"
