@@ -2,7 +2,7 @@
   "services": [
     {
       "title": "Full Service Design",
-      "description": "Full-service interior architecture and design from early planning through to completion.",
+      "description": "Full-service interior architecture and design from early planning through to final installation.",
       "link": "services-full-service-design.html"
     },
     {
@@ -11,23 +11,23 @@
       "link": "services-curated-furnishing.html"
     },
     {
-      "title": "Pre-Purchase Design",
-      "description": "Professional design insight before purchasing a property, helping assess layout potential, renovation opportunities and long term suitability before committing.",
+      "title": "Pre-Purchase Review",
+      "description": "Professional design insight before purchasing a property, helping assess layout potential, renovation opportunities and overall suitability before committing.",
       "link": "services-pre-purchase-design.html"
     },
     {
       "title": "Layout Assessment",
-      "description": "A focused review of your floor plan to improve functionality, flow, furniture placement, joinery opportunities and daily liveability before key decisions are locked in.",
+      "description": "A focused review of your floor plan to improve functionality, flow, furniture placement and joinery opportunities before key decisions are locked in.",
       "link": "services-layout-assessment.html"
     },
     {
       "title": "Target Buyer Strategy",
-      "description": "Strategic design guidance for developers, investors and property owners to help align a project with the expectations of its intended buyer and strengthen overall appeal.",
+      "description": "Strategic design guidance for developers and property owners to help align a project with its intended buyer and strengthen its overall appeal.",
       "link": "services-target-buyer-strategy.html"
     },
     {
       "title": "Design Consultation",
-      "description": "The first step for all Patina Design Studio services, providing professional guidance, strategic direction and clarity around the most suitable path for your project.",
+      "description": "The first step for all Patina Design Studio services, providing strategic guidance and clarity around the most suitable direction for your project.",
       "link": "services-design-consultation.html"
     }
   ]
