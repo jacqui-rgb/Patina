@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById('cms-projects-grid');
         if (!grid || !projects?.length) return;
         grid.innerHTML = projects.map(p => `
-            <div class="project-card${p.featured ? ' large' : ''}">
+            <a href="${p.link || '#'}" class="project-card${p.featured ? ' large' : ''}">
                 <img src="${p.image}" alt="${p.image_alt || p.name}" loading="lazy">
                 <div class="project-info">
                     <h3>${p.name}</h3>
                     <p>${p.category}</p>
                 </div>
-            </div>
+            </a>
         `).join('');
     }
 
