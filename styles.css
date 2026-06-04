@@ -395,7 +395,7 @@ nav a:hover {
 }
 
 #cms-cta-bg {
-    background-position: 78% center; /* Shift crop right to frame the pendant light, hide flowers, and sit text over clean negative space */
+    background-position: center; /* Center the new architectural background image */
     background-size: cover;
     transition: background-position 0.4s ease;
     opacity: 1; /* Ensure background image is fully opaque */
@@ -407,7 +407,7 @@ nav a:hover {
         min-height: 400px;
     }
     #cms-cta-bg {
-        background-position: 82% center; /* Shift slightly more right on mobile to completely filter out left side flowers and ovens */
+        background-position: center; /* Keep the new background image centered on mobile */
     }
 }
 
