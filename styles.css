@@ -235,6 +235,11 @@ nav a:hover {
 .section-title {
     position: relative;
     padding-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.section-title.over-image {
+    color: var(--white) !important;
 }
 
 .section-title::after {

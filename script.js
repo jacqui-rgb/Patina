@@ -221,13 +221,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ═══════════════════════════════════════════════════════
-    // PARALLAX HERO
+    // PARALLAX HERO & SELECTED PROJECTS FONT COLOR TRANSITION
     // ═══════════════════════════════════════════════════════
     const heroBg = document.getElementById('cms-hero-bg');
     if (heroBg) {
+        const selectedProjectsTitle = document.querySelector('#projects .section-title');
+        
+        const checkOverlap = () => {
+            if (selectedProjectsTitle) {
+                const titleRect = selectedProjectsTitle.getBoundingClientRect();
+                const heroRect = heroBg.getBoundingClientRect();
+                
+                // Overlap exists if the top of the title is above the bottom of the hero image
+                // and the bottom of the title is below the top of the hero image.
+                const isOverlapping = titleRect.top < heroRect.bottom && titleRect.bottom > heroRect.top;
+                
+                selectedProjectsTitle.classList.toggle('over-image', isOverlapping);
+            }
+        };
+
         window.addEventListener('scroll', () => {
             heroBg.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+            checkOverlap();
         }, { passive: true });
+
+        // Run once on load/init
+        checkOverlap();
     }
 
     // ═══════════════════════════════════════════════════════
