@@ -1743,3 +1743,153 @@ body.subpage header {
         text-align: left;
     }
 }
+
+/* ═══════════════════════════════════════════════════════
+   ADAPTIVE RESPONSIVENESS & MOBILE ALIGNMENT OVERRIDES
+   ═══════════════════════════════════════════════════════ */
+
+/* Body scroll lock when mobile menu is open */
+body.menu-active {
+    overflow: hidden;
+}
+
+/* Redefine root variables for adaptive margins and gutters */
+@media (max-width: 768px) {
+    :root {
+        --p-gutter: 1.5rem;
+        --p-section: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --p-gutter: 1rem;
+        --p-section: 3.5rem;
+    }
+}
+
+/* Header Alignment Overrides for Pixel-Perfect Left/Right Edges */
+@media (max-width: 1024px) {
+    header {
+        padding: 1.5rem var(--p-gutter);
+    }
+    header.scrolled {
+        padding: 1.25rem var(--p-gutter);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.25rem var(--p-gutter);
+    }
+    header.scrolled {
+        padding: 1rem var(--p-gutter);
+    }
+    body.subpage header {
+        padding: 1.25rem var(--p-gutter);
+    }
+}
+
+/* Responsive Heading Font Clamping */
+@media (max-width: 480px) {
+    h1, .logo-main {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+    }
+    h2 {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+    }
+    .logo-sub {
+        font-size: 0.55rem;
+        letter-spacing: 0.15rem;
+    }
+}
+
+/* Project and Portfolio touch screen usability */
+@media (max-width: 768px) {
+    /* Always show title and category info on mobile/touch screens since :hover is unreliable */
+    .project-info {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 1.5rem;
+    }
+}
+
+/* Highlight boxes padding overrides to prevent squeezed text */
+@media (max-width: 768px) {
+    .project-highlight-box,
+    .service-highlight-box {
+        padding: 1.75rem 1.5rem;
+        margin-top: 2.5rem;
+    }
+}
+
+/* Sidebar paddings overrides within stacked layouts */
+@media (max-width: 768px) {
+    .post-sidebar-block {
+        padding: 1.75rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-sidebar,
+    .media-sidebar {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+/* Service Item list card paddings */
+@media (max-width: 768px) {
+    .service-item {
+        padding: 2rem 1.5rem;
+    }
+    .step-card {
+        padding: 1.75rem var(--p-gutter);
+    }
+}
+
+/* Subpage spacing overrides */
+@media (max-width: 768px) {
+    .subpage-hero {
+        padding: 8rem 0 4rem 0;
+    }
+    .subpage-content {
+        padding: 4rem 0;
+    }
+}
+
+/* Post Quotes formatting */
+@media (max-width: 768px) {
+    .post-quote {
+        padding-left: 1.5rem;
+        margin: 2.5rem 0;
+    }
+    .post-quote p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Contain drop-shadow spill to prevent viewport overflow */
+@media (max-width: 768px) {
+    .split-image img {
+        filter: drop-shadow(10px 10px 0 var(--accent-light));
+    }
+}
+
+/* Footer Responsive Column Overrides */
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+/* Refined Process Timeline spacing */
+@media (max-width: 768px) {
+    .process-phase-header {
+        margin-bottom: 2rem;
+    }
+    .process-steps {
+        gap: 2.5rem;
+    }
+}
