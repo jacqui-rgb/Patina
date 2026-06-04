@@ -1647,6 +1647,17 @@ body.subpage header {
     margin-bottom: 1.5rem;
 }
 
+.project-main-info p a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.project-main-info p a:hover {
+    color: var(--accent-light);
+}
+
 .project-main-info p.lead {
     font-size: 1.35rem;
     font-weight: 300;
