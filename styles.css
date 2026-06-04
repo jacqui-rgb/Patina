@@ -391,13 +391,14 @@ nav a:hover {
 }
 
 .accent-bg {
-    background-color: hsl(36, 12%, 15%); /* Elegant, dark warm charcoal anchoring color */
+    background-color: transparent; /* Removed underlying warm dark charcoal anchoring background color */
 }
 
 #cms-cta-bg {
     background-position: 78% center; /* Shift crop right to frame the pendant light, hide flowers, and sit text over clean negative space */
     background-size: cover;
     transition: background-position 0.4s ease;
+    opacity: 1; /* Ensure background image is fully opaque */
 }
 
 @media (max-width: 768px) {
