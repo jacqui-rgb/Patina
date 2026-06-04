@@ -101,6 +101,8 @@ header.scrolled {
     display: flex;
     flex-direction: column;
     letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo-main {
