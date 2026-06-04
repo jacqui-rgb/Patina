@@ -386,8 +386,18 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
+    color: var(--text-primary);
     overflow: hidden;
+}
+
+#cta .button {
+    background: var(--text-primary);
+    color: var(--white);
+}
+
+#cta .button:hover {
+    background: var(--accent);
+    color: var(--white);
 }
 
 .accent-bg {
