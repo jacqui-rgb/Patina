@@ -1082,6 +1082,45 @@ body.subpage header {
     color: var(--accent);
 }
 
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact-cta h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.contact-cta p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.contact-cta p:last-of-type {
+    margin-bottom: 3rem;
+}
+
+.contact-cta .button {
+    background: var(--text-primary);
+    color: var(--white);
+    align-self: flex-start;
+    margin-top: 0;
+}
+
+.contact-cta .button:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
