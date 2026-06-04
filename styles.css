@@ -1736,6 +1736,16 @@ body.subpage header {
     color: var(--accent);
 }
 
+.project-sidebar-block .meta-list li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-sidebar-block .meta-list li a:hover {
+    color: var(--accent);
+}
+
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
