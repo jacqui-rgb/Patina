@@ -1724,6 +1724,36 @@ body.subpage header {
     color: var(--accent);
 }
 
+/* Vaucluse Residence Specific Sidebar Refinement */
+.vaucluse-page .project-sidebar {
+    background-color: hsl(40, 15%, 96%); /* Lightened background tone */
+    padding: 2.25rem 2.25rem; /* Reduced internal padding slightly */
+}
+
+.vaucluse-page .project-sidebar-block {
+    margin-bottom: 1.5rem; /* Tightened spacing between metadata categories */
+}
+
+.vaucluse-page .project-sidebar-block h3 {
+    margin-bottom: 0.5rem; /* Tightened spacing inside categories */
+}
+
+.vaucluse-page .project-sidebar-block .meta-list li {
+    margin-bottom: 0.35rem; /* Tightened list spacing */
+}
+
+@media (max-width: 992px) {
+    .vaucluse-page .project-sidebar {
+        padding: 2rem 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .vaucluse-page .project-sidebar {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
