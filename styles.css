@@ -1627,6 +1627,12 @@ body.subpage header {
     margin-bottom: 6rem;
 }
 
+@media (min-width: 993px) {
+    .project-details-grid {
+        grid-template-columns: 1.9fr 1fr; /* Refined proportions for more elegant, less block-like feel */
+    }
+}
+
 .project-main-info h2 {
     font-family: var(--font-heading);
     font-size: 2rem;
@@ -1673,14 +1679,20 @@ body.subpage header {
 }
 
 .project-sidebar {
-    background-color: var(--bg-secondary);
-    padding: 3rem;
+    background-color: hsl(40, 15%, 96%); /* Soft, lightened background tone */
+    padding: 2.25rem 2.25rem; /* Reduced internal padding for a compact, editorial layout */
     position: sticky;
     top: 120px;
 }
 
+@media (min-width: 993px) {
+    .project-sidebar {
+        margin-top: -2rem; /* Raise the panel slightly on desktop to align intentionally with "The Design Story" heading */
+    }
+}
+
 .project-sidebar-block {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem; /* Tightened spacing between metadata categories */
 }
 
 .project-sidebar-block:last-child {
@@ -1692,7 +1704,7 @@ body.subpage header {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Tightened spacing inside categories */
     font-weight: 500;
 }
 
@@ -1712,7 +1724,7 @@ body.subpage header {
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem; /* Tightened list spacing */
     position: relative;
     padding-left: 1.5rem;
 }
@@ -1722,45 +1734,6 @@ body.subpage header {
     position: absolute;
     left: 0;
     color: var(--accent);
-}
-
-/* Vaucluse Residence Specific Sidebar Refinement */
-@media (min-width: 993px) {
-    .vaucluse-page .project-details-grid {
-        grid-template-columns: 1.9fr 1fr; /* Reduce the width of the metadata panel slightly so the proportions feel more refined and less block-like */
-    }
-    .vaucluse-page .project-sidebar {
-        margin-top: -2rem; /* Raise the metadata panel slightly so the top of the panel aligns more intentionally with the “The Design Story” heading area */
-    }
-}
-
-.vaucluse-page .project-sidebar {
-    background-color: hsl(40, 15%, 96%); /* Lightened background tone */
-    padding: 2.25rem 2.25rem; /* Reduced internal padding slightly */
-}
-
-.vaucluse-page .project-sidebar-block {
-    margin-bottom: 1.5rem; /* Tightened spacing between metadata categories */
-}
-
-.vaucluse-page .project-sidebar-block h3 {
-    margin-bottom: 0.5rem; /* Tightened spacing inside categories */
-}
-
-.vaucluse-page .project-sidebar-block .meta-list li {
-    margin-bottom: 0.35rem; /* Tightened list spacing */
-}
-
-@media (max-width: 992px) {
-    .vaucluse-page .project-sidebar {
-        padding: 2rem 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .vaucluse-page .project-sidebar {
-        padding: 1.5rem 1.25rem;
-    }
 }
 
 .project-gallery {
@@ -1869,7 +1842,7 @@ body.subpage header {
     }
     .project-sidebar {
         position: static;
-        padding: 2.5rem;
+        padding: 2rem 2rem;
     }
 }
 
