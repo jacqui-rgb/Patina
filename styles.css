@@ -381,7 +381,8 @@ nav a:hover {
 
 /* CTA Section */
 #cta {
-    height: 60vh;
+    height: 50vh;
+    min-height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,8 +390,28 @@ nav a:hover {
     overflow: hidden;
 }
 
+.accent-bg {
+    background-color: hsl(36, 12%, 15%); /* Elegant, dark warm charcoal anchoring color */
+}
+
+#cms-cta-bg {
+    background-position: 78% center; /* Shift crop right to frame the pendant light, hide flowers, and sit text over clean negative space */
+    background-size: cover;
+    transition: background-position 0.4s ease;
+}
+
+@media (max-width: 768px) {
+    #cta {
+        height: 45vh;
+        min-height: 400px;
+    }
+    #cms-cta-bg {
+        background-position: 82% center; /* Shift slightly more right on mobile to completely filter out left side flowers and ovens */
+    }
+}
+
 .cta-content h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 5vw, 3.5rem); /* Responsive sizing for better text flow */
     margin-bottom: 1.5rem;
 }
 
