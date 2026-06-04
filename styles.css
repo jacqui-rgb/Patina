@@ -1725,6 +1725,15 @@ body.subpage header {
 }
 
 /* Vaucluse Residence Specific Sidebar Refinement */
+@media (min-width: 993px) {
+    .vaucluse-page .project-details-grid {
+        grid-template-columns: 1.9fr 1fr; /* Reduce the width of the metadata panel slightly so the proportions feel more refined and less block-like */
+    }
+    .vaucluse-page .project-sidebar {
+        margin-top: -2rem; /* Raise the metadata panel slightly so the top of the panel aligns more intentionally with the “The Design Story” heading area */
+    }
+}
+
 .vaucluse-page .project-sidebar {
     background-color: hsl(40, 15%, 96%); /* Lightened background tone */
     padding: 2.25rem 2.25rem; /* Reduced internal padding slightly */
