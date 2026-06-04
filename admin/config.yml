@@ -150,10 +150,6 @@ collections:
             name: "instagram_url"
             widget: "string"
             required: false
-          - label: "Pinterest URL"
-            name: "pinterest_url"
-            widget: "string"
-            required: false
           - label: "CTA Heading"
             name: "cta_heading"
             widget: "string"

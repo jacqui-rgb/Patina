@@ -149,11 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 igEl.textContent = 'Instagram';
                 if (settings.instagram_url) igEl.setAttribute('href', settings.instagram_url);
             }
-            const piEl = document.getElementById('cms-footer-pinterest');
-            if (piEl) {
-                piEl.textContent = 'Pinterest';
-                if (settings.pinterest_url) piEl.setAttribute('href', settings.pinterest_url);
-            }
         }
 
         // Re-observe newly built cards (after grid/list rebuild)
