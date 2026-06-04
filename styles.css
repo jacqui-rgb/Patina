@@ -480,6 +480,13 @@ footer a:hover {
     color: var(--accent);
 }
 
+#cms-footer-location {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid rgba(0,0,0,0.1);
