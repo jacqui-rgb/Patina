@@ -1,9 +1,14 @@
 {
   "title": "The Studio",
-  "lead": "INTERIOR ARCHITECTURE AND DESIGN FOR HIGHLY RESOLVED RESIDENTIAL PROJECTS.",
-  "body": "Patina Design Studio approaches residential interiors with a strong focus on functionality, proportion and long-term liveability across both design and execution. The studio is often engaged early in the planning of a home to refine layouts, coordinate key design decisions and shape cohesive, highly considered homes with greater influence over the final outcome.",
+{
+  "title": "The Studio",
+  "lead": "We believe the success of a home is determined long before finishes and furnishings are selected.",
+  "body": "Spatial planning is one of the most important and often overlooked aspects of residential design. Patina Design Studio is frequently engaged to review, refine and improve floor plans, helping clients identify opportunities that influence how a home functions long before details become fixed.\n\nThrough years of reviewing proposed layouts for new builds, renovations and off-plan properties, the studio has developed a reputation for identifying opportunities, resolving spatial challenges and improving the way homes are experienced every day.",
   "cta_label": "About the Studio →",
   "cta_href": "about.html",
+  "image": "https://static.wixstatic.com/media/9dda45_1757b0e6b05f4c6fb346513525d4e3e4~mv2.jpeg",
+  "image_alt": "Studio Detail"
+}
   "image": "https://static.wixstatic.com/media/9dda45_1757b0e6b05f4c6fb346513525d4e3e4~mv2.jpeg",
   "image_alt": "Studio Detail"
 }
