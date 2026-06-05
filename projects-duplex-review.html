@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplex Review | Patina Design Studio Sydney</title>
+    <meta name="description" content="Design positioning strategy and layout refinement for a luxury new-build residential duplex in Dover Heights, Sydney.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style>
+        /* Case Study Page Specific Custom Styles */
+        
+        /* Hero Metadata Row */
+        .hero-meta-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .meta-item {
+            position: relative;
+        }
+        .meta-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 10%;
+            bottom: 10%;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+        .meta-value {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero-meta-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2.5rem;
+                padding-top: 1.5rem;
+            }
+            .meta-item:not(:last-child)::after {
+                display: none;
+            }
+            .meta-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                padding-bottom: 1rem;
+            }
+            .meta-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        /* Intro Headline Section */
+        .case-study-intro {
+            padding: 5rem 0 2.5rem 0;
+            text-align: left;
+        }
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .intro-headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--text-primary);
+            margin-bottom: 1.8rem;
+        }
+        .intro-paragraph {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* Review Considerations Section */
+        .review-considerations {
+            background-color: var(--bg-secondary);
+            padding: 6rem 0;
+        }
+        .review-considerations .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 3.5rem;
+        }
+        .considerations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .consideration-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            border-radius: 4px;
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .consideration-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+        }
+        .consideration-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 0.2rem;
+        }
+        .consideration-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            font-weight: 400;
+        }
+        .consideration-content p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .considerations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .considerations-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .consideration-card {
+                padding: 1.8rem;
+            }
+            .review-considerations {
+                padding: 4.5rem 0;
+            }
+            .review-considerations .section-title {
+                margin-bottom: 2.5rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Bottom Grey Banner Box */
+        .bottom-banner-section {
+            padding: 0 0 7rem 0;
+        }
+        .banner-box {
+            background-color: var(--bg-secondary);
+            border-radius: 4px;
+            padding: 3.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+        .banner-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+        .banner-text p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+            max-width: 620px;
+        }
+        .banner-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+        .banner-btn {
+            display: inline-block;
+            padding: 1rem 1.8rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .banner-btn.primary {
+            background-color: var(--accent);
+            color: var(--white);
+            border: 1px solid var(--accent);
+        }
+        .banner-btn.primary:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-light);
+        }
+        .banner-btn.secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(0,0,0,0.15);
+        }
+        .banner-btn.secondary:hover {
+            border-color: var(--text-primary);
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        @media (max-width: 1024px) {
+            .banner-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 3rem 2.5rem;
+                gap: 2.2rem;
+            }
+            .banner-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+            .banner-btn {
+                width: 100%;
+            }
+        }
+
+        /* What We Reviewed Section styling */
+        .client-received-section {
+            background-color: var(--bg-secondary);
+            padding: 0 0 7rem 0;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .comparison-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .comparison-column.left-column {
+            padding-right: 2rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .comparison-column .column-header {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .comparison-column .column-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: var(--text-primary);
+            opacity: 0.3;
+        }
+        .comparison-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+        .comparison-card {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            padding-bottom: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        .comparison-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .comparison-card:hover {
+            transform: translateX(4px);
+        }
+        .comparison-card .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .comparison-card .card-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .comparison-column.left-column {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="subpage projects-duplex-review-page">
+    <header id="main-header">
+        <a class='logo' href='/'>
+            <span class="logo-main" id="cms-studio-name">Patina Design Studio</span>
+            <span class="logo-sub">Interior Architectural Design</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a class='nav-link' href='/projects'>PROJECTS</a></li>
+                <li><a class='nav-link' href='/#services'>SERVICES</a></li>
+                <li><a class='nav-link' href='/about'>ABOUT</a></li>
+                <li><a class='nav-link' href='/process'>PROCESS</a></li>
+                <li><a class='nav-link' href='/journal'>JOURNAL</a></li>
+                <li><a class='nav-link' href='/media'>MEDIA</a></li>
+                <li><a class='nav-link' href='/faq'>FAQ</a></li>
+                <li><a class='nav-link' href='/contact'>CONTACT</a></li>
+                <li><a class='cta-link' href='/enquiries'>ENQUIRIES</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ── Subpage Hero ─────────────────────────────────── -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="category-eyebrow"><a href='/services-design-positioning-strategy'>DESIGN POSITIONING STRATEGY CASE STUDY</a></span>
+                <h1 class="reveal-text">Duplex Review</h1>
+                <p class="fade-in">A strategic design review for a new-build duplex, identifying the likely buyer profile and aligning design decisions with buyer expectations, market positioning and perceived value.</p>
+                
+                <div class="hero-meta-row fade-in">
+                    <div class="meta-item">
+                        <span class="meta-label">SERVICE</span>
+                        <span class="meta-value">Design Positioning Strategy<br>delivered alongside Full Service Design</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">PROPERTY TYPE</span>
+                        <span class="meta-value">New-build duplex</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Review Brief</span>
+                        <span class="meta-value">Identify the likely buyer profile and align design decisions with buyer expectations, market positioning and perceived value.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Subpage Content: Intro ──────────────────────── -->
+        <section class="case-study-intro reveal">
+            <div class="container container-narrow">
+                <h2 class="intro-headline">Designed for the purchaser most likely to recognise the value.</h2>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem;">The developer wanted the duplexes to appeal to a premium local buyer without feeling like a standard development or quick resale project.</p>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem;">As part of the broader Full Service Design process, Patina Design Studio worked with the developer, with input from the real estate agent, to identify the buyer profile most likely to respond to this type of property. The review then considered how the layout, finishes, joinery, detailing and buyer presentation could support that purchaser.</p>
+                <p class="intro-paragraph">This allowed the design decisions to be assessed through the lens of the intended purchaser, rather than broad assumptions about the market.</p>
+            </div>
+        </section>
+
+        <!-- ── Image Section ────────────────────────────────── -->
+        <section class="case-study-image-section reveal" style="padding: 2rem 0 5rem 0;">
+            <div class="container">
+                <div style="background: var(--white); border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);">
+                    <img src="https://static.wixstatic.com/media/9dda45_bc388fadd7644dbebc32f03ea50bac71~mv2.jpg/v1/fill/w_1800,h_1000,al_c/9dda45_bc388fadd7644dbebc32f03ea50bac71~mv2.jpg" alt="Dover Heights Duplex Dining Area" style="width: 100%; height: auto; display: block; object-fit: cover;" loading="lazy">
+                </div>
+                <p style="font-family: var(--font-body); font-size: 0.9rem; color: var(--text-secondary); font-style: italic; text-align: center; margin-top: 1.8rem; font-weight: 300;">A completed duplex, designed to feel more like a tailored home than a developer driven project.</p>
+            </div>
+        </section>
+
+        <!-- ── What The Review Considered Section ────────────── -->
+        <section class="review-considerations reveal">
+            <div class="container">
+                <h2 class="section-title text-center">What the Review Considered</h2>
+                <div class="considerations-grid">
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Buyer Profile</h3>
+                            <p>Who was most likely to purchase the homes, what would they value, and what would make the property feel more compelling than other options on the market.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Lifestyle Requirements</h3>
+                            <p>How the homes could support young families, downsizers, visiting grandchildren, entertaining and everyday family routines.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Family Functionality</h3>
+                            <p>Where specific inclusions, such as a bath in the shared bathroom, could better support buyers with young children or visiting grandchildren.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                                <circle cx="6" cy="6" r="1"></circle>
+                                <circle cx="12" cy="6" r="1"></circle>
+                                <circle cx="18" cy="6" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Kitchen &amp; Entertaining</h3>
+                            <p>How the kitchen could support daily family use while also including a bar area that felt adult, considered and suitable for entertaining.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="12" y1="3" x2="12" y2="21"></line>
+                                <circle cx="8" cy="12" r="1"></circle>
+                                <circle cx="16" cy="12" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Entry &amp; Storage</h3>
+                            <p>How the entry could feel more welcoming, with concealed storage for shoes, bags and coats to reduce visible clutter.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Ceiling &amp; Spatial Definition</h3>
+                            <p>How a coffered ceiling and linear insert could define the living, dining and kitchen zones without physically separating them.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Light &amp; Proportion</h3>
+                            <p>How ceiling and lighting decisions could make the narrow internal width feel taller, wider and less visually cluttered.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                                <circle cx="7.5" cy="10.5" r="1.5"></circle>
+                                <circle cx="11.5" cy="7.5" r="1.5"></circle>
+                                <circle cx="16.5" cy="9.5" r="1.5"></circle>
+                                <circle cx="15.5" cy="14.5" r="1.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Finishes &amp; Material Depth</h3>
+                            <p>How neutral, highly textured finishes, including custom plaster and liquid metal details, could create warmth, contrast and depth.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Buyer Presentation</h3>
+                            <p>How interested buyers could be guided through the design intent, finishes, joinery and expected completed outcome during the sales process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Review Comparison Section ───────────────────── -->
+        <section class="client-received-section reveal" style="padding-top: 6rem;">
+            <div class="container">
+                <div class="comparison-grid">
+                    <!-- Left Column: What We Reviewed -->
+                    <div class="comparison-column left-column">
+                        <h2 class="column-header">What We Reviewed</h2>
+                        <div class="comparison-cards">
+                            <div class="comparison-card">
+                                <h3 class="card-title">The Likely Purchaser</h3>
+                                <p class="card-text">Who was most likely to buy the homes, and what would make this property feel more aligned with their lifestyle than other options on the market?</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">The Design Opportunities</h3>
+                                <p class="card-text">Which layout, storage, ceiling, lighting, joinery and finish decisions could make the homes feel more tailored and less developer-led?</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">The Sales Experience</h3>
+                                <p class="card-text">What would prospective buyers need to understand during inspections to appreciate the design decisions before the homes were complete?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: What The Strategy Clarified -->
+                    <div class="comparison-column right-column">
+                        <h2 class="column-header">What The Strategy Clarified</h2>
+                        <div class="comparison-cards">
+                            <div class="comparison-card">
+                                <h3 class="card-title">Buyer Profile</h3>
+                                <p class="card-text">The likely buyers were identified as young families or downsizers with young grandchildren.</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Design Priorities</h3>
+                                <p class="card-text">The strategy clarified where family functionality, entertaining, concealed storage, material depth and spatial definition would have the greatest impact.</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Buyer Presentation</h3>
+                                <p class="card-text">Patina Design Studio assisted during the sales process by meeting interested parties and explaining the finishes, joinery and design intent.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Outcome Section ──────────────────────────────── -->
+        <section class="case-study-outcome reveal" style="background-color: var(--white); padding: 6rem 0 3rem 0;">
+            <div class="container container-narrow text-center">
+                <span class="meta-label" style="display: block; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; font-weight: 500;">THE OUTCOME</span>
+                <h2 style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 400; color: var(--text-primary); margin-bottom: 2rem; line-height: 1.3;">Both residences were purchased prior to completion.</h2>
+                <p class="intro-paragraph" style="margin-bottom: 1.8rem; font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">The final purchasers aligned closely with the buyer profiles identified during the strategy process: young families and downsizers with young grandchildren.</p>
+                <p class="intro-paragraph" style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary); max-width: 800px; margin-left: auto; margin-right: auto;">The properties sold above the original sales expectations, reinforcing the value of aligning design decisions with buyer expectations, market positioning and perceived value.</p>
+            </div>
+        </section>
+
+        <!-- ── The Purpose Of The Strategy Section ─────────── -->
+        <section class="case-study-purpose reveal" style="background-color: var(--bg-secondary); padding: 7rem 0;">
+            <div class="container container-narrow">
+                <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.2rem); font-weight: 400; color: var(--text-primary); margin-bottom: 1.8rem; text-align: center;">The Purpose Of The Review</h2>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem; font-weight: 400; color: var(--text-primary); text-align: center;">A strategy for aligning design decisions with buyer expectations.</p>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem; text-align: center; max-width: 750px; margin-left: auto; margin-right: auto;">The review was designed to help the developer understand who the homes were for, what those buyers would value, and how the design could support stronger market appeal.</p>
+                <p class="intro-paragraph" style="text-align: center; max-width: 750px; margin-left: auto; margin-right: auto;">The value was in making design decisions through the lens of the intended purchaser, rather than relying on broad market assumptions or generic luxury finishes.</p>
+            </div>
+        </section>
+
+        <!-- ── Bottom Banner Block (Grey Box) ───────────────── -->
+        <section class="bottom-banner-section reveal" style="padding: 4rem 0 7rem 0; background-color: var(--bg-secondary);">
+            <div class="container">
+                <div class="banner-box" style="background-color: var(--white); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);">
+                    <div class="banner-text">
+                        <h3>Developing a property and unsure who the design should speak to?</h3>
+                        <p>A Design Positioning Strategy can help identify the most likely buyer, clarify what they are likely to value, and guide the design decisions that make the property feel more considered, desirable and specific.</p>
+                    </div>
+                    <div class="banner-buttons">
+                        <a class='banner-btn secondary' href='/services-design-positioning-strategy'>View Design Positioning Strategy</a>
+                        <a class='banner-btn primary' href='/enquiries'>Register Your Interest</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class='logo' href='/'>
+                    <span class="logo-main" id="cms-footer-name">Patina Design Studio</span>
+                    <span class="logo-sub">Interior Architectural Design</span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href='/projects'>Projects</a></li>
+                    <li><a href='/#services'>Services</a></li>
+                    <li><a href='/about'>About</a></li>
+                    <li><a href='/contact'>Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p id="cms-footer-location">Based in Sydney, undertaking select interstate and international projects.</p>
+                <p><a id="cms-footer-email" href="mailto:hello@patinadesignstudio.com">hello@patinadesignstudio.com</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow</h4>
+                <p><a id="cms-footer-instagram" href="https://www.instagram.com/patina.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                <h4 style="margin-top: 2rem;"><a href='/journal'>The Invisible Layer Series</a></h4>
+                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-secondary);">Early access to editorial insights and project updates.</p>
+                <p><a href='/journal#subscribe'>Sign Up &rarr;</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
+            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href='/privacy-policy'>Privacy Policy</a> | <a href='/terms-conditions'>Terms & Conditions</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

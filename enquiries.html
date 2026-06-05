@@ -3,32 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Enquiry | Patina Design Studio</title>
+    <title>Enquiries | Patina Design Studio Sydney</title>
     <meta name="description" content="Begin your bespoke interior architecture journey by completing our comprehensive project enquiry form.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style>
+        /* Process Overview Styling */
+        .process-overview {
+            margin-bottom: 5rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .process-overview-title {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+        .process-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+        }
+        .process-overview-step {
+            display: flex;
+            flex-direction: column;
+        }
+        .process-overview-step .step-num {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--accent-light);
+            opacity: 0.6;
+            margin-bottom: 0.8rem;
+            line-height: 1;
+        }
+        .process-overview-step h3 {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+        .process-overview-step p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Helper text and special styling */
+        .form-helper {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        .form-small-note {
+            display: block;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-top: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Columns Helpers */
+        .grid-2-cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-3-cols {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-4-cols {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Two-column layout for form questions */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 3rem;
+            row-gap: 0;
+        }
+
+        /* What happens next box styling */
+        .what-happens-next-box {
+            margin: 5rem 0 3rem 0;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 4px;
+        }
+        .what-happens-next-box h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+        .what-happens-next-box p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        .what-happens-next-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-submit-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        .button-submit {
+            margin-bottom: 1.5rem;
+        }
+        .warm-outro {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        /* Section Headings */
+        .form-section-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin: 4rem 0 2rem 0;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Nested/Conditional field styling */
+        .conditional-field {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+            margin-top: 0;
+        }
+        .conditional-field.active {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 3rem;
+        }
+
+        /* Priority Ranking List Styling */
+        .priority-ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            max-width: 500px;
+        }
+        .priority-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        .priority-name {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--text-primary);
+        }
+        .priority-select {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid rgba(0,0,0,0.15);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            width: 180px;
+        }
+        .priority-select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .process-overview-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .grid-4-cols {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-3-cols {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-2-cols {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 576px) {
+            .process-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .grid-4-cols, .grid-3-cols, .grid-2-cols {
+                grid-template-columns: 1fr;
+            }
+            .what-happens-next-box {
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body class="subpage">
     <header id="main-header">
-        <a href="index.html" class="logo">
-            <span class="logo-main" id="cms-studio-name">PATINA</span>
-            <span class="logo-sub">DESIGN STUDIO</span>
+        <a class='logo' href='/'>
+            <span class="logo-main" id="cms-studio-name">Patina Design Studio</span>
+            <span class="logo-sub">Interior Architectural Design</span>
         </a>
         <nav>
             <ul>
-                <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                <li><a href="index.html#services" class="nav-link">SERVICES</a></li>
-                <li><a href="about.html" class="nav-link">ABOUT</a></li>
-                <li><a href="process.html" class="nav-link">PROCESS</a></li>
-                <li><a href="journal.html" class="nav-link">JOURNAL</a></li>
-                <li><a href="media.html" class="nav-link">MEDIA</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                <li><a href="enquiries.html" class="cta-link">ENQUIRIES</a></li>
+                <li><a class='nav-link' href='/projects'>PROJECTS</a></li>
+                <li><a class='nav-link' href='/#services'>SERVICES</a></li>
+                <li><a class='nav-link' href='/about'>ABOUT</a></li>
+                <li><a class='nav-link' href='/process'>PROCESS</a></li>
+                <li><a class='nav-link' href='/journal'>JOURNAL</a></li>
+                <li><a class='nav-link' href='/media'>MEDIA</a></li>
+                <li><a class='nav-link' href='/faq'>FAQ</a></li>
+                <li><a class='nav-link' href='/contact'>CONTACT</a></li>
+                <li><a class='cta-link' href='/enquiries'>ENQUIRIES</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
@@ -42,163 +269,405 @@
         <section class="subpage-hero">
             <div class="container">
                 <h1 class="reveal-text">Project Enquiry</h1>
-                <p class="fade-in">This enquiry form is designed to provide an initial understanding of your project, priorities and requirements before arranging a consultation.</p>
+                <p>Every project begins with understanding the people, priorities and objectives behind it.</p>
+                <p style="margin-top: 1.5rem;">Share details about your project before arranging a complimentary discovery call with Patina Design Studio.</p>
             </div>
         </section>
 
         <!-- ── Subpage Content ──────────────────────────────── -->
         <section class="subpage-content container">
-            <div class="form-container reveal">
-                <form name="enquiries" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            
+            <!-- Process Overview -->
+            <div class="process-overview">
+                <span class="process-overview-title">Your Enquiry journey</span>
+                <div class="process-overview-grid">
+                    <div class="process-overview-step">
+                        <span class="step-num">01</span>
+                        <h3>Submit Your Enquiry</h3>
+                        <p>Provide details about your project, goals and requirements.</p>
+                    </div>
+                    <div class="process-overview-step">
+                        <span class="step-num">02</span>
+                        <h3>Complimentary Discovery Call</h3>
+                        <p>A short conversation to discuss your project and answer any initial questions.</p>
+                    </div>
+                    <div class="process-overview-step">
+                        <span class="step-num">03</span>
+                        <h3>Design Consultation</h3>
+                        <p>A dedicated consultation providing professional guidance, clarity and strategic direction.</p>
+                    </div>
+                    <div class="process-overview-step">
+                        <span class="step-num">04</span>
+                        <h3>Tailored Project Proposal</h3>
+                        <p>A tailored proposal outlining the recommended scope of work and design fee estimates and next steps</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); margin-bottom: 3.5rem;"><strong>Before you begin</strong><br><br><em>We review every enquiry personally. The information provided helps us understand your project, priorities and objectives before our initial conversation so we can provide more considered guidance from the outset.</em></p>
+                <form method='POST' name='enquiries'><input type='hidden' name='form-name' value='enquiries' />
                     <!-- Spam Prevention honeypot -->
-                    <p style="display:none">
+                    <p style="display: none !important;" aria-hidden="true">
                         <label>Don't fill this: <input name="bot-field" /></label>
                     </p>
 
                     <!-- SECTION 1: Personal Details -->
-                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">01. Personal Details</h2>
+                    <h2 class="form-section-title" style="margin-top: 0;">01. Personal Details</h2>
                     
-                    <div class="form-group">
-                        <label for="enquiry-name">Full Name *</label>
-                        <input type="text" id="enquiry-name" name="name" class="form-control" placeholder="Enter your full name" required>
-                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="enquiry-name">Full Name *</label>
+                            <input type="text" id="enquiry-name" name="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="enquiry-email">Email Address *</label>
-                        <input type="email" id="enquiry-email" name="email" class="form-control" placeholder="Enter your email address" required>
-                    </div>
+                        <div class="form-group">
+                            <label for="enquiry-email">Email *</label>
+                            <input type="email" id="enquiry-email" name="email" class="form-control" placeholder="Enter your email address" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="enquiry-phone">Phone Number *</label>
-                        <input type="tel" id="enquiry-phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
-                    </div>
+                        <div class="form-group">
+                            <label for="enquiry-phone">Phone *</label>
+                            <input type="tel" id="enquiry-phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="enquiry-company">Company (if relevant)</label>
-                        <input type="text" id="enquiry-company" name="company" class="form-control" placeholder="Enter your company name">
+                        <div class="form-group">
+                            <label for="enquiry-company">Company</label>
+                            <input type="text" id="enquiry-company" name="company" class="form-control" placeholder="Enter your company name">
+                        </div>
                     </div>
 
 
                     <!-- SECTION 2: Project Details -->
-                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">02. Project Details</h2>
+                    <h2 class="form-section-title">02. Project Overview</h2>
 
                     <div class="form-group">
-                        <label for="enquiry-address">Project Address / Location</label>
-                        <input type="text" id="enquiry-address" name="project_address" class="form-control" placeholder="City, Suburb, or Specific Address">
+                        <label for="enquiry-address">Project Location *</label>
+                        <input type="text" id="enquiry-address" name="project_address" class="form-control" placeholder="City, suburb or specific address" required>
                     </div>
 
                     <div class="form-group">
                         <label>Property Type *</label>
-                        <div class="form-checkbox-group">
+                        <div class="form-checkbox-group grid-3-cols">
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Single Residential" class="form-checkbox"> Single Residential
+                                <input type="checkbox" name="property_type" value="Single Residential" class="form-checkbox"><span class="form-checkbox-text">Single Residential</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Multi-Residential" class="form-checkbox"> Multi-Residential
+                                <input type="checkbox" name="property_type" value="Apartment" class="form-checkbox"><span class="form-checkbox-text">Apartment</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Apartment" class="form-checkbox"> Apartment
+                                <input type="checkbox" name="property_type" value="Multi-Residential" class="form-checkbox"><span class="form-checkbox-text">Multi-Residential</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Development" class="form-checkbox"> Development
+                                <input type="checkbox" name="property_type" value="Development" class="form-checkbox"><span class="form-checkbox-text">Development</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Commercial / Retail" class="form-checkbox"> Commercial / Retail
+                                <input type="checkbox" name="property_type" value="Commercial" class="form-checkbox"><span class="form-checkbox-text">Commercial</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Hospitality" class="form-checkbox"> Hospitality
+                                <input type="checkbox" name="property_type" value="Hospitality" class="form-checkbox"><span class="form-checkbox-text">Hospitality</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Health &amp; Wellness" class="form-checkbox"> Health &amp; Wellness
+                                <input type="checkbox" name="property_type" value="Health &amp; Wellness" class="form-checkbox"><span class="form-checkbox-text">Health &amp; Wellness</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Other" class="form-checkbox"> Other
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Anticipated Services Required *</label>
-                        <div class="form-checkbox-group">
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Full Service Design" class="form-checkbox"> Full Service Design
-                            </label>
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Curated Furnishing" class="form-checkbox"> Curated Furnishing
-                            </label>
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Pre-Purchase Review" class="form-checkbox"> Pre-Purchase Review
-                            </label>
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Layout Assessment" class="form-checkbox"> Layout Assessment
-                            </label>
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Target Buyer Strategy" class="form-checkbox"> Target Buyer Strategy
-                            </label>
-                            <label class="form-checkbox-label">
-                                <input type="checkbox" name="services" value="Design Consultation" class="form-checkbox"> Design Consultation
+                                <input type="checkbox" name="property_type" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="enquiry-timing">Approximate Project Timing</label>
-                        <input type="text" id="enquiry-timing" name="project_timing" class="form-control" placeholder="e.g. Immediate, 3-6 months, next year">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Do you currently have access to the property? *</label>
-                        <div class="form-checkbox-group" style="grid-template-columns: repeat(4, 1fr);">
+                        <label>Project Type *</label>
+                        <div class="form-checkbox-group grid-2-cols">
                             <label class="form-checkbox-label">
-                                <input type="radio" name="property_access" value="Yes" class="form-checkbox" required> Yes
+                                <input type="checkbox" name="project_type" value="Renovation" class="form-checkbox"><span class="form-checkbox-text">Renovation</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="radio" name="property_access" value="No" class="form-checkbox" required> No
-                            </label>
-                        </div>
-                    </div>
-
-
-                    <!-- SECTION 3: Goals & Vision -->
-                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">03. Project Goals &amp; Vision</h2>
-
-                    <div class="form-group">
-                        <label for="enquiry-goals">Your Goals for the Project</label>
-                        <textarea id="enquiry-goals" name="project_goals" class="form-control" rows="4" placeholder="Objectives, key frustrations, style inspirations, level of detail required, and target end-user" style="resize: none;"></textarea>
-                    </div>
-
-
-                    <!-- SECTION 4: Budget & Context -->
-                    <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin: 4rem 0 2rem 0; color: var(--accent); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 0.5rem;">04. Context &amp; Resources</h2>
-
-                    <div class="form-group">
-                        <label for="enquiry-budget">Estimated Project Investment Range</label>
-                        <input type="text" id="enquiry-budget" name="budget_range" class="form-control" placeholder="e.g. $50k - $100k, $100k - $250k, $250k+">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Do you have an existing engagement with an architect or builder? *</label>
-                        <div class="form-checkbox-group" style="grid-template-columns: repeat(4, 1fr);">
-                            <label class="form-checkbox-label">
-                                <input type="radio" name="existing_engagement" value="Yes" class="form-checkbox" required> Yes
+                                <input type="checkbox" name="project_type" value="Extension" class="form-checkbox"><span class="form-checkbox-text">Extension</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="radio" name="existing_engagement" value="No" class="form-checkbox" required> No
+                                <input type="checkbox" name="project_type" value="New Build" class="form-checkbox"><span class="form-checkbox-text">New Build</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Apartment Fitout" class="form-checkbox"><span class="form-checkbox-text">Apartment Fitout</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Furnishing &amp; Procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing &amp; Procurement</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Property Purchase Review" class="form-checkbox"><span class="form-checkbox-text">Property Purchase Review</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Developing Property For Sale" class="form-checkbox"><span class="form-checkbox-text">Developing Property For Sale</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Commercial Fitout" class="form-checkbox"><span class="form-checkbox-text">Commercial Fitout</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="project_type" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="enquiry-referral">How did you hear about Patina Design Studio?</label>
-                        <input type="text" id="enquiry-referral" name="referral_source" class="form-control" placeholder="e.g. Instagram, Word of mouth, Referral, Search">
+                        <label>Project Stage *</label>
+                        <div class="form-checkbox-group grid-2-cols">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Exploring options and conducting initial research" class="form-checkbox" required><span class="form-checkbox-text">Exploring options and conducting initial research</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="We have recently purchased a property" class="form-checkbox" required><span class="form-checkbox-text">We have recently purchased a property</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="We are currently developing plans" class="form-checkbox" required><span class="form-checkbox-text">We are currently developing plans</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Plans are already complete" class="form-checkbox" required><span class="form-checkbox-text">Plans are already complete</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Consultant team has already been appointed" class="form-checkbox" required><span class="form-checkbox-text">Consultant team has already been appointed</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Approvals have been obtained" class="form-checkbox" required><span class="form-checkbox-text">Approvals have been obtained</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Construction has commenced" class="form-checkbox" required><span class="form-checkbox-text">Construction has commenced</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="We are seeking assistance after working with another designer or consultant" class="form-checkbox" required><span class="form-checkbox-text">We are seeking assistance after working with another designer or consultant</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="project_stage" value="Other" class="form-checkbox" required><span class="form-checkbox-text">Other</span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="enquiry-additional">Other relevant details or constraints</label>
-                        <textarea id="enquiry-additional" name="additional_info" class="form-control" rows="3" placeholder="Any other detail that might help us understand your vision" style="resize: none;"></textarea>
+                        <label>Areas You Would Like Assistance With</label>
+                        <span class="form-helper">Select any areas you are currently considering. If unsure, we can determine the most appropriate service during the discovery call.</span>
+                        <div class="form-checkbox-group grid-2-cols">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Planning a renovation or new build" class="form-checkbox"><span class="form-checkbox-text">Planning a renovation or new build</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Reviewing a property before purchase" class="form-checkbox"><span class="form-checkbox-text">Reviewing a property before purchase</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Improving functionality or layout" class="form-checkbox"><span class="form-checkbox-text">Improving functionality or layout</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Furnishing and procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing and procurement</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Developing a property for sale" class="form-checkbox"><span class="form-checkbox-text">Developing a property for sale</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="areas_of_assistance" value="Clarifying the best path forward" class="form-checkbox"><span class="form-checkbox-text">Clarifying the best path forward</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <button type="submit" class="button-submit">Submit Enquiry</button>
+                    <div class="form-group">
+                        <label>Commencement Timing *</label>
+                        <div class="form-checkbox-group grid-3-cols">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="commence_timing" value="Immediately" class="form-checkbox" required><span class="form-checkbox-text">Immediately</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="commence_timing" value="Within 3 months" class="form-checkbox" required><span class="form-checkbox-text">Within 3 months</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="commence_timing" value="Within 6 months" class="form-checkbox" required><span class="form-checkbox-text">Within 6 months</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="commence_timing" value="Within 12 months" class="form-checkbox" required><span class="form-checkbox-text">Within 12 months</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="commence_timing" value="More than 12 months away" class="form-checkbox" required><span class="form-checkbox-text">More than 12 months away</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Property Access *</label>
+                        <div class="form-checkbox-group grid-4-cols">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="property_access" value="Yes" class="form-checkbox" required><span class="form-checkbox-text">Yes</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="property_access" value="No" class="form-checkbox" required><span class="form-checkbox-text">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- SECTION 3: Goals & Priorities -->
+                    <h2 class="form-section-title">03. Project Goals &amp; Priorities</h2>
+
+                    <div class="form-group">
+                        <label for="enquiry-project-about">Tell Us About Your Project *</label>
+                        <span class="form-helper">What are you hoping to achieve? What challenges are you experiencing? Are there particular goals, frustrations or opportunities you would like us to understand?</span>
+                        <textarea id="enquiry-project-about" name="project_about" class="form-control" rows="5" placeholder="Share your goals, challenges, and objectives..." style="resize: none;" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-prompt">What Prompted You To Enquire Now</label>
+                        <textarea id="enquiry-prompt" name="enquiry_prompt" class="form-control" rows="5" placeholder="Tell us what led you to take this step today..." style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priority Ranking *</label>
+                        <span class="form-helper">Please number the following in their order of priority (with 1 being the most important and 5 being the least).</span>
+                        <div class="priority-ranking-list">
+                            <div class="priority-item">
+                                <span class="priority-name">Aesthetics</span>
+                                <select name="priority_aesthetics" class="priority-select" required>
+                                    <option value="" disabled selected>Select priority</option>
+                                    <option value="1">1 (Most Important)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Least Important)</option>
+                                </select>
+                            </div>
+                            <div class="priority-item">
+                                <span class="priority-name">Quality</span>
+                                <select name="priority_quality" class="priority-select" required>
+                                    <option value="" disabled selected>Select priority</option>
+                                    <option value="1">1 (Most Important)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Least Important)</option>
+                                </select>
+                            </div>
+                            <div class="priority-item">
+                                <span class="priority-name">Function</span>
+                                <select name="priority_function" class="priority-select" required>
+                                    <option value="" disabled selected>Select priority</option>
+                                    <option value="1">1 (Most Important)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Least Important)</option>
+                                </select>
+                            </div>
+                            <div class="priority-item">
+                                <span class="priority-name">Comfort</span>
+                                <select name="priority_comfort" class="priority-select" required>
+                                    <option value="" disabled selected>Select priority</option>
+                                    <option value="1">1 (Most Important)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Least Important)</option>
+                                </select>
+                            </div>
+                            <div class="priority-item">
+                                <span class="priority-name">Budget</span>
+                                <select name="priority_budget" class="priority-select" required>
+                                    <option value="" disabled selected>Select priority</option>
+                                    <option value="1">1 (Most Important)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Least Important)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- SECTION 4: Project Context -->
+                    <h2 class="form-section-title">04. Project Context</h2>
+
+                    <div class="form-group">
+                        <label for="enquiry-budget">Investment Allocation</label>
+                        <span class="form-helper">Please provide any known allocations for construction, renovation works, furnishings, procurement or other project-related costs.</span>
+                        <textarea id="enquiry-budget" name="budget_allocation" class="form-control" rows="2" placeholder="Construction budget, furnishing budget, overall project investment, or currently obtaining cost advice" style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Consultants Engaged</label>
+                        <div class="form-checkbox-group grid-4-cols">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="consultants_engaged" value="Yes" class="form-checkbox"><span class="form-checkbox-text">Yes</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="consultants_engaged" value="No" class="form-checkbox"><span class="form-checkbox-text">No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-consultants-names">Consultant Names</label>
+                        <textarea id="enquiry-consultants-names" name="consultants_names" class="form-control" rows="2" placeholder="Architect, builder, landscape architect, planner, engineer, certifier or other consultants." style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Discovery Source</label>
+                        <div class="form-checkbox-group grid-3-cols">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Previous Client" class="form-checkbox"><span class="form-checkbox-text">Previous Client</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Architect" class="form-checkbox"><span class="form-checkbox-text">Architect</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Builder" class="form-checkbox"><span class="form-checkbox-text">Builder</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Buyers Agent" class="form-checkbox"><span class="form-checkbox-text">Buyers Agent</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Real Estate Agent" class="form-checkbox"><span class="form-checkbox-text">Real Estate Agent</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Google Search" class="form-checkbox"><span class="form-checkbox-text">Google Search</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Instagram" class="form-checkbox"><span class="form-checkbox-text">Instagram</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="LinkedIn" class="form-checkbox"><span class="form-checkbox-text">LinkedIn</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Media Feature" class="form-checkbox"><span class="form-checkbox-text">Media Feature</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Podcast" class="form-checkbox"><span class="form-checkbox-text">Podcast</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" name="discover_source" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-discover-details">Discovery Source Details</label>
+                        <span class="form-helper">If referred, please tell us who referred you. If through media, we’d love to know which publication, article, podcast or feature.</span>
+                        <textarea id="enquiry-discover-details" name="discover_details" class="form-control" rows="2" placeholder="Provide details (e.g. name of person, magazine title, etc.)" style="resize: none;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-constraints">Constraints / Considerations</label>
+                        <span class="form-helper">Examples may include timelines, approvals, access limitations, builder commitments, settlement dates or other requirements.</span>
+                        <textarea id="enquiry-constraints" name="constraints" class="form-control" rows="4" placeholder="Timelines, approvals, access, settlement dates, or other specific requirements..." style="resize: none;"></textarea>
+                    </div>
+
+
+                    <!-- WHAT HAPPENS NEXT? -->
+                    <div class="what-happens-next-box">
+                        <h2>What Happens Next?</h2>
+                        <p>Once your enquiry has been submitted, we will review the information provided and contact you to arrange a complimentary discovery call.</p>
+                        <p>This initial conversation allows us to better understand your objectives, answer any questions you may have, and determine whether a Design Consultation is the most appropriate next step.</p>
+                        <p>Should we proceed, the consultation provides dedicated time to explore your property, discuss opportunities and challenges, and establish a clear direction for moving forward.</p>
+                    </div>
+
+                    <div class="form-submit-container">
+                        <button type="submit" class="button-submit">Submit Enquiry</button>
+                        <p class="warm-outro">We look forward to learning more about your project and discussing the most appropriate path forward.</p>
+                    </div>
                 </form>
             </div>
         </section>
@@ -207,19 +676,18 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <div class="logo">
-                    <span class="logo-main" id="cms-footer-name">PATINA</span>
-                    <span class="logo-sub">DESIGN STUDIO</span>
-                </div>
-                <p id="cms-footer-tagline">Bespoke Interior Architecture</p>
+                <a class='logo' href='/'>
+                    <span class="logo-main" id="cms-footer-name">Patina Design Studio</span>
+                    <span class="logo-sub">Interior Architectural Design</span>
+                </a>
             </div>
             <div class="footer-links">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href='/projects'>Projects</a></li>
+                    <li><a href='/#services'>Services</a></li>
+                    <li><a href='/about'>About</a></li>
+                    <li><a href='/contact'>Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -229,18 +697,117 @@
             </div>
             <div class="footer-social">
                 <h4>Follow</h4>
-                <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
-                <h4 style="margin-top: 2rem;">The Invisible Layer Series</h4>
+                <p><a id="cms-footer-instagram" href="https://www.instagram.com/patina.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                <h4 style="margin-top: 2rem;"><a href='/journal'>The Invisible Layer Series</a></h4>
                 <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-secondary);">Early access to editorial insights and project updates.</p>
-                <p><a href="https://forms.fillout.com/t/7kB1WdiUJJus" target="_blank" rel="noopener">Sign Up &rarr;</a></p>
+                <p><a href='/journal#subscribe'>Sign Up &rarr;</a></p>
             </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
-            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href='/privacy-policy'>Privacy Policy</a> | <a href='/terms-conditions'>Terms & Conditions</a></p>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ═══════════════════════════════════════════════════════
+            // PRIORITY RANKING SYSTEM (Mutually Exclusive & Auto-Swapping Dropdowns)
+            // ═══════════════════════════════════════════════════════
+            const prioritySelects = document.querySelectorAll('.priority-select');
+
+            // Store previous values of each select to enable seamless swapping
+            const previousValues = {};
+            prioritySelects.forEach(select => {
+                previousValues[select.name] = select.value;
+            });
+
+            function updatePriorityOptions() {
+                // Get all selected values (excluding the empty default value)
+                const selectedValues = Array.from(prioritySelects)
+                    .map(select => select.value)
+                    .filter(value => value !== "");
+
+                prioritySelects.forEach(select => {
+                    const currentValue = select.value;
+                    Array.from(select.options).forEach(option => {
+                        if (option.value === "") return; // Don't disable the placeholder
+                        
+                        // Disable option if it is selected by another dropdown, but NOT by this dropdown
+                        if (selectedValues.includes(option.value) && option.value !== currentValue) {
+                            option.disabled = true;
+                        } else {
+                            option.disabled = false;
+                        }
+                    });
+                });
+            }
+
+            prioritySelects.forEach(select => {
+                select.addEventListener('change', () => {
+                    const name = select.name;
+                    const newValue = select.value;
+                    const oldValue = previousValues[name];
+
+                    if (newValue !== "") {
+                        // Check if any other select has the same new value
+                        prioritySelects.forEach(otherSelect => {
+                            if (otherSelect !== select && otherSelect.value === newValue) {
+                                // Swap values: assign this select's old value to the other select
+                                otherSelect.value = oldValue;
+                                previousValues[otherSelect.name] = oldValue;
+                            }
+                        });
+                    }
+
+                    // Keep track of the new value
+                    previousValues[name] = newValue;
+
+                    // Update disabled states across all options
+                    updatePriorityOptions();
+                });
+            });
+
+            // Run once initially to handle any pre-selected values
+            updatePriorityOptions();
+
+            // ═══════════════════════════════════════════════════════
+            // FORM SUBMISSION VALIDATION
+            // ═══════════════════════════════════════════════════════
+            const form = document.querySelector('form[name="enquiries"]');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    const values = Array.from(prioritySelects)
+                        .map(select => select.value)
+                        .filter(value => value !== "");
+                    
+                    const uniqueValues = new Set(values);
+                    if (uniqueValues.size !== 5 || values.length !== 5) {
+                        e.preventDefault();
+                        alert('Please rank all 5 priorities from 1 to 5 against each other. Each priority must have a unique rank.');
+                        return false;
+                    }
+
+                    // Validate required checkbox groups:
+                    // 1. Property Type *
+                    const checkedPropertyTypes = form.querySelectorAll('input[name="property_type"]:checked');
+                    if (checkedPropertyTypes.length === 0) {
+                        e.preventDefault();
+                        alert('Please select at least one Property Type.');
+                        return false;
+                    }
+
+                    // 2. Project Type *
+                    const checkedProjectTypes = form.querySelectorAll('input[name="project_type"]:checked');
+                    if (checkedProjectTypes.length === 0) {
+                        e.preventDefault();
+                        alert('Please select at least one Project Type.');
+                        return false;
+                    }
+                });
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

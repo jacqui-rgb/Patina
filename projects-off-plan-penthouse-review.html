@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Plan Penthouse Review | Patina Design Studio Sydney</title>
+    <meta name="description" content="Pre-purchase design advice for an off-plan penthouse already under construction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style>
+        /* Case Study Page Specific Custom Styles */
+        
+        /* Hero Metadata Row */
+        .hero-meta-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .meta-item {
+            position: relative;
+        }
+        .meta-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 10%;
+            bottom: 10%;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+        .meta-label {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+        }
+        .meta-value {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .hero-meta-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2.5rem;
+                padding-top: 1.5rem;
+            }
+            .meta-item:not(:last-child)::after {
+                display: none;
+            }
+            .meta-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                padding-bottom: 1rem;
+            }
+            .meta-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        /* Intro Headline Section */
+        .case-study-intro {
+            padding: 5rem 0 2.5rem 0;
+            text-align: left;
+        }
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .intro-headline {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 4vw, 2.3rem);
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--text-primary);
+            margin-bottom: 1.8rem;
+        }
+        .intro-paragraph {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        /* Plans Comparison Section */
+        .plans-comparison-section {
+            padding: 2rem 0 5rem 0;
+        }
+        .plans-comparison-section .container {
+            max-width: 1600px;
+        }
+        .plans-comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        .plan-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .plan-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+        .plan-image-wrapper {
+            padding: 0.5rem;
+            background: #fdfdfc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            aspect-ratio: 2482 / 1755;
+        }
+        .plan-image-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        .plan-card-info {
+            padding: 1.8rem;
+        }
+        .plan-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+            font-weight: 400;
+        }
+        .plan-card-subtitle {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+        .plans-comparison-caption {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;
+            margin-top: 1.8rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .plans-comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .plan-image-wrapper {
+                padding: 1rem;
+            }
+        }
+
+        /* Review Considerations Section */
+        .review-considerations {
+            background-color: var(--bg-secondary);
+            padding: 6rem 0;
+        }
+        .review-considerations .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 3.5rem;
+        }
+        .considerations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .consideration-card {
+            background: var(--white);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            border-radius: 4px;
+            padding: 2.2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .consideration-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+        }
+        .consideration-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            display: flex;
+            align-items: flex-start;
+            padding-top: 0.2rem;
+        }
+        .consideration-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+            font-weight: 400;
+        }
+        .consideration-content p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .considerations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .considerations-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .consideration-card {
+                padding: 1.8rem;
+            }
+            .review-considerations {
+                padding: 4.5rem 0;
+            }
+            .review-considerations .section-title {
+                margin-bottom: 2.5rem;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Brief/Review/Outcome Timeline vs Why This Matters Section */
+        .case-study-details-section {
+            padding: 7rem 0;
+        }
+        .details-grid-two-cols {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .timeline-wrapper {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        .timeline-wrapper::before {
+            content: '';
+            position: absolute;
+            left: 4.5px;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 1px;
+            background-color: var(--accent-light);
+            opacity: 0.3;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-bullet {
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+        .timeline-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+        .timeline-content p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .why-matters-column {
+            padding-left: 1rem;
+        }
+        .why-matters-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        .why-matters-lead {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 3rem;
+        }
+        .why-points-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+        .why-point-row {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .why-point-icon {
+            color: var(--accent);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 50%;
+            background-color: var(--bg-primary);
+        }
+        .why-point-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+            font-weight: 400;
+        }
+        .why-point-text p {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .details-grid-two-cols {
+                grid-template-columns: 1fr;
+                gap: 4.5rem;
+            }
+            .why-matters-column {
+                padding-left: 0;
+            }
+            .case-study-details-section {
+                padding: 5rem 0;
+            }
+        }
+
+        /* Bottom Grey Banner Box */
+        .bottom-banner-section {
+            padding: 0 0 7rem 0;
+        }
+        .banner-box {
+            background-color: var(--bg-secondary);
+            border-radius: 4px;
+            padding: 3.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 3rem;
+        }
+        .banner-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+        .banner-text p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+            max-width: 620px;
+        }
+        .banner-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+        .banner-btn {
+            display: inline-block;
+            padding: 1rem 1.8rem;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .banner-btn.primary {
+            background-color: var(--accent);
+            color: var(--white);
+            border: 1px solid var(--accent);
+        }
+        .banner-btn.primary:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-light);
+        }
+        .banner-btn.secondary {
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid rgba(0,0,0,0.15);
+        }
+        .banner-btn.secondary:hover {
+            border-color: var(--text-primary);
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        @media (max-width: 1024px) {
+            .banner-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 3rem 2.5rem;
+                gap: 2.2rem;
+            }
+            .banner-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+            .banner-btn {
+                width: 100%;
+            }
+        }
+
+        /* Situation Section styling */
+        .case-study-situation {
+            padding: 1rem 0 5rem 0;
+        }
+        .situation-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 1.8rem;
+        }
+
+        /* What The Client Received Section styling */
+        .client-received-section {
+            background-color: var(--bg-secondary);
+            padding: 7rem 0;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: start;
+        }
+        .comparison-column {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .comparison-column.left-column {
+            padding-right: 2rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .comparison-column .column-header {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .comparison-column .column-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: var(--text-primary);
+            opacity: 0.3;
+        }
+        .comparison-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+        .comparison-card {
+            background-color: transparent;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            padding-bottom: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        .comparison-card:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .comparison-card:hover {
+            transform: translateX(4px);
+        }
+        .comparison-card .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .comparison-card .card-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .comparison-column.left-column {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding-bottom: 4rem;
+            }
+        }
+
+        /* Image Lightbox / Zoom Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: zoom-out;
+        }
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content-wrapper {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: default;
+        }
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            background-color: #fcfbf9; /* match the plan paper background or white */
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .lightbox-caption {
+            color: rgba(255, 255, 255, 0.85);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 300;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -2.5rem;
+            right: 0;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            line-height: 1;
+            transition: color 0.2s ease;
+            font-family: Arial, sans-serif;
+        }
+        .lightbox-close:hover {
+            color: var(--accent);
+        }
+        
+        /* Make trigger images look clickable */
+        .plan-image-wrapper {
+            cursor: zoom-in;
+            position: relative;
+        }
+        /* Add a zoom icon indicator on hover */
+        .plan-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2rem;
+            height: 2rem;
+            background: rgba(255, 255, 255, 0.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a4a4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7'/%3E%3C/svg%3E") no-repeat center;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            pointer-events: none;
+        }
+        .plan-image-wrapper:hover::after {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .plan-card-desc {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 640px) {
+            .lightbox-caption {
+                font-size: 0.85rem;
+                margin-top: 1rem;
+                max-width: 280px;
+            }
+            .lightbox-close {
+                top: -2.2rem;
+                right: 0;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="subpage projects-off-plan-penthouse-review-page">
+    <header id="main-header">
+        <a class='logo' href='/'>
+            <span class="logo-main" id="cms-studio-name">Patina Design Studio</span>
+            <span class="logo-sub">Interior Architectural Design</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a class='nav-link' href='/projects'>PROJECTS</a></li>
+                <li><a class='nav-link' href='/#services'>SERVICES</a></li>
+                <li><a class='nav-link' href='/about'>ABOUT</a></li>
+                <li><a class='nav-link' href='/process'>PROCESS</a></li>
+                <li><a class='nav-link' href='/journal'>JOURNAL</a></li>
+                <li><a class='nav-link' href='/media'>MEDIA</a></li>
+                <li><a class='nav-link' href='/faq'>FAQ</a></li>
+                <li><a class='nav-link' href='/contact'>CONTACT</a></li>
+                <li><a class='cta-link' href='/enquiries'>ENQUIRIES</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- ── Subpage Hero ─────────────────────────────────── -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="category-eyebrow"><a href='/services-pre-purchase-design-review'>PRE-PURCHASE DESIGN REVIEW CASE STUDY</a></span>
+                <h1 class="reveal-text">Off-Plan Penthouse Review</h1>
+                <p class="fade-in">A layout and design assessment for clients considering the purchase of an off-plan penthouse.</p>
+                
+                <div class="hero-meta-row fade-in">
+                    <div class="meta-item">
+                        <span class="meta-label">SERVICE</span>
+                        <span class="meta-value">Pre-Purchase Design Review</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">PROPERTY TYPE</span>
+                        <span class="meta-value">Off-plan penthouse</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Review Brief</span>
+                        <span class="meta-value">Identify what could be adjusted, clarified or raised with the developer before purchase.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Subpage Content: Intro ──────────────────────── -->
+        <section class="case-study-intro reveal">
+            <div class="container container-narrow">
+                <h2 class="intro-headline">The clients wanted to understand what could still be changed before they committed.</h2>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem;">The existing sales plan did not fully reflect the way the clients wanted to live.</p>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem;">Patina Design Studio reviewed the apartment’s layout, finishes, lighting, appliances, storage, furniture planning and outdoor areas to identify what could be adjusted, clarified or raised with the developer before purchase.</p>
+                <p class="intro-paragraph">The review also helped the client and buyer’s agent identify which design items should be raised with the developer before proceeding.</p>
+            </div>
+        </section>
+
+        <!-- ── Floor Plans Comparison Section ───────────────── -->
+        <section class="plans-comparison-section reveal">
+            <div class="container">
+                <div class="plans-comparison-grid">
+                    <div class="plan-card">
+                        <div class="plan-image-wrapper" data-caption="Existing Plan: The existing plan was reviewed against the clients’ lifestyle requirements, storage needs, entertaining habits, furniture planning and desired level of finish.">
+                            <img src="assets/images/existing-plan-off-plan-penthouse-review.png" alt="Existing Plan - Original architect’s plan" loading="lazy">
+                        </div>
+                        <div class="plan-card-info">
+                            <h3 class="plan-card-title">Existing Plan</h3>
+                            <p class="plan-card-subtitle">Original architect’s plan</p>
+                            <p class="plan-card-desc">The existing plan was reviewed against the clients’ lifestyle requirements, storage needs, entertaining habits, furniture planning and desired level of finish.</p>
+                        </div>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-image-wrapper" data-caption="Patina Design Studio Review: The proposed concept layout identified possible changes across room relationships, storage, joinery, kitchen planning, ensuite planning and outdoor use.">
+                            <img src="assets/images/patina-design-studio-plan-off-plan-penthouse-review.png" alt="Patina Design Studio Review - Proposed concept layout" loading="lazy">
+                        </div>
+                        <div class="plan-card-info">
+                            <h3 class="plan-card-title">Patina Design Studio Review</h3>
+                            <p class="plan-card-subtitle">Proposed concept layout</p>
+                            <p class="plan-card-desc">Patina Design Studio prepared a proposed concept layout identifying possible changes across room relationships, storage, joinery, kitchen planning, ensuite planning and outdoor use.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="plans-comparison-caption">Existing architect’s plan compared with Patina Design Studio’s proposed concept layout.<br><span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-top: 0.5rem; font-style: normal; opacity: 0.8;">Click to enlarge plan</span></p>
+            </div>
+        </section>
+
+        <!-- ── What The Review Considered Section ────────────── -->
+        <section class="review-considerations reveal">
+            <div class="container">
+                <h2 class="section-title text-center">What the Review Considered</h2>
+                <div class="considerations-grid">
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="17 11 21 7 17 3"></polyline>
+                                <path d="M21 7H9a5 5 0 0 0-5 5v7"></path>
+                                <polyline points="7 13 3 17 7 21"></polyline>
+                                <path d="M3 17h12a5 5 0 0 0 5-5V7"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Layout &amp; Circulation</h3>
+                            <p>How the apartment worked as a whole, including arrival, hallway flow, room relationships and everyday movement.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                                <circle cx="6" cy="6" r="1"></circle>
+                                <circle cx="12" cy="6" r="1"></circle>
+                                <circle cx="18" cy="6" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Kitchen Planning</h3>
+                            <p>Whether the kitchen layout, island, sink location, appliance placement and bench space could be improved.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+                                <line x1="4" y1="8" x2="20" y2="8"></line>
+                                <circle cx="12" cy="14" r="4"></circle>
+                                <line x1="8" y1="5.5" x2="8" y2="5.5"></line>
+                                <line x1="12" y1="5.5" x2="12" y2="5.5"></line>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Pantry &amp; Laundry</h3>
+                            <p>How the pantry and laundry could be reworked to improve storage, grocery flow, laundry use and appliance access.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 7v14M21 7v14M3 12h18M3 16h18M4 7h16a1 1 0 0 1 1 1v4H3V8a1 1 0 0 1 1-1z"></path>
+                                <path d="M6 7v3M18 7v3"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Bedrooms</h3>
+                            <p>Whether the bedroom zones, bed placement, privacy and wardrobe planning could be improved while maintaining three bedrooms.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Ensuite &amp; Powder Room</h3>
+                            <p>Whether an additional ensuite and dedicated guest powder room could be incorporated without compromising key spaces.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Study &amp; Wardrobe Use</h3>
+                            <p>How we could reconfigure the layout to incorporate a dedicated study and additional walk-in robe to the main bedroom.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                                <path d="M9 18h6"></path>
+                                <path d="M10 22h4"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Lighting &amp; Electrical</h3>
+                            <p>What lighting, electrical and security items needed to be clarified before purchase.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                                <circle cx="7.5" cy="10.5" r="1.5"></circle>
+                                <circle cx="11.5" cy="7.5" r="1.5"></circle>
+                                <circle cx="16.5" cy="9.5" r="1.5"></circle>
+                                <circle cx="15.5" cy="14.5" r="1.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Finishes &amp; Fixtures</h3>
+                            <p>Which finishes, sanitaryware, plumbing fixtures and appliance selections needed to be clarified, upgraded or adjusted.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="12" y1="3" x2="12" y2="21"></line>
+                                <circle cx="8" cy="12" r="1"></circle>
+                                <circle cx="16" cy="12" r="1"></circle>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Joinery &amp; Storage</h3>
+                            <p>Where integrated storage, fireplace joinery, bar joinery, linen storage, utility storage and display joinery could be improved or added.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Window Treatments &amp; Heat Control</h3>
+                            <p>What needed to be allowed for motorised blinds, curtains, awnings, privacy and sun control.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 11V9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2M3 11a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1v-3a2 2 0 0 0-2-2M3 11h18M6 11v6M18 11v6"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Furniture &amp; Art Planning</h3>
+                            <p>Whether the apartment could support dining for 12, conversation-focused living, outdoor furniture and art placement.</p>
+                        </div>
+                    </div>
+                    <div class="consideration-card">
+                        <div class="consideration-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 14h12l-1 7H7l-1-7z"></path>
+                                <path d="M12 2v12M12 6a3 3 0 0 0-3-3M12 8a4 4 0 0 1 4-4M9 10a3 3 0 0 0-3-3M15 11a3 3 0 0 1 3-3"></path>
+                            </svg>
+                        </div>
+                        <div class="consideration-content">
+                            <h3>Terrace &amp; Outdoor Use</h3>
+                            <p>How the terrace could better support outdoor dining, BBQ, lounging, spa use, awnings, storage and garden function.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ── Review Comparison (New Section) ──────── -->
+        <section class="client-received-section reveal">
+            <div class="container">
+                <div class="comparison-grid">
+                    <!-- Left Column: What We Reviewed -->
+                    <div class="comparison-column left-column">
+                        <h2 class="column-header">What We Reviewed</h2>
+                        <div class="comparison-cards">
+                            <div class="comparison-card">
+                                <h3 class="card-title">Existing Plan</h3>
+                                <p class="card-text">Could the apartment be adapted before purchase?</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Clients’ Priorities</h3>
+                                <p class="card-text">Would the layout support entertaining, storage, privacy, outdoor living and daily function?</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Change Potential</h3>
+                                <p class="card-text">Which items needed to be clarified with the developer before proceeding?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: What The Review Clarified -->
+                    <div class="comparison-column right-column">
+                        <h2 class="column-header">What The Review Clarified</h2>
+                        <div class="comparison-cards">
+                            <div class="comparison-card">
+                                <h3 class="card-title">Proposed Concept Layout</h3>
+                                <p class="card-text">The proposed concept layout identified possible changes across room relationships, storage, joinery, kitchen planning, ensuite planning and outdoor use.</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Developer Discussion Points</h3>
+                                <p class="card-text">Layout, lighting, appliances, finishes, joinery, storage and outdoor-use items were identified for discussion with the developer.</p>
+                            </div>
+                            <div class="comparison-card">
+                                <h3 class="card-title">Purchase Negotiation Support</h3>
+                                <p class="card-text">The review helped the client and buyer’s agent identify the design items to raise with the developer before proceeding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── The Purpose Of The Review (New Section) ──────── -->
+        <section class="case-study-purpose reveal" style="padding: 6rem 0 3.5rem 0;">
+            <div class="container container-narrow">
+                <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3.5vw, 2.2rem); font-weight: 400; color: var(--text-primary); margin-bottom: 1.8rem; text-align: center;">The Purpose Of The Review</h2>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem; font-weight: 400; color: var(--text-primary); text-align: center;">This was not a full design process.</p>
+                <p class="intro-paragraph" style="margin-bottom: 1.5rem; text-align: center;">It was a focused pre-purchase assessment designed to help the clients understand what could be adjusted, what needed to be clarified, and what should be raised before proceeding.</p>
+                <p class="intro-paragraph" style="text-align: center;">The value was not in resolving every design detail. It was in identifying the right questions early enough to influence the purchase.</p>
+            </div>
+        </section>
+
+        <!-- ── Bottom Banner Block (Grey Box) ───────────────── -->
+        <section class="bottom-banner-section reveal">
+            <div class="container">
+                <div class="banner-box">
+                    <div class="banner-text">
+                        <h3>Buying off-plan and unsure what can be changed?</h3>
+                        <p>A Pre-Purchase Design Review can help clarify design potential, limitations and key items to raise before you commit.</p>
+                    </div>
+                    <div class="banner-buttons">
+                        <a class='banner-btn secondary' href='/services-pre-purchase-design-review'>View Pre-Purchase Design Review</a>
+                        <a class='banner-btn primary' href='/enquiries'>Register Your Interest</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class='logo' href='/'>
+                    <span class="logo-main" id="cms-footer-name">Patina Design Studio</span>
+                    <span class="logo-sub">Interior Architectural Design</span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href='/projects'>Projects</a></li>
+                    <li><a href='/#services'>Services</a></li>
+                    <li><a href='/about'>About</a></li>
+                    <li><a href='/contact'>Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p id="cms-footer-location">Based in Sydney, undertaking select interstate and international projects.</p>
+                <p><a id="cms-footer-email" href="mailto:hello@patinadesignstudio.com">hello@patinadesignstudio.com</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow</h4>
+                <p><a id="cms-footer-instagram" href="https://www.instagram.com/patina.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                <h4 style="margin-top: 2rem;"><a href='/journal'>The Invisible Layer Series</a></h4>
+                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-secondary);">Early access to editorial insights and project updates.</p>
+                <p><a href='/journal#subscribe'>Sign Up &rarr;</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
+            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href='/privacy-policy'>Privacy Policy</a> | <a href='/terms-conditions'>Terms & Conditions</a></p>
+        </div>
+    </footer>
+
+    <!-- ── Lightbox Modal for Floor Plans ──────────────── -->
+    <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-content-wrapper">
+            <img id="lightboxImg" class="lightbox-image" src="" alt="Enlarged floor plan">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('lightboxModal');
+            const modalImg = document.getElementById('lightboxImg');
+            const modalCaption = document.getElementById('lightboxCaption');
+            const closeBtn = document.getElementById('lightboxClose');
+            const planWrappers = document.querySelectorAll('.plan-image-wrapper');
+
+            planWrappers.forEach(wrapper => {
+                wrapper.addEventListener('click', () => {
+                    const img = wrapper.querySelector('img');
+                    const captionText = wrapper.getAttribute('data-caption') || img.alt;
+                    
+                    if (img) {
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt;
+                        modalCaption.textContent = captionText;
+                        
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Restore background scrolling
+                setTimeout(() => {
+                    modalImg.src = '';
+                    modalCaption.textContent = '';
+                }, 300); // Wait for transition to complete
+            };
+
+            // Close on close button click
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeModal();
+            });
+
+            // Close when clicking outside the content (on the modal overlay itself)
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal || e.target.classList.contains('lightbox-content-wrapper')) {
+                    closeModal();
+                }
+            });
+
+            // Close on Escape key press
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

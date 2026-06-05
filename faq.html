@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions | Patina Design Studio</title>
+    <title>FAQ | Patina Design Studio Sydney</title>
     <meta name="description" content="Find answers to common questions about working with Patina Design Studio on interior architecture and residential design.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="assets/images/favicon.jpg">
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
 </head>
 <body class="subpage">
     <header id="main-header">
-        <a href="index.html" class="logo">
-            <span class="logo-main" id="cms-studio-name">PATINA</span>
-            <span class="logo-sub">DESIGN STUDIO</span>
+        <a class='logo' href='/'>
+            <span class="logo-main" id="cms-studio-name">Patina Design Studio</span>
+            <span class="logo-sub">Interior Architectural Design</span>
         </a>
         <nav>
             <ul>
-                <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
-                <li><a href="index.html#services" class="nav-link">SERVICES</a></li>
-                <li><a href="about.html" class="nav-link">ABOUT</a></li>
-                <li><a href="process.html" class="nav-link">PROCESS</a></li>
-                <li><a href="journal.html" class="nav-link">JOURNAL</a></li>
-                <li><a href="media.html" class="nav-link">MEDIA</a></li>
-                <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
-                <li><a href="enquiries.html" class="cta-link">ENQUIRIES</a></li>
+                <li><a class='nav-link' href='/projects'>PROJECTS</a></li>
+                <li><a class='nav-link' href='/#services'>SERVICES</a></li>
+                <li><a class='nav-link' href='/about'>ABOUT</a></li>
+                <li><a class='nav-link' href='/process'>PROCESS</a></li>
+                <li><a class='nav-link' href='/journal'>JOURNAL</a></li>
+                <li><a class='nav-link' href='/media'>MEDIA</a></li>
+                <li><a class='nav-link' href='/faq'>FAQ</a></li>
+                <li><a class='nav-link' href='/contact'>CONTACT</a></li>
+                <li><a class='cta-link' href='/enquiries'>ENQUIRIES</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
@@ -42,12 +43,15 @@
         <section class="subpage-hero">
             <div class="container">
                 <h1 class="reveal-text">Frequently Asked Questions</h1>
-                <p class="fade-in">Clear guidance on working together, our design philosophy, and the path to realizing your bespoke residential project.</p>
+                <p class="fade-in">Clear guidance on working together, our design philosophy, and the path to realising your bespoke residential project.</p>
             </div>
         </section>
 
         <!-- ── Subpage Content ──────────────────────────────── -->
         <section class="subpage-content container">
+            <!-- Dynamic FAQ navigation categories will be inserted here -->
+            <div class="faq-nav" id="faq-categories-nav"></div>
+
             <div class="faq-list">
                 
                 <!-- Category 1: Services & Projects -->
@@ -56,102 +60,482 @@
                     
                     <div class="faq-item reveal">
                         <h3>What services does Patina Design Studio offer?</h3>
-                        <p>Patina Design Studio is a full-service interior architecture and design practice specialising in high-end residential projects. Our services include spatial planning, interior architecture, interior design, construction documentation packages, procurement, design project management, custom furniture selection, styling, and final installation coordination. We work closely with clients, architects, consultants, and builders from early planning through to final completion.</p>
+                        <p>Patina Design Studio is a full-service interior architecture and design practice specialising in high-end residential projects. Our services include spatial planning, interior architecture, interior design, construction documentation packages, procurement coordination, design project management, custom furniture selection, styling, and final installation. We work closely with clients, architects, consultants, and builders from early planning through to final completion.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/#services'>Services</a>
+                            <a href='/process'>Process</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>What types of projects do you work on?</h3>
-                        <p>We specialise in high-end residential projects including apartment renovations, complete house renovations, new builds, developments, furnishing projects, and luxury holiday homes. We also take on select hospitality (boutique hotels, bars, restaurants), premium retail, and workplace projects depending on the brief, scope, and alignment of design values.</p>
+                        <p>We specialise in high-end residential projects including apartment renovations, complete house renovations, custom new builds, boutique developments, furnishing projects, and premium holiday homes. We also take on select hospitality (boutique hotels, bars, restaurants), premium retail, and workplace projects depending on the brief, scope, and alignment of design values. We work on projects across Sydney, interstate, and internationally.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/projects'>Projects</a>
+                            <a href='/contact'>Contact</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Who do you work with?</h3>
-                        <p>We work with homeowners, developers, and private clients seeking highly considered, premium residential spaces. We often collaborate closely with architects, builders, consultants, trades, and broader project teams throughout both the design and construction phases.</p>
+                        <p>We work with homeowners, developers, and private clients seeking highly considered, premium residential spaces. Our projects range from apartment renovations and new builds through to boutique developments, furnishing projects, and holiday homes. We often collaborate closely with architects, builders, consultants, trades, and broader project teams throughout both the design and construction phases.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/projects'>Projects</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/process'>Process</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
-                        <h3>Do you work on off-plan apartments?</h3>
-                        <p>Yes. We can assist with off-plan apartments, particularly when clients want to review layouts, finishes, joinery details, lighting designs, furniture planning, and developer upgrade opportunities before key architectural decisions are locked in.</p>
-                    </div>
-
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Do you only work on luxury homes?</h3>
-                        <p>We work on highly considered residential projects where clients value thoughtful planning, refined detailing, and a collaborative design process. The scale of a project is often less important than the level of care, detail, and coordination required to achieve a beautiful, custom outcome.</p>
+                        <p>We work on highly considered residential projects where clients value thoughtful planning, refined detailing, and a collaborative design process. The scale of a project is often less important than the level of care, detail, and coordination required to achieve a beautiful, custom outcome. We also take on select hospitality (boutique hotels, bars, restaurants), premium retail, and workplace projects depending on the brief, scope, and alignment of design values.</p>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Do you offer furnishing and styling only?</h3>
-                        <p>Yes, depending on the project. Some clients engage the studio specifically for furnishing, styling, and custom procurement independently of larger renovation or construction works, helping to elevate existing spatial envelopes.</p>
+                        <p>Yes, depending on the project. Some clients engage the studio specifically for furnishing, styling, and custom procurement independently of larger renovation or construction works, helping to elevate existing spatial envelopes. Our services include styling as part of the final installation stage, but we do not offer styling as a stand-alone service.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-furnishing-procurement'>Furnishing &amp; Procurement</a>
+                            <a href='/process'>Process</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Do you take on projects with existing furniture or pieces clients already own?</h3>
-                        <p>Yes. Where appropriate, we can incorporate existing high-quality furniture, artwork, or sentimental pieces into the broader design direction. This creates a home that feels deeply personal, layered, and reflective of the client's life and travels.</p>
+                        <p>Yes. Where appropriate, we can incorporate existing high-quality furniture, artwork, or sentimental pieces into the broader design direction. The goal is always to create a home that feels deeply personal, layered, cohesive, and reflective of the client's life and travels.</p>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Do you work on existing structures or only new builds?</h3>
-                        <p>We work on both. Our projects range from complex renovations and interior reconfigurations of existing structures to knock-down rebuilds and luxury new developments.</p>
+                        <p>We work on both existing structures and new builds. Our projects range from complex renovations and interior reconfigurations of existing structures to knock-down rebuilds, custom new homes, and luxury developments. Some clients engage us early while planning a new home, while others come to us to help rethink, renovate, or improve the way an existing property functions and feels over time.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/projects'>Projects</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/process'>Process</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Are your services turn-key?</h3>
+                        <p>Yes. Our full-service interior architecture and design offering is entirely turn-key. We guide you from initial spatial planning and concept design through construction documentation, builder liaison, and on-site design management, all the way to procurement, furniture placement, styling, and final handover. We coordinate all the moving parts so you can enjoy a calm, cohesive, and refined experience.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-full-service-design'>Full Service Design</a>
+                            <a href='/process'>Process</a>
+                            <a href='/#services'>Services</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Category 2: Planning & Process -->
+                <!-- Category 2: Pre-Purchase & Strategy -->
                 <div class="faq-category">
-                    <h2 class="faq-category-title" style="margin-top: 4rem;">Planning &amp; Process</h2>
-                    
+                    <h2 class="faq-category-title">Pre-Purchase &amp; Strategy</h2>
+
+                    <div class="faq-item reveal">
+                        <h3>Can an interior designer help before I buy a property?</h3>
+                        <p>Yes. Engaging an interior architect or designer before purchasing a property is a highly strategic step. We often assist clients during the pre-purchase phase by helping assess the potential, spatial functionality, and opportunities within a property before major capital commitments are made. Early design guidance can help you look past staging or cosmetic finishes to understand how layouts, orientation, and structural limitations may affect the way you want to live long-term.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Is a Pre-Purchase Design Review different from a building inspection?</h3>
+                        <p>Yes, completely. A building inspection is conducted by a building inspector or surveyor to identify structural defects, moisture, pests, or compliance issues. In contrast, our Pre-Purchase Design Review is focused on spatial potential, interior architecture, and layout functionality. We assess how the spaces can be reconfigured, how natural light moves, whether your desired renovation is physically feasible, and if the property can realistically support your lifestyle goals.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Does Patina Design Studio take the place of a buyer’s agent?</h3>
+                        <p>No. Patina Design Studio does not take the place of a buyer’s agent. A buyer’s agent is a licensed real estate professional who helps clients search for, evaluate, and negotiate the purchase of a property.</p>
+                        <p>Instead, we work alongside you and your buyer’s agent as independent design advisors. While your buyer’s agent focuses on market value, property sourcing, and transaction negotiations, Patina Design Studio evaluates the property’s spatial layout, structural potential, natural light, interior architecture, and renovation opportunities. Our Pre-Purchase Design Review helps you understand whether a property can realistically be reconfigured to support your lifestyle and long-term goals before you proceed with a purchase.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can you review an off-plan apartment before purchase?</h3>
+                        <p>Yes. We frequently review off-plan apartment plans for clients prior to purchase. This allows us to assess layout efficiencies, storage, lighting placement, electrical plans, and joinery details. Providing feedback at this early stage allows you to request developer modifications or upgrades before the design and construction are locked in.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do you work on off-plan apartments?</h3>
+                        <p>Yes. We can assist with off-plan apartments, particularly when clients want to review layouts, finishes, joinery, lighting, furniture planning, and developer upgrade opportunities before key decisions are locked in.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal-no3-what-actually-impacts-time-and-cost-on-a-project'>"Timelines Change Everything"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/journal'>Journal</a>
+                            <a href='/#services'>Services</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can you help compare multiple properties?</h3>
+                        <p>Yes. When you are deciding between multiple potential properties, we can conduct comparative design assessments. By comparing layouts, orientation, structural constraints, and renovation potential side-by-side, we help provide the objective clarity needed to determine which property is the best long-term investment for your lifestyle.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can you identify renovation opportunities before I buy?</h3>
+                        <p>Yes. This is a core focus of our pre-purchase services. We look beyond cosmetic finishes to assess whether walls can be moved, spatial flow can be improved, or extra storage and custom joinery can be integrated. We help you see the latent potential in a dated or poorly laid out floor plan, giving you confidence in the property's true potential before you buy.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                            <a href='/services-layout-assessment'>Layout Assessment</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What happens after a Pre-Purchase Design Review?</h3>
+                        <p>Following the review, we provide a clear analysis outlining the property's layout potential, limitations, and key considerations to raise or negotiate before purchase. If you proceed with the purchase, this review forms a foundational brief for any future design, space planning, or full-service interior architectural works we undertake together.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-pre-purchase-design-review'>Pre-Purchase Design Review</a>
+                            <a href='/process'>Process</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Design Philosophy -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">Design Philosophy</h2>
+
+                    <div class="faq-item reveal">
+                        <h3>Why is spatial planning so important?</h3>
+                        <p>Spatial planning shapes how a home functions, flows, and feels long before finishes and furniture are introduced. A home can contain beautiful finishes, expensive materials, and quality furniture, yet still feel frustrating to live in if the layout has not been properly resolved. The way rooms connect, how circulation moves through a home, where natural light enters, and how daily routines unfold all influence the long-term experience of living in the space. Layouts and floor plans are the most critical elements to resolve early, influencing circulation, storage, furniture placement, natural light, privacy, and daily functionality. For this reason, spatial planning is one of the earliest and most critical aspects of our design process.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/journal'>Journal</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What makes a home feel resolved?</h3>
+                        <p>A resolved home is one where the planning, detailing, lighting, materials, functionality, and overall experience feel cohesive rather than disconnected. Often, it is the quieter decisions - the ones people may not consciously notice - that have the greatest impact on how effortless a home feels to live in over time.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>How do you approach designing for everyday living?</h3>
+                        <p>We believe homes should support the realities of everyday life, not simply look good in photographs. The way spaces flow, how natural light moves through a home, where items are stored, how rooms connect, and how routines unfold over time all influence how a home ultimately feels to live in.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What is The Invisible Layer Series?</h3>
+                        <p>The Invisible Layer Series is Patina Design Studio’s private newsletter exploring the thinking, planning, coordination, and details behind highly considered homes. The series shares insights into the often unseen decisions that shape how homes ultimately feel, function, and endure over time. Selected editions are later published on the Journal section of the website.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/journal'>Journal</a>
+                            <a href='/journal#subscribe'>Newsletter Signup</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do you follow trends?</h3>
+                        <p>We focus less on trends and more on creating homes that feel refined, personal, and effortless to live in long term. Every project is shaped around the client, the property, and how the space needs to function in everyday life.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal'>"The Small Things You Tolerate"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/projects'>Projects</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: Our Process -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">Our Process</h2>
+
                     <div class="faq-item reveal">
                         <h3>When is the best time to engage an interior designer or interior architect?</h3>
-                        <p>The earlier, the better. Many important design decisions—such as room layouts, lighting plans, and integrated joinery pathways—happen well before finishes and furniture selections begin. Early involvement allows these elements to be resolved before they become difficult, restrictive, or costly to change.</p>
+                        <p>The earlier, the better. Many of the most important design decisions happen well before finishes and furniture selections begin. Early involvement allows layouts, lighting, joinery, functionality, and spatial planning to be resolved before decisions become more difficult and costly to change later. The earlier planning decisions are considered, the calmer and more cohesive the overall process tends to be.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal-no3-what-actually-impacts-time-and-cost-on-a-project'>"Timelines Change Everything"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Why does early planning matter so much?</h3>
-                        <p>Spatial planning, lighting, circulation, storage, and custom joinery all heavily influence how a home functions and feels. The earlier these invisible structural layers are considered, the more cohesive, effortless, and elegant the final physical outcome tends to be.</p>
+                        <p>Many of the decisions that shape how a home ultimately feels happen long before furniture and finishes are introduced. Spatial planning, lighting, circulation, storage, joinery, and coordination all influence how a home functions and how effortless it feels to live in over time. The earlier these layers are considered, the more cohesive the final outcome tends to be.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal-no2-why-a-perfect-floor-plan-can-still-feel-wrong'>"The Power of a Plan"</a>
+                            <a href='/journal-no3-what-actually-impacts-time-and-cost-on-a-project'>"Timelines Change Everything"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
-                        <h3>Can you help before we purchase a property?</h3>
-                        <p>Yes. We often assist during the pre-purchase phase to help assess the potential, spatial functionality, and interior opportunities within a property before major capital commitments are made.</p>
+                    <div class="faq-item reveal">
+                        <h3>What does the process of working with Patina Design Studio look like?</h3>
+                        <p>Projects are typically divided into three phases:
+                        <br><br>
+                        <strong>Pre-Design:</strong> Consultation, concept &amp; schematic direction, team coordination.
+                        <br>
+                        <strong>Design:</strong> Design development, documentation packages, page turns with contractors.
+                        <br>
+                        <strong>Design Execution:</strong> Design management during construction, installation, post-construction check-ins.
+                        <br><br>
+                        The level of involvement is tailored to each project.</p>
+                        <div class="faq-links">
+                            <span>Related Page:</span>
+                            <a href='/process'>Process</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
-                        <h3>What if we do not know exactly what we want yet?</h3>
-                        <p>That is completely normal. Part of our expert role is helping clients clarify priorities, identify opportunities, and shape a cohesive aesthetic direction and functional brief through our design process.</p>
+                    <div class="faq-item reveal">
+                        <h3>How involved do clients need to be throughout the project?</h3>
+                        <p>The design brief is shaped collaboratively during the early consultation, concept, and briefing stages, where we take the time to understand how you want the home to feel, function, and support your lifestyle. From there, our role is to guide the process, resolve the countless decisions required throughout the project, and present considered solutions that align with the brief. Clients are involved through key approvals, feedback, and decision points, while the studio manages coordination, communication, and the broader design process on their behalf. Throughout the project, clients receive regular communication and weekly progress updates so they remain informed without needing to manage the countless moving parts themselves. The goal is not for clients to feel overwhelmed by every decision, but to feel confident the project is being thoughtfully guided and resolved throughout each stage.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/#services'>Services</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
-                        <h3>Can you help balance budget and design priorities?</h3>
-                        <p>Yes. We help clients prioritize where their design investment will have the greatest impact on how the home feels, functions, and performs long-term, ensuring resources are allocated thoughtfully.</p>
+                    <div class="faq-item reveal">
+                        <h3>How far in advance should we reach out?</h3>
+                        <p>Ideally, we are engaged as early as possible in the project planning process. In many cases, the most valuable time for our involvement is before layouts, architectural plans, and key structural decisions are fully resolved, as this allows greater influence over how the home will ultimately function, feel, and flow. Where an architect is involved, we ideally become part of the process during the early planning stages or around the first draft of plans, while there is still opportunity to influence elements such as layouts, circulation, window placements, lighting integration, and the broader experience of the home. Following the initial consultation, we can also help guide the broader project team and coordinate the consultants required as the project develops.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal-no3-what-actually-impacts-time-and-cost-on-a-project'>"Timelines Change Everything"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/journal'>Journal</a>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Will you help us make decisions throughout the project?</h3>
+                        <p>Yes. One of the benefits of working with a full-service studio is having guidance throughout the countless decisions required during a residential project. Our role is to help simplify complexity, provide clarity, and ensure decisions work cohesively together rather than in isolation.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do you present multiple design options?</h3>
+                        <p>Where appropriate, different directions may be explored during the early concept stages of a project. Our role, however, is not simply to present endless options, but to thoughtfully resolve the brief and guide clients towards the strongest overall outcome for the way they want to live. This is why we spend significant time upfront understanding how clients live, what is and is not working in the existing home, their routines, priorities, and long-term goals for the space. Design decisions are considered holistically, with layouts, materials, lighting, joinery, and furnishings all shaped around the broader design intent and experience of the home. Clients are guided through key approvals and feedback throughout the process, while the studio manages the broader coordination and refinement required to bring the project together cohesively.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What if changes happen during the project?</h3>
+                        <p>Changes can happen throughout the design and construction process, particularly as projects evolve. Our role is to help guide decisions clearly, communicate implications early, and maintain alignment between the design intent, budget, and broader project team. Unforeseen issues are part of the nature of building and renovating. You never really know what's behind a wall until you tear it down. Our process is designed to mitigate as much of these issues as possible, and we stay involved during the construction phase to ensure that when something unforeseen does come up, the solution will minimise the impact on other aspects of the design that might not be immediately apparent to the builder.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>How long does a project typically take?</h3>
+                        <p>Every project is different depending on scope, approvals, construction requirements, and procurement lead times. Smaller furnishing projects may move relatively quickly, while larger renovations and new builds can span many months or longer from early planning through to completion. Projects that begin with thoughtful planning and early coordination generally move more smoothly throughout construction.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal-no2-why-a-perfect-floor-plan-can-still-feel-wrong'>"The Power of a Plan"</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can we be living in the home during construction?</h3>
+                        <p>This depends on the scale and staging of the works. We strongly recommend against this; part of your project budget should be allocated to alternative accommodation for the duration of the construction phase. These considerations are usually discussed early in the planning process.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Are you involved during construction and do you attend site?</h3>
+                        <p>Yes. Patina Design Studio remains involved throughout construction to help guide the design intent, resolve details, and coordinate with the broader project team as decisions arise on site. Site meetings form an important part of our process to maintain close alignment between the design direction, construction documentation, and the actual build process as projects progress, ensuring quality assurance.</p>
+                        <div class="faq-links">
+                            <span>Related Reading:</span>
+                            <a href='/journal'>"The Invisible Layer Series"</a>
+                            <span>&bull;</span>
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/journal'>Journal</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do you manage furniture sourcing, procurement and installation?</h3>
+                        <p>Yes. We assist with sourcing, procurement coordination, freight management, deliveries, and installation to help ensure the final outcome feels cohesive and fully resolved.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/#services'>Services</a>
+                            <a href='/projects'>Projects</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What is handover like at the end of the project?</h3>
+                        <p>Our goal is for the home to feel complete, calm, and ready to live in from day one. Towards the end of the project, we coordinate installation and styling, including furniture placement, artwork, accessories, and final detailing throughout the home. Where included within scope, our install team manages deliveries, unpacks items, removes packaging and rubbish, inspects pieces for any freight or transit damage, and helps prepare the home for handover. This can also include organising kitchens, wardrobes, and other everyday essentials so clients are not left unpacking boxes or coordinating final details themselves after construction. We also remain involved during the post-completion phase to help address defects, resolve outstanding items, and ensure the home feels fully settled following handover.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/#services'>Services</a>
+                            <a href='/projects'>Projects</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Category 3: Collaboration & Logistics -->
+                <!-- Category 5: Working Together & Collaboration -->
                 <div class="faq-category">
-                    <h2 class="faq-category-title" style="margin-top: 4rem;">Collaboration &amp; Logistics</h2>
-                    
+                    <h2 class="faq-category-title">Working Together &amp; Collaboration</h2>
+
                     <div class="faq-item reveal">
                         <h3>Can you work with our architect or builder?</h3>
-                        <p>Yes. We have a trusted network of preferred partners and builders we can recommend, but we are also happy to work alongside a team you have already engaged. We regularly collaborate with external architects, builders, consultants, and specialty trades.</p>
+                        <p>Yes. We have preferred builders and architects we have worked with previously and will recommend a team that we think will be a good fit for your project. However, if you already have someone you want to engage, we will work alongside them too. We regularly collaborate with architects, builders, consultants, and trades throughout the design and construction process. Our role is to help connect the broader design intent with the detailed decisions required to bring a project together cohesively.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/projects'>Projects</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Who will be working on my project?</h3>
-                        <p>Every single project is directly led and conceptualized by founder Jacqui Hurwitz. Depending on the scope, the team may include designers, consultants, suppliers, and skilled trades coordinated by the studio. We intentionally take on a select number of projects each year to ensure high-level, dedicated attention.</p>
+                        <p>Every single project is directly led and conceptualised by founder Jacqui Hurwitz. Depending on the scope, the team may include designers, consultants, suppliers, and skilled trades coordinated by the studio. We intentionally take on a select number of projects each year to ensure high-level, dedicated attention.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/about'>About</a>
+                            <a href='/process'>Process</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
-                        <h3>Do you attend site meetings?</h3>
-                        <p>Yes. Site meetings are an important part of our process to maintain close alignment between the design vision, construction documentation, and the actual build process, ensuring quality assurance.</p>
-                    </div>
-
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Do you work on projects outside Sydney?</h3>
-                        <p>Yes. We work across Sydney, interstate, and internationally. Projects located more than 15km from our studio may incur additional travel time and coordination costs, which are discussed transparently and agreed upon prior to engagement.</p>
+                        <p>Yes. Patina Design Studio works on projects across Sydney, interstate, and internationally. Projects located more than 15km from our studio may incur additional travel time and coordination costs, which are discussed transparently and agreed upon prior to engagement.</p>
+                        <div class="faq-links">
+                            <span>Related Page:</span>
+                            <a href='/contact'>Contact</a>
+                        </div>
                     </div>
 
-                    <div class="faq-item reveal" style="margin-top: 2rem;">
+                    <div class="faq-item reveal">
                         <h3>Can you work remotely with clients?</h3>
                         <p>Yes. Depending on the scope and location, parts of the design process can be managed remotely alongside strategically scheduled site visits, material deliveries, and consultant coordination meetings.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>How does Patina Design Studio handle project photography, publication, and privacy?</h3>
+                        <p>Completed project photography is an important part of Patina Design Studio’s portfolio and media presence, and is discussed with clients during the project process.</p>
+                        <p>We understand that many clients value discretion. Patina Design Studio does not publish client names, exact addresses, personal details, or private circumstances without permission. Where a project is photographed, published, submitted for awards, or shared online, the way the project is identified and described is handled with care.</p>
+                    </div>
+                </div>
+
+                <!-- Category 6: Fees & Enquiries -->
+                <div class="faq-category">
+                    <h2 class="faq-category-title">Fees &amp; Enquiries</h2>
+
+                    <div class="faq-item reveal">
+                        <h3>How do we get started?</h3>
+                        <p>You can begin by submitting an enquiry through our Enquiries page or contacting the studio directly. We’d love to hear more about your project, what you’re planning, and how you hope your home will feel and function.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/contact'>Contact</a>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do all projects begin with a consultation?</h3>
+                        <p>Yes. The initial consultation helps us understand the property, project goals, timeline, scope, and how you hope the home will feel and function. It also gives clients an opportunity to understand how we work and whether the project feels aligned.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/contact'>Contact</a>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can you help us understand what is possible before we commit to a renovation?</h3>
+                        <p>Yes. An initial Design Consultation can help clarify the opportunities, constraints, and likely design direction before a larger commitment is made. This is often useful when clients are deciding whether to renovate, purchase, reconfigure, or stage works over time.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/services-design-consultation'>Design Consultation</a>
+                            <a href='/enquiries'>Enquiries</a>
+                            <a href='/contact'>Contact</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What information should we prepare before enquiring?</h3>
+                        <p>Helpful information can include the property address or suburb, current plans if available, photos, your intended scope, desired timeframe, approximate budget, and any key priorities or concerns. You do not need to have everything resolved before reaching out.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What happens after we submit an enquiry?</h3>
+                        <p>We review each enquiry personally. If the project feels aligned, we will be in touch to discuss the next steps and arrange an initial consultation.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>How are your fees structured?</h3>
+                        <p>Fees are tailored to the scope, scale, and level of involvement required for each project. Following an initial Design Consultation, we prepare a proposal outlining the recommended scope of services and associated fees based on the level of involvement required.</p>
+                        <div class="faq-links">
+                            <span>Related Page:</span>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>What’s included in the project proposal?</h3>
+                        <p>Following the initial consultation, we prepare a tailored proposal outlining the recommended scope of services, project considerations, estimated timelines, and associated fees based on the level of involvement required. The proposal is intended to provide clarity around how the project may progress, how the studio will be involved, and the recommended next steps moving forward.</p>
+                        <div class="faq-links">
+                            <span>Related Pages:</span>
+                            <a href='/process'>Process</a>
+                            <a href='/enquiries'>Enquiries</a>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Do you work with fixed construction budgets?</h3>
+                        <p>We understand every project has financial parameters. Part of our role is helping align design decisions, priorities, and scope with the overall goals and realities of the project as it develops. At each step, we gauge where the costs are landing or predicted to land, and you have the opportunity to adjust accordingly at different stages before construction and the larger financial commitment begins.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Is there a minimum project size?</h3>
+                        <p>Patina Design Studio is best suited to projects that require thoughtful planning, detailed design, and a high level of involvement. Rather than assessing projects by size alone, we consider scope, timeline, location, and the level of design input required.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>Can we engage you for one part of the process only?</h3>
+                        <p>Sometimes, depending on the project and stage. For the best outcome, we usually recommend engaging the studio early enough to ensure the design direction, documentation, and execution are properly aligned. For example, we will only create a documentation package, or install and style for our own designs.</p>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <h3>How many projects do you take on each year?</h3>
+                        <p>Patina Design Studio works on a select number of projects each year to ensure every project receives the time, attention, and detail required. This allows the studio and Jacqui to remain closely involved throughout each stage of the project.</p>
                     </div>
                 </div>
 
@@ -162,19 +546,18 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-brand">
-                <div class="logo">
-                    <span class="logo-main" id="cms-footer-name">PATINA</span>
-                    <span class="logo-sub">DESIGN STUDIO</span>
-                </div>
-                <p id="cms-footer-tagline">Bespoke Interior Architecture</p>
+                <a class='logo' href='/'>
+                    <span class="logo-main" id="cms-footer-name">Patina Design Studio</span>
+                    <span class="logo-sub">Interior Architectural Design</span>
+                </a>
             </div>
             <div class="footer-links">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href='/projects'>Projects</a></li>
+                    <li><a href='/#services'>Services</a></li>
+                    <li><a href='/about'>About</a></li>
+                    <li><a href='/contact'>Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -184,15 +567,15 @@
             </div>
             <div class="footer-social">
                 <h4>Follow</h4>
-                <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
-                <h4 style="margin-top: 2rem;">The Invisible Layer Series</h4>
+                <p><a id="cms-footer-instagram" href="https://www.instagram.com/patina.design.studio/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+                <h4 style="margin-top: 2rem;"><a href='/journal'>The Invisible Layer Series</a></h4>
                 <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-secondary);">Early access to editorial insights and project updates.</p>
-                <p><a href="https://forms.fillout.com/t/7kB1WdiUJJus" target="_blank" rel="noopener">Sign Up &rarr;</a></p>
+                <p><a href='/journal#subscribe'>Sign Up &rarr;</a></p>
             </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
-            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href='/privacy-policy'>Privacy Policy</a> | <a href='/terms-conditions'>Terms & Conditions</a></p>
         </div>
     </footer>
 
