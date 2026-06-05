@@ -21,20 +21,21 @@
 </head>
 <body>
     <header id="main-header">
-        <div class="logo">
+        <a href="index.html" class="logo">
             <span class="logo-main" id="cms-studio-name">PATINA</span>
             <span class="logo-sub">DESIGN STUDIO</span>
-        </div>
+        </a>
         <nav>
             <ul>
-                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
-                <li><a href="#services" class="nav-link">SERVICES</a></li>
-                <li><a href="#about" class="nav-link">ABOUT</a></li>
-                <li><a href="#process" class="nav-link">PROCESS</a></li>
-                <li><a href="#media" class="nav-link">MEDIA</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#contact" class="nav-link">CONTACT</a></li>
-                <li><a href="#enquiries" class="cta-link">ENQUIRIES</a></li>
+                <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                <li><a href="index.html#services" class="nav-link">SERVICES</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="process.html" class="nav-link">PROCESS</a></li>
+                <li><a href="journal.html" class="nav-link">JOURNAL</a></li>
+                <li><a href="media.html" class="nav-link">MEDIA</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <li><a href="enquiries.html" class="cta-link">ENQUIRIES</a></li>
             </ul>
         </nav>
         <div class="menu-toggle" id="menu-toggle">
@@ -49,10 +50,10 @@
             <div class="hero-bg" id="cms-hero-bg"></div>
             <div class="hero-content">
                 <h1 class="reveal-text">
-                    <span id="cms-hero-headline">Timeless. Bespoke.</span>
-                    <br><em id="cms-hero-headline-em">Interior Architecture.</em>
+                    <span id="cms-hero-headline">Highly Resolved Homes,</span>
+                    <br><em id="cms-hero-headline-em">Thoughtfully Designed</em>
                 </h1>
-                <p class="fade-in" id="cms-hero-sub">Crafting spaces that resonate with soul and sophistication.</p>
+                <p class="fade-in" id="cms-hero-sub">Patina Design Studio approaches each project with a strong focus on functionality, proportion and long-term liveability from concept through to completion.</p>
                 <div class="scroll-indicator">
                     <div class="line"></div>
                 </div>
@@ -69,15 +70,15 @@
                 <!-- Fallback static cards shown until JS runs -->
                 <div class="project-card large">
                     <img src="https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg" alt="Vaucluse Residence">
-                    <div class="project-info"><h3>Vaucluse Residence</h3><p>Residential Architecture</p></div>
+                    <div class="project-info"><h3>Vaucluse Residence</h3><p>Interior Architecture</p></div>
                 </div>
                 <div class="project-card">
-                    <img src="https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg" alt="Modern Minimalist">
-                    <div class="project-info"><h3>Modern Minimalist</h3><p>Interior Design</p></div>
+                    <img src="https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg" alt="Dover Heights Duplex">
+                    <div class="project-info"><h3>Dover Heights Duplex</h3><p>Bespoke Residential</p></div>
                 </div>
                 <div class="project-card">
-                    <img src="https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg" alt="Coastal Living">
-                    <div class="project-info"><h3>Coastal Living</h3><p>Kitchen &amp; Joinery</p></div>
+                    <img src="https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg" alt="LP Residence">
+                    <div class="project-info"><h3>LP Residence</h3><p>Interior Design</p></div>
                 </div>
             </div>
         </section>
@@ -87,9 +88,11 @@
             <div class="container split">
                 <div class="split-content">
                     <h2 class="section-title" id="cms-studio-title">The Studio</h2>
-                    <p class="lead" id="cms-studio-lead">Patina Design Studio is a boutique interior architecture practice based in Sydney, dedicated to the art of bespoke residential design.</p>
-                    <p id="cms-studio-body">Our philosophy is rooted in the belief that every space should tell a story. We blend textures, light, and form to create interiors that are not only beautiful but deeply personal and functional.</p>
-                    <a href="#process" class="text-link" id="cms-studio-cta">Our Process →</a>
+                    <p class="lead" id="cms-studio-lead">INTERIOR ARCHITECTURE AND DESIGN FOR HIGHLY RESOLVED RESIDENTIAL PROJECTS.</p>
+                    <div id="cms-studio-body">
+                        <p style="margin-bottom: 1.5rem;">Patina Design Studio approaches residential interiors with a strong focus on functionality, proportion and long-term liveability across both design and execution. The studio is often engaged early in the planning of a home to refine layouts, coordinate key design decisions and shape cohesive, highly considered homes with greater influence over the final outcome.</p>
+                    </div>
+                    <a href="about.html" class="text-link" id="cms-studio-cta">About the Studio →</a>
                 </div>
                 <div class="split-image reveal">
                     <img id="cms-studio-img" src="https://static.wixstatic.com/media/9dda45_1757b0e6b05f4c6fb346513525d4e3e4~mv2.jpeg" alt="Studio Detail">
@@ -104,28 +107,58 @@
             </div>
             <div class="services-list" id="cms-services-list">
                 <!-- Populated by script.js from _data/services.json -->
-                <div class="service-item">
-                    <span class="number">01</span>
-                    <div class="service-content"><h3>Interior Architecture</h3><p>Comprehensive spatial planning, structural modifications, and detailed architectural drawings for luxury residences.</p></div>
-                </div>
-                <div class="service-item">
-                    <span class="number">02</span>
-                    <div class="service-content"><h3>Bespoke Joinery</h3><p>Custom-designed cabinetry and furniture that maximizes utility while elevating the aesthetic of every room.</p></div>
-                </div>
-                <div class="service-item">
-                    <span class="number">03</span>
-                    <div class="service-content"><h3>Material &amp; Finish Selection</h3><p>Meticulously curated palettes of stones, timbers, and fabrics that age gracefully and develop their own patina.</p></div>
-                </div>
+                <a href="services-full-service-design.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Full Service Design</h3>
+                        <p>Full-service interior architecture and design from early planning through to final installation.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
+                <a href="services-curated-furnishing.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Curated Furnishing</h3>
+                        <p>Furniture, lighting, artwork and custom pieces carefully selected, procured and installed to create a cohesive, resolved and highly personal home.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
+                <a href="services-pre-purchase-design.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Pre-Purchase Review</h3>
+                        <p>Professional design insight before purchasing a property, helping assess layout potential, renovation opportunities and overall suitability before committing.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
+                <a href="services-layout-assessment.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Layout Assessment</h3>
+                        <p>A focused review of your floor plan to improve functionality, flow, furniture placement and joinery opportunities before key decisions are locked in.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
+                <a href="services-target-buyer-strategy.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Target Buyer Strategy</h3>
+                        <p>Strategic design guidance for developers and property owners to help align a project with its intended buyer and strengthen its overall appeal.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
+                <a href="services-design-consultation.html" class="service-item">
+                    <div class="service-content">
+                        <h3>Design Consultation</h3>
+                        <p>The first step for all Patina Design Studio services, providing strategic guidance and clarity around the most suitable direction for your project.</p>
+                        <span class="learn-more">Learn More <span class="arrow">→</span></span>
+                    </div>
+                </a>
             </div>
         </section>
 
         <!-- ── CTA Banner ─────────────────────────────────────── -->
         <section id="cta" class="full-bleed accent-bg">
-            <div class="hero-bg" id="cms-cta-bg" style="background-image: url('https://static.wixstatic.com/media/9dda45_4d75dc710c164e42811fcfd622ba53d4~mv2.jpeg'); opacity: 0.3;"></div>
+            <div class="hero-bg" id="cms-cta-bg" style="background-image: url('assets/images/cta-background.png');"></div>
             <div class="cta-content container text-center">
-                <h2 id="cms-cta-heading">Start Your Journey</h2>
-                <p id="cms-cta-sub">Begin your bespoke design experience with Patina Design Studio.</p>
-                <a href="#enquiries" class="button" id="cms-cta-btn">ENQUIRE NOW</a>
+                <h2 id="cms-cta-heading">Considering a Project?</h2>
+                <p id="cms-cta-sub">If you are planning a renovation, new build or furnishing project, we invite you to register your interest with Patina Design Studio.</p>
+                <a href="enquiries.html" class="button" id="cms-cta-btn">REGISTER YOUR INTEREST</a>
             </div>
         </section>
     </main>
@@ -142,25 +175,28 @@
             <div class="footer-links">
                 <h4>Navigation</h4>
                 <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Contact</h4>
-                <p id="cms-footer-location">Sydney, Australia</p>
-                <p><a id="cms-footer-email" href="mailto:info@patinadesignstudio.com.au">info@patinadesignstudio.com.au</a></p>
+                <p id="cms-footer-location">Based in Sydney, undertaking select interstate and international projects.</p>
+                <p><a id="cms-footer-email" href="mailto:hello@patinadesignstudio.com">hello@patinadesignstudio.com</a></p>
             </div>
             <div class="footer-social">
                 <h4>Follow</h4>
                 <p><a id="cms-footer-instagram" href="#">Instagram</a></p>
-                <p><a id="cms-footer-pinterest" href="#">Pinterest</a></p>
+                <h4 style="margin-top: 2rem;">The Invisible Layer Series</h4>
+                <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 0.5rem; color: var(--text-secondary);">Early access to editorial insights and project updates.</p>
+                <p><a href="https://forms.fillout.com/t/7kB1WdiUJJus" target="_blank" rel="noopener">Sign Up &rarr;</a></p>
             </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; <span id="cms-footer-year">2026</span> <span id="cms-footer-copy-name">Patina Design Studio</span>. All Rights Reserved.</p>
+            <p class="footer-legal-links" style="margin-top: 0.5rem;"><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
         </div>
     </footer>
 
