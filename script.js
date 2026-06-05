@@ -1,6 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ═══════════════════════════════════════════════════════
+    // IMAGE PROTECT SYSTEM
+    // Global protection preventing right-clicking, image-dragging, page-saving, printing, and inspecting
+    // ═══════════════════════════════════════════════════════
+    // Disable right-click context menu globally across the website
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    }, true);
+
+    // Disable dragging globally (stops dragging images/links to desktop)
+    document.addEventListener('dragstart', (e) => {
+        e.preventDefault();
+    }, true);
+
+    // Intercept keyboard shortcuts used to save, print, or inspect elements
+    document.addEventListener('keydown', (e) => {
+        // Prevent Save Page: Ctrl+S or Cmd+S
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+        }
+        // Prevent Print Page / Print to PDF: Ctrl+P or Cmd+P
+        if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+            e.preventDefault();
+        }
+        // Prevent View Source: Ctrl+U or Cmd+Option+U
+        if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+            e.preventDefault();
+        }
+        // Prevent Inspect / DevTools: F12, Ctrl+Shift+I / Cmd+Option+I, Ctrl+Shift+C
+        if (e.key === 'F12' || 
+            ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J'))) {
+            e.preventDefault();
+        }
+    }, true);
+
+    // ═══════════════════════════════════════════════════════
     // CMS CONTENT LOADER
     // Fetches _data/*.json and populates DOM elements by ID.
     // Falls back gracefully to static HTML if fetch fails.
@@ -20,8 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function set(id, value) {
         const el = document.getElementById(id);
         if (el && value !== undefined && value !== null && value !== '') {
-            if (id === 'cms-studio-body' && value.includes('\n')) {
-                el.innerHTML = value.split('\n\n').map(p => `<p style="margin-bottom: 1.5rem;">${p.replace(/\n/g, '<br>')}</p>`).join('');
+            if (id === 'cms-studio-body') {
+                if (value.includes('\n')) {
+                    el.innerHTML = value.split('\n\n').map(p => `<p style="margin-bottom: 1.5rem;">${p.replace(/\n/g, '<br>')}</p>`).join('');
+                } else {
+                    el.innerHTML = `<p style="margin-bottom: 1.5rem;">${value}</p>`;
+                }
             } else {
                 el.textContent = value;
             }
@@ -118,8 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Header
             const studioNameEl = document.getElementById('cms-studio-name');
             if (studioNameEl && settings.studio_name) {
-                // Show only the first word in the logo mark
-                studioNameEl.textContent = settings.studio_name.split(' ')[0].toUpperCase();
+                studioNameEl.textContent = settings.studio_name;
             }
 
             // CTA section
@@ -132,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Footer
-            set('cms-footer-name', settings.studio_name?.split(' ')[0]?.toUpperCase());
+            set('cms-footer-name', settings.studio_name);
             set('cms-footer-tagline', settings.tagline);
             set('cms-footer-location', settings.location);
             set('cms-footer-year', settings.copyright_year);
@@ -148,6 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (igEl) {
                 igEl.textContent = 'Instagram';
                 if (settings.instagram_url) igEl.setAttribute('href', settings.instagram_url);
+                igEl.setAttribute('target', '_blank');
+                igEl.setAttribute('rel', 'noopener noreferrer');
             }
         }
 
@@ -164,6 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             staggerObserver.observe(el);
         });
+
+        // Ensure any external links (including dynamically loaded ones) open in a new tab
+        handleExternalLinks();
     }
 
     // ═══════════════════════════════════════════════════════
@@ -320,6 +363,191 @@ document.addEventListener('DOMContentLoaded', () => {
             el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
         });
     }
+
+    // ═══════════════════════════════════════════════════════
+    // EXTERNAL LINKS HANDLER
+    // Ensures any links to external pages or websites open in a new tab.
+    // ═══════════════════════════════════════════════════════
+    function handleExternalLinks() {
+        document.querySelectorAll('a[href]').forEach(link => {
+            const href = link.getAttribute('href').trim();
+            // Match absolute URLs starting with http://, https://, or //
+            if (/^(https?:)?\/\//i.test(href)) {
+                try {
+                    const url = new URL(href, window.location.href);
+                    if (url.hostname !== window.location.hostname) {
+                        link.setAttribute('target', '_blank');
+                        // Use rel="noopener noreferrer" for secure opening in new tab
+                        link.setAttribute('rel', 'noopener noreferrer');
+                    }
+                } catch (e) {
+                    // Fallback simple check if URL is parsed incorrectly
+                    if (!href.includes(window.location.hostname)) {
+                        link.setAttribute('target', '_blank');
+                        link.setAttribute('rel', 'noopener noreferrer');
+                    }
+                }
+            }
+        });
+    }
+
+    // Run initially for any hardcoded static external links
+    handleExternalLinks();
+
+    // ═══════════════════════════════════════════════════════
+    // FAQ ACCORDIONS (Progressive Enhancement)
+    // ═══════════════════════════════════════════════════════
+    function initFAQAccordions() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        if (!faqItems.length) return;
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('h3');
+            if (!question) return;
+
+            // Create trigger button wrapper (for perfect semantic HTML & keyboard accessibility)
+            const trigger = document.createElement('button');
+            trigger.className = 'faq-trigger';
+            trigger.setAttribute('aria-expanded', 'false');
+            trigger.setAttribute('type', 'button');
+
+            // Insert trigger before the h3, and move h3 inside it
+            question.parentNode.insertBefore(trigger, question);
+            trigger.appendChild(question);
+
+            // Add plus/minus indicator icon inside the trigger
+            const icon = document.createElement('span');
+            icon.className = 'faq-icon';
+            trigger.appendChild(icon);
+
+            // Wrap all remaining content of .faq-item (the answer) in a collapsible container
+            const answer = document.createElement('div');
+            answer.className = 'faq-answer';
+
+            const answerInner = document.createElement('div');
+            answerInner.className = 'faq-answer-inner';
+
+            // Gather all siblings after the trigger and move them into the inner answer
+            while (trigger.nextSibling) {
+                answerInner.appendChild(trigger.nextSibling);
+            }
+
+            answer.appendChild(answerInner);
+            item.appendChild(answer);
+
+            // Toggle function
+            const toggleItem = () => {
+                const isActive = item.classList.contains('active');
+                
+                // Toggle active class and aria-expanded
+                if (isActive) {
+                    item.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('active');
+                    trigger.setAttribute('aria-expanded', 'true');
+                }
+            };
+
+            // Click listener
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleItem();
+            });
+
+            // If the custom cursor is enabled, also grow the cursor on trigger hover
+            if (window.matchMedia('(pointer: fine)').matches) {
+                const cursor = document.getElementById('cursor');
+                if (cursor) {
+                    trigger.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
+                    trigger.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
+                }
+            }
+        });
+    }
+
+    // ═══════════════════════════════════════════════════════
+    // FAQ CATEGORY NAVIGATION
+    // ═══════════════════════════════════════════════════════
+    function initFAQCategoryNav() {
+        const faqNavContainer = document.getElementById('faq-categories-nav');
+        if (!faqNavContainer) return;
+
+        const faqList = document.querySelector('.faq-list');
+        if (!faqList) return;
+
+        const categories = faqList.querySelectorAll('.faq-category');
+        if (categories.length < 2) return;
+
+        // Add class to list indicating navigation is active
+        faqList.classList.add('has-nav');
+
+        categories.forEach((category, index) => {
+            const titleElement = category.querySelector('.faq-category-title');
+            if (!titleElement) return;
+
+            // Get clean text of category title
+            const categoryTitle = titleElement.textContent.trim();
+
+            // Create button for category tab
+            const btn = document.createElement('button');
+            btn.className = 'faq-nav-btn';
+            btn.textContent = categoryTitle;
+            btn.setAttribute('type', 'button');
+
+            // Handle active/inactive states
+            if (index === 0) {
+                btn.classList.add('active');
+                category.classList.add('active-category');
+                
+                // Force reveal of items in active category
+                category.querySelectorAll('.reveal').forEach(item => {
+                    item.classList.add('visible');
+                });
+            }
+
+            // Click listener
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Deactivate all buttons & categories
+                faqNavContainer.querySelectorAll('.faq-nav-btn').forEach(b => b.classList.remove('active'));
+                categories.forEach(c => c.classList.remove('active-category'));
+
+                // Activate selected
+                btn.classList.add('active');
+                category.classList.add('active-category');
+
+                // Force reveal of items in the newly active category
+                category.querySelectorAll('.reveal').forEach(item => {
+                    item.classList.add('visible');
+                });
+
+                // Scroll to top of FAQ nav with safe header offset
+                const rect = faqNavContainer.getBoundingClientRect();
+                const absoluteTop = rect.top + window.scrollY;
+                window.scrollTo({
+                    top: absoluteTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Handle custom cursor if present
+            if (window.matchMedia('(pointer: fine)').matches) {
+                const cursor = document.getElementById('cursor');
+                if (cursor) {
+                    btn.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
+                    btn.addEventListener('mouseleave', () => cursor.classList.remove('cursor-grow'));
+                }
+            }
+
+            faqNavContainer.appendChild(btn);
+        });
+    }
+
+    // Initialize FAQ accordions and category navigation
+    initFAQAccordions();
+    initFAQCategoryNav();
 
     // ═══════════════════════════════════════════════════════
     // KICK OFF CONTENT LOAD

@@ -37,11 +37,64 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Image Copy & Save Protection */
+img {
+    -webkit-touch-callout: none; /* Disables long-press context menu on iOS */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Standard */
+    -webkit-user-drag: none;     /* Safari/Chrome dragging */
+    user-drag: none;             /* Standard dragging */
+    pointer-events: none;        /* Blocks right-click context menu, dragging, and saving */
+}
+
+/* Background Image Protection (Stops selection and dragging on containers) */
+.hero-bg, 
+[id*="-bg"], 
+.project-card, 
+.project-gallery-item, 
+.split-image, 
+.journal-card-img-wrapper, 
+.post-image-block,
+.newsletter-image-block,
+.newsletter-fullwidth-image,
+.small-project-card {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+/* Prevent extracting images via printing or Print to PDF */
+@media print {
+    img, 
+    .hero-bg, 
+    [id*="-bg"], 
+    .project-card, 
+    .project-gallery-item, 
+    .split-image, 
+    .journal-card-img-wrapper, 
+    .post-image-block,
+    .newsletter-image-block,
+    .newsletter-fullwidth-image,
+    .small-project-card {
+        display: none !important;
+    }
+}
+
 /* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: 400;
     line-height: 1.2;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0;
 }
 
 h1 { font-size: clamp(3rem, 8vw, 5rem); }
@@ -98,23 +151,41 @@ header.scrolled {
 }
 
 .logo {
-    display: flex;
-    flex-direction: column;
-    letter-spacing: 0.2rem;
+    display: inline-block;
+    width: max-content;
+    max-width: 100%;
     text-decoration: none;
-    color: inherit;
+    color: #000000 !important;
+    font-size: 1rem;
+}
+
+header .logo {
+    font-size: 0.9rem;
 }
 
 .logo-main {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
+    display: block;
+    width: 100%;
+    font-family: "prophet trial light", "Prophet Trial Light", "Prophet Trial", var(--font-body);
+    font-size: 1.55em;
+    font-weight: normal;
+    color: #000000 !important;
+    text-align: left;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
 }
 
 .logo-sub {
-    font-size: 0.6rem;
-    font-weight: 400;
-    margin-top: -5px;
+    display: block;
+    width: 100%;
+    font-family: "prophet trial light", "Prophet Trial Light", "Prophet Trial", var(--font-body);
+    font-size: 1.0em;
+    font-weight: normal;
+    color: #000000 !important;
+    text-align: left;
+    line-height: 1.1;
+    margin-top: 0.3em;
+    letter-spacing: 0.05em;
 }
 
 nav ul {
@@ -223,7 +294,8 @@ nav a:hover {
 
 /* Projects Section */
 #projects {
-    padding: var(--p-section) 0;
+    padding-top: var(--p-section);
+    padding-bottom: var(--p-section);
 }
 
 .section-header {
@@ -282,6 +354,28 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+/* Special card styling for plan/drawing reviews that should not be cropped */
+.project-card.contained-image {
+    background-color: var(--white);
+}
+
+.project-card.contained-image img {
+    object-fit: contain;
+    object-position: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+/* Reviews grid & cards specific styles for a more compact and intentional design reviews section */
+.reviews-grid .project-card {
+    aspect-ratio: 1.35 / 1;
+}
+
+.reviews-grid .project-card.contained-image img {
+    padding: 0.6rem;
+}
+
 .project-info {
     position: absolute;
     bottom: 0;
@@ -335,7 +429,8 @@ nav a:hover {
 
 /* Services Section */
 #services {
-    padding: var(--p-section) 0;
+    padding-top: var(--p-section);
+    padding-bottom: var(--p-section);
 }
 
 .services-list {
@@ -460,6 +555,16 @@ footer {
 footer h4 {
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
+}
+
+footer h4 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer h4 a:hover {
+    color: var(--accent);
 }
 
 footer ul {
@@ -731,7 +836,8 @@ body.subpage header {
 }
 
 .subpage-content {
-    padding: 8rem 0;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 /* FAQ Styles */
@@ -740,7 +846,13 @@ body.subpage header {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem; /* slightly increased gap between categories */
+}
+
+.faq-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* tight, refined gap between items in a category */
 }
 
 .faq-category-title {
@@ -748,38 +860,284 @@ body.subpage header {
     letter-spacing: 0.15rem;
     text-transform: uppercase;
     color: var(--accent);
-    margin: 3rem 0 1.5rem 0;
+    margin: 0 0 1rem 0;
     border-bottom: 1px solid rgba(0,0,0,0.08);
     padding-bottom: 0.5rem;
-}
-
-.faq-category-title:first-of-type {
-    margin-top: 0;
 }
 
 .faq-item {
     background: var(--white);
     border: 1px solid rgba(0,0,0,0.05);
-    padding: 2.5rem;
-    transition: all 0.4s ease;
+    padding: 0; /* padding moved to trigger and inner answer to allow 100% click area */
+    transition: border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
 }
 
 .faq-item:hover {
-    transform: translateY(-5px);
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+}
+
+.faq-item.active {
+    border-color: rgba(0,0,0,0.12);
     box-shadow: 0 15px 35px rgba(0,0,0,0.03);
 }
 
-.faq-item h3 {
-    font-size: 1.35rem;
-    margin-bottom: 1rem;
+.faq-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    gap: 1.5rem;
+    user-select: none;
+    outline: none;
+    padding: 1.75rem 2.25rem;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    transition: background-color 0.3s ease;
+}
+
+.faq-trigger h3 {
+    font-size: 1.25rem;
+    margin: 0;
     color: var(--text-primary);
     font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.45;
+    transition: color 0.3s ease;
+}
+
+.faq-trigger:hover h3,
+.faq-trigger:focus-visible h3 {
+    color: var(--accent);
+}
+
+/* Elegant Plus/Minus Icon */
+.faq-icon {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--accent);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+/* Horizontal line */
+.faq-icon::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: translateY(-50%);
+}
+
+/* Vertical line */
+.faq-icon::after {
+    top: 0;
+    left: 50%;
+    width: 1.5px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+/* Active State: morphs plus into a minus */
+.faq-item.active .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.faq-item.active .faq-icon::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Collapsible content wrapper (using smooth CSS Grid transition) */
+.faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.faq-item.active .faq-answer {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.faq-answer-inner {
+    min-height: 0;
+    padding: 0 2.25rem 2rem 2.25rem;
 }
 
 .faq-item p {
     color: var(--text-secondary);
     font-size: 1.05rem;
-    line-height: 1.7;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+}
+
+.faq-item p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item p strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.faq-item a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.faq-item a:hover {
+    color: var(--accent-light);
+}
+
+.faq-links {
+    margin-top: 1.5rem;
+    font-size: 0.95rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    padding-top: 1.25rem;
+}
+
+.faq-links span {
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.faq-links a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.faq-links a:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Navigation/Tabs Styles */
+.faq-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 1.5rem;
+}
+
+.faq-nav-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 0.6rem 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.faq-nav-btn:hover {
+    color: var(--accent);
+}
+
+.faq-nav-btn.active {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+/* Elegant underline for active button */
+.faq-nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: bottom right;
+}
+
+.faq-nav-btn.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.faq-nav::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .faq-nav {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    .faq-nav-btn {
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        font-size: 0.85rem;
+        letter-spacing: 0.08rem;
+    }
+}
+
+/* Show/hide categories when navigation is active */
+.faq-list.has-nav .faq-category {
+    display: none;
+}
+
+.faq-list.has-nav .faq-category.active-category {
+    display: flex;
+    animation: faqFadeIn 0.5s ease forwards;
+}
+
+.faq-list.has-nav .faq-category-title {
+    display: none;
+}
+
+@keyframes faqFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Process Timeline Styles */
@@ -867,6 +1225,40 @@ body.subpage header {
     }
 }
 
+/* Process Closing Section */
+.process-closing-section {
+    padding-bottom: 8rem;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 6rem;
+}
+
+.process-closing-content {
+    max-width: 750px;
+}
+
+.process-closing-content h2 {
+    font-size: 2.2rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.process-closing-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.process-closing-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.process-closing-content .text-link {
+    margin-top: 2rem;
+}
+
 /* Media Page Styles */
 .media-grid {
     display: grid;
@@ -927,6 +1319,47 @@ body.subpage header {
     font-size: 1.05rem;
 }
 
+.media-title-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.media-meta {
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.media-action-link, .media-project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.media-action-link:hover, .media-project-link:hover {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+
+.media-separator {
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.media-project {
+    color: var(--text-secondary);
+}
+
 .media-sidebar {
     background: var(--bg-secondary);
     padding: 3.5rem;
@@ -979,7 +1412,7 @@ body.subpage header {
     margin-bottom: 3rem;
 }
 
-.form-group label {
+.form-group > label {
     display: block;
     font-size: 0.8rem;
     letter-spacing: 0.12rem;
@@ -1000,6 +1433,11 @@ body.subpage header {
     transition: border-bottom-color 0.3s ease;
 }
 
+textarea.form-control {
+    line-height: 1.6;
+    resize: none;
+}
+
 .form-control:focus {
     outline: none;
     border-bottom-color: var(--accent);
@@ -1012,20 +1450,128 @@ body.subpage header {
     margin-top: 1.5rem;
 }
 
+/* Precise grid helper classes to control columns and reduce text wrapping */
+.form-checkbox-group.grid-1-col {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+
+.form-checkbox-group.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.form-checkbox-group.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+}
+
+.form-checkbox-group.grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.4rem;
+}
+
 .form-checkbox-label {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start; /* Ensures top-alignment for multi-line text */
+    gap: 1rem;              /* Same spacing from label text */
     font-size: 1.05rem;
     cursor: pointer;
     font-weight: 300;
+    line-height: 1.4;       /* Fine-tuned line-height for label text */
+    text-transform: none;   /* Reset uppercase for multi-line checkboxes and radios */
 }
 
-.form-checkbox {
-    width: 20px;
-    height: 20px;
-    accent-color: var(--accent);
+/* Custom Styled Input Controls with absolute consistency */
+input[type="checkbox"].form-checkbox,
+input[type="radio"].form-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 20px;       /* Same size: 20px */
+    height: 20px;      /* Same size: 20px */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Same border weight: 1px */
+    display: inline-grid;
+    place-content: center;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    flex-shrink: 0;    /* Prevent control from shrinking */
+    margin-top: 2px;   /* Same vertical alignment: aligns center of control with center of first text line */
+}
+
+/* Checkbox specific: square controls */
+input[type="checkbox"].form-checkbox {
+    border-radius: 0px; /* Completely square */
+}
+
+/* Radio specific: circular controls */
+input[type="radio"].form-checkbox {
+    border-radius: 50%; /* Completely circular */
+}
+
+/* Selected-state: Consistent selected-state styling using premium brand brass */
+input[type="checkbox"].form-checkbox:checked {
+    border-color: var(--accent);
+    background-color: var(--accent);
+}
+
+input[type="radio"].form-checkbox:checked {
+    border-color: var(--accent);
+    background-color: transparent; /* Keep background transparent for radio buttons */
+}
+
+/* Inner indicator elements */
+/* Checkbox indicator: elegant custom white checkmark */
+input[type="checkbox"].form-checkbox::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--bg-primary); /* Matches warm brand background */
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"].form-checkbox:checked::before {
+    transform: scale(1);
+}
+
+/* Radio indicator: elegant solid brand brass inner circle */
+input[type="radio"].form-checkbox::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--accent); /* Solid inner circle */
+}
+
+input[type="radio"].form-checkbox:checked::before {
+    transform: scale(1);
+}
+
+/* Hover effects for both controls */
+input[type="checkbox"].form-checkbox:hover,
+input[type="radio"].form-checkbox:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(182, 137, 88, 0.15); /* Soft premium brass glow */
+}
+
+/* Text wrapper within label to ensure perfect vertical and horizontal alignment */
+.form-checkbox-text {
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+    user-select: none;
+    line-height: 1.4;
+    text-transform: none; /* Reset uppercase for multi-line checkboxes and radios */
+}
+
+/* Interactive brand text highlight on label hover */
+.form-checkbox-label:hover .form-checkbox-text {
+    color: var(--accent);
 }
 
 .button-submit {
@@ -1128,9 +1674,21 @@ body.subpage header {
     }
 }
 
+@media (max-width: 768px) {
+    .form-checkbox-group.grid-3-cols,
+    .form-checkbox-group.grid-4-cols {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+}
+
 @media (max-width: 576px) {
-    .form-checkbox-group {
+    .form-checkbox-group,
+    .form-checkbox-group.grid-2-cols,
+    .form-checkbox-group.grid-3-cols,
+    .form-checkbox-group.grid-4-cols {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 }
 
@@ -1151,6 +1709,16 @@ body.subpage header {
     display: block;
     margin-bottom: 1rem;
     font-weight: 500;
+}
+
+.category-eyebrow a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category-eyebrow a:hover {
+    color: var(--accent-light);
 }
 
 .service-main-info h2 {
@@ -1225,9 +1793,41 @@ body.subpage header {
 }
 
 .deliverables-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.related-projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-projects-list li {
+    padding-left: 1.8rem;
+    position: relative;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.related-projects-list li::before {
     content: "—";
     position: absolute;
     left: 0;
+    color: var(--accent);
+}
+
+.related-projects-list li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.related-projects-list li a:hover {
     color: var(--accent);
 }
 
@@ -1276,10 +1876,18 @@ body.subpage header {
     font-weight: 300;
 }
 
-.service-steps-grid {
+.service-steps-grid,
+.service-steps-grid-4 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
+}
+
+.service-steps-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.service-steps-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .step-card {
@@ -1317,7 +1925,8 @@ body.subpage header {
 }
 
 @media (max-width: 1024px) {
-    .service-steps-grid {
+    .service-steps-grid,
+    .service-steps-grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1327,7 +1936,94 @@ body.subpage header {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    .service-steps-grid {
+    .service-steps-grid,
+    .service-steps-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Related Projects Row Section */
+.related-projects-row-section {
+    margin-bottom: var(--p-section, 8rem);
+    margin-top: 4rem;
+}
+
+.related-projects-row-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.related-projects-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.related-projects-row.count-1 {
+    grid-template-columns: minmax(200px, 380px);
+}
+
+.related-projects-row.count-2 {
+    grid-template-columns: repeat(2, minmax(200px, 380px));
+}
+
+.small-project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.small-project-card:hover {
+    transform: translateY(-4px);
+}
+
+.small-project-card .image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: var(--bg-secondary);
+}
+
+.small-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.small-project-card:hover img {
+    transform: scale(1.05);
+}
+
+.small-project-card .project-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+.small-project-card .project-descriptor {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+    .related-projects-row {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .related-projects-row.count-2 {
         grid-template-columns: 1fr;
     }
 }
@@ -1811,7 +2507,8 @@ body.subpage header {
     justify-content: space-between;
     border-top: 1px solid rgba(0,0,0,0.08);
     border-bottom: 1px solid rgba(0,0,0,0.08);
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     margin: 6rem 0 4rem 0;
 }
 
@@ -1895,7 +2592,8 @@ body.subpage header {
     .project-navigation {
         flex-direction: column;
         gap: 2rem;
-        padding: 2.5rem 0;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
     .project-nav-link {
         max-width: 100%;
@@ -1953,16 +2651,18 @@ body.menu-active {
 }
 
 /* Responsive Heading Font Clamping */
-@media (max-width: 480px) {
-    h1, .logo-main {
+@media (max-width: 768px) {
+    h1 {
         font-size: clamp(2.2rem, 8vw, 2.8rem);
     }
     h2 {
         font-size: clamp(1.6rem, 5vw, 2.2rem);
     }
-    .logo-sub {
-        font-size: 0.55rem;
-        letter-spacing: 0.15rem;
+    .logo {
+        font-size: clamp(0.72rem, 4vw, 1rem);
+    }
+    header .logo {
+        font-size: clamp(0.648rem, 3.6vw, 0.9rem);
     }
 }
 
@@ -2015,7 +2715,8 @@ body.menu-active {
         padding: 8rem 0 4rem 0;
     }
     .subpage-content {
-        padding: 4rem 0;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }
 
@@ -2053,5 +2754,689 @@ body.menu-active {
     }
     .process-steps {
         gap: 2.5rem;
+    }
+}
+
+/* Prevent full-bleed offset overflow and horizontal scrolling on mobile */
+@media (max-width: 768px) {
+    .full-bleed {
+        width: 100%;
+        left: auto;
+        right: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Optimise card/box paddings on mobile to prevent squeezed text and provide maximum reading area */
+@media (max-width: 768px) {
+    .faq-item,
+    .media-item {
+        padding: 1.75rem 1.5rem;
+    }
+    .journal-card-content {
+        padding: 1.75rem 1.5rem;
+    }
+}
+
+/* ────────────────────────────────────────────────────────
+   Full Service Design Refinements
+   ──────────────────────────────────────────────────────── */
+
+/* Value Rows List Layout (When Full Service Design Creates the Greatest Value) */
+.service-value-section {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 6rem 0;
+}
+
+.service-value-section h2 {
+    font-size: 2.2rem;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.value-rows-list {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    margin-top: 3rem;
+}
+
+.value-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    align-items: start;
+}
+
+.value-number {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--accent);
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.value-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.value-content h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.value-content p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .value-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .value-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+    .value-number {
+        font-size: 1.5rem;
+    }
+    .value-content {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+
+/* Outcome Section (Who It's For & Strategic Outcome) */
+.service-outcome-section {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 6rem 0;
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.outcome-single-column {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.outcome-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.outcome-block .category-eyebrow {
+    margin-bottom: 0.75rem;
+}
+
+.outcome-block h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.outcome-block p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+.outcome-single-column .outcome-block p {
+    line-height: 1.8;
+}
+
+.outcome-single-column .outcome-block p:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .outcome-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .outcome-block h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Strategic Positioning Section (Why Clients Engage Patina Design Studio Early) */
+.strategic-positioning.alternate-bg {
+    background-color: var(--bg-secondary);
+    padding: var(--p-section) 0;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.strategic-positioning-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.positioning-left {
+    position: sticky;
+    top: 8rem;
+}
+
+.positioning-left h2 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 1.5rem 0;
+}
+
+.positioning-lead {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.positioning-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.positioning-point {
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 1.5rem;
+}
+
+.positioning-point:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.positioning-point h3 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.positioning-point p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .strategic-positioning-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .positioning-left {
+        position: static;
+    }
+}
+
+/* ==========================================================================
+   Scoped Styles for Newsletter Pages
+   ========================================================================== */
+body.newsletter-page {
+    background-color: var(--bg-primary);
+}
+
+/* Hide global subpage hero */
+body.newsletter-page .subpage-hero {
+    display: none;
+}
+
+/* Center main wrapper */
+.newsletter-email-wrapper {
+    width: 100%;
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-primary);
+}
+
+.newsletter-email-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--bg-primary);
+}
+
+/* Newsletter Top Header */
+.newsletter-header-block {
+    text-align: center;
+    padding: 3rem 0 0 0; /* Remove bottom padding so the divider block sits flush */
+    border-bottom: none; /* Borders are now handled individually by the logo wrapper and divider */
+}
+
+.newsletter-series-tag {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #7A7267;
+    margin-bottom: 1.5rem;
+    padding: 0 3rem;
+}
+
+.newsletter-logo-wrapper {
+    margin-bottom: 0;
+    padding: 0 3rem 2.25rem 3rem; /* 48px left/right, 36px bottom padding to match newsletter's first row exactly */
+    border-bottom: 1px solid #DDD5C8; /* Under-logo horizontal line */
+}
+
+.newsletter-logo-img {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.newsletter-bts-divider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left-aligned content block */
+    height: 48px; /* Standard Mailchimp divider row height */
+    padding: 0 3rem; /* 48px left/right padding */
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid #DDD5C8; /* Bottom horizontal line */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.newsletter-bts-divider .divider-line:first-child {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 12px; /* Thick vertical bar on the left */
+    height: 48px; /* Stretches from top border to bottom border */
+    background-color: #DDD5C8;
+}
+
+.newsletter-bts-divider .bts-badge {
+    font-family: var(--font-body);
+    font-size: 0.5625rem; /* Exactly 9px to match newsletter */
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8C7355;
+    white-space: nowrap;
+    margin-left: 20px; /* 20px gap from the left vertical bar */
+}
+
+.newsletter-bts-divider .divider-line:last-child {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 12px; /* Thick vertical bar on the right */
+    height: 48px; /* Stretches from top border to bottom border */
+    background-color: #DDD5C8;
+    margin-left: auto; /* Pushes the right vertical bar to the far right */
+}
+
+/* "A note from Jacqui" section */
+.newsletter-jacqui-note-block {
+    padding: 3rem 0 2.5rem 0;
+    border-bottom: 1px solid #DDD5C8;
+}
+
+.jacqui-note-eyebrow {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7A7267;
+    margin-bottom: 1.5rem;
+}
+
+.jacqui-note-text p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #2C2925;
+    margin-bottom: 1rem;
+}
+
+.jacqui-note-signoff {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #8C7355;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+
+.jacqui-note-signoff span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Pull Quote Block */
+.newsletter-pullquote-block {
+    padding: 3.5rem 3rem;
+    background-color: #F4EFE6;
+    border-left: 3px solid #8C7355;
+    border-bottom: 1px solid #DDD5C8;
+    margin: 0 0 2rem 0;
+}
+
+.pullquote-text {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.6;
+    color: #2C2925;
+    margin: 0;
+}
+
+/* Feature Header block */
+.newsletter-feature-header-block {
+    padding: 1rem 0;
+}
+
+.feature-series-no {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #8C7355;
+    margin-bottom: 0.5rem;
+}
+
+.feature-title {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2C2925;
+    margin-bottom: 1.5rem;
+}
+
+/* Story body layout overrides */
+.newsletter-body {
+    padding-bottom: 2rem;
+}
+
+.newsletter-body p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #3E3A35;
+    margin-bottom: 1.2rem;
+}
+
+.newsletter-body p strong, .newsletter-body p span[style*="font-weight:600"] {
+    font-weight: 600 !important;
+    color: #2C2925 !important;
+}
+
+.newsletter-body h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2C2925;
+    margin: 3rem 0 1rem 0;
+}
+
+.newsletter-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #2C2925;
+    margin: 2.5rem 0 1rem 0;
+}
+
+/* Image styles in newsletter */
+.newsletter-image-block {
+    margin: 2rem 0;
+}
+
+.newsletter-image-block img {
+    width: 100%;
+    display: block;
+    border: 1px solid #DDD5C8;
+    height: auto;
+}
+
+.newsletter-image-caption {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #7A7267;
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+/* Dark Manifesto Block */
+.newsletter-manifesto-block {
+    background-color: #2C2925;
+    padding: 2.5rem;
+    margin: 3rem 0 2rem 0;
+}
+
+.newsletter-manifesto-block h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #C9BFB0;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.newsletter-manifesto-block p {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #C9BFB0;
+    margin-bottom: 1rem;
+}
+
+.newsletter-manifesto-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Fullwidth image underneath manifesto */
+.newsletter-fullwidth-image {
+    margin-bottom: 2rem;
+}
+
+.newsletter-fullwidth-image img {
+    width: 100%;
+    display: block;
+    border: 1px solid #DDD5C8;
+    height: auto;
+}
+
+/* CTA buttons section */
+.newsletter-cta-block {
+    text-align: center;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.newsletter-cta-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.newsletter-cta-btn.primary {
+    background-color: #2C2925;
+    color: #F4EFE6;
+    border: 1px solid #2C2925;
+}
+
+.newsletter-cta-btn.primary:hover {
+    background-color: #3E3A35;
+    border-color: #3E3A35;
+}
+
+.newsletter-cta-btn.secondary {
+    background-color: transparent;
+    color: #2C2925;
+    border: 1px solid #2C2925;
+}
+
+.newsletter-cta-btn.secondary:hover {
+    background-color: #2C2925;
+    color: #F4EFE6;
+}
+
+/* Feedback section */
+.newsletter-feedback-block {
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.newsletter-feedback-block p {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #7A7267;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-feedback-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Teaser block */
+.newsletter-teaser-block {
+    padding: 2.5rem 0;
+    border-top: 1px solid #DDD5C8;
+    border-bottom: 1px solid #DDD5C8;
+    margin: 2rem 0;
+}
+
+.teaser-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #8C7355;
+    margin-bottom: 0.5rem;
+}
+
+.teaser-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #2C2925;
+    margin-bottom: 0.5rem;
+}
+
+.teaser-desc {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #7A7267;
+    margin: 0;
+}
+
+/* Footer compliance block */
+.newsletter-footer-compliance {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E5E5E5;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.newsletter-footer-compliance p {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    color: #606060;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-footer-compliance .compliance-links a {
+    color: #8C7355;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.newsletter-footer-compliance .compliance-links a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-footer-compliance .compliance-address {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    color: #606060;
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Mobile responsive layout */
+@media only screen and (max-width: 620px) {
+    .newsletter-email-wrapper {
+        padding: 2rem 1rem;
+    }
+    .newsletter-cta-block {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .newsletter-cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .newsletter-pullquote-block {
+        padding: 2rem 1.5rem;
+    }
+    .newsletter-manifesto-block {
+        padding: 1.5rem;
+    }
+    .newsletter-series-tag {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+    .newsletter-logo-wrapper {
+        padding: 0 1rem 1.5rem 1rem;
+    }
+    .newsletter-bts-divider {
+        padding: 0 1rem;
+    }
+    .newsletter-bts-divider .bts-badge {
+        font-size: 0.5rem;
+        margin-left: 12px;
     }
 }
