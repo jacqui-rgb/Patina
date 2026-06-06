@@ -3440,3 +3440,478 @@ body.newsletter-page .subpage-hero {
         margin-left: 12px;
     }
 }
+
+/* ==========================================================================
+   Comprehensive Responsive Refinements Pass (June 2026 Pass)
+   ========================================================================== */
+
+/* --- Prevent Logo wrapping under all conditions --- */
+.logo-main, .logo-sub {
+    white-space: nowrap !important;
+}
+
+/* --- Base Typography Refinements --- */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+h1 {
+    line-height: 1.15;
+}
+
+/* --- Tablet Landscape (1024px–1194px) and Portrait (768px–834px) Navigation Fixes --- */
+@media (max-width: 1100px) {
+    /* Trigger Mobile Hamburger Menu early to avoid crowded horizontal nav on tablets */
+    .menu-toggle {
+        display: flex !important;
+    }
+    nav {
+        display: none !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-primary);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        z-index: 999;
+    }
+    nav.mobile-open {
+        display: flex !important;
+    }
+    nav ul {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 2.5rem !important;
+    }
+    nav a {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Collapse Two-Column layouts that feel squeezed on Tablet Landscape/Portrait */
+    .service-details-grid,
+    .project-details-grid,
+    .post-layout,
+    .media-grid,
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    
+    .project-sidebar {
+        position: static !important;
+        padding: 2rem var(--p-gutter) !important;
+    }
+
+    /* Collapse Duplex/Penthouse Case Study Meta rows early */
+    .hero-meta-row {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 2.5rem !important;
+        padding-top: 1.5rem !important;
+    }
+    .meta-item::after {
+        display: none !important;
+    }
+    .meta-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+    }
+    .meta-item:last-child {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+    
+    /* Prevent considerations cards wrapping on tablet */
+    .considerations-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+}
+
+/* --- Laptop / Small Desktop (1200px–1366px wide) Spacing Refinements --- */
+@media (max-width: 1366px) {
+    /* Narrow the grid gap for Split rows so text columns don't feel too narrow */
+    .split {
+        gap: 3.5rem !important;
+    }
+    
+    /* Slightly compress the header gaps and fonts on laptops to fit everything gracefully */
+    nav ul {
+        gap: 1.5rem !important;
+    }
+    nav a {
+        font-size: 0.7rem !important;
+    }
+    header {
+        padding: 1.5rem 2.5rem !important;
+    }
+    
+    /* Scale down wide gaps for contact & projects */
+    .contact-grid {
+        gap: 4rem !important;
+    }
+    
+    /* Keep journal cards readable on laptop screens */
+    .journal-grid {
+        gap: 2.5rem !important;
+    }
+    .journal-card-content {
+        padding: 1.75rem !important;
+    }
+}
+
+/* --- Medium Width (768px - 1200px) Layout Refinements --- */
+@media (max-width: 1200px) {
+    /* 2 columns for services on tablet/medium screen width (avoid 3-col squashing and 1-col dropping) */
+    .services-list {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+    .service-item {
+        padding: 2.25rem !important;
+    }
+}
+
+/* --- Tablet Portrait / Mobile Landscape Height/Scroll Refinements --- */
+@media (max-width: 1024px) {
+    /* Prevent category navigation tabs from wrapping on tablet */
+    .faq-nav {
+        justify-content: flex-start !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        padding-bottom: 1rem !important;
+        gap: 1.5rem !important;
+        margin-bottom: 2.5rem !important;
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+    }
+    .faq-nav::-webkit-scrollbar {
+        display: none !important;
+    }
+    .faq-nav-btn {
+        flex-shrink: 0 !important;
+    }
+}
+
+/* --- Projects & Portfolio Touch & Collapse refinements --- */
+@media (max-width: 900px) {
+    /* Collapse project card grid earlier for stunning, premium imagery on tablet portrait */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    .project-card.large {
+        grid-column: span 1 !important;
+        aspect-ratio: 1/1 !important;
+    }
+}
+
+/* --- Heading Font Size Clamping for smaller widths --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.8rem, 7.5vw, 2.5rem) !important;
+    }
+    h2 {
+        font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+    }
+    h3 {
+        font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
+    }
+    
+    /* Ensure the services list collapses to single-column on mobile */
+    .services-list {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    .service-item {
+        padding: 1.75rem 1.5rem !important;
+    }
+    
+    /* Overwrite inline styles on about & services pages for margins and section paddings */
+    .split[style*="gap: 4rem"] {
+        gap: 2rem !important;
+    }
+    section[style*="padding: 6rem 0"],
+    section[style*="padding: 3.6rem 0"] {
+        padding: 3.5rem 0 !important;
+    }
+    div[style*="max-width: 800px"] {
+        max-width: 100% !important;
+    }
+    div[style*="margin-bottom: 3rem"] {
+        margin-bottom: 2rem !important;
+    }
+    h2[style*="font-size: 2.5rem"] {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* --- Mobile Landscape Height & Sizing Safeguard --- */
+@media (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 6rem var(--p-gutter) 4rem var(--p-gutter) !important;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
+/* --- Mobile Portrait Extra Fine-Tuning (320px–430px wide) --- */
+@media (max-width: 480px) {
+    /* Prevent very long checkboxes/radios from getting cut off */
+    .form-checkbox-group,
+    .form-checkbox-group.grid-2-cols,
+    .form-checkbox-group.grid-3-cols,
+    .form-checkbox-group.grid-4-cols,
+    .grid-4-cols,
+    .grid-3-cols,
+    .grid-2-cols {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Scale down hero title for absolute premium fit */
+    .hero-content h1 {
+        font-size: 2.0rem !important;
+    }
+    
+    /* Ensure small subpage hero elements have elegant breathing room */
+    .subpage-hero {
+        padding: 7rem 0 3.5rem 0 !important;
+    }
+    .subpage-content {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Squeezed text inside cards optimization */
+    .project-highlight-box,
+    .service-highlight-box {
+        padding: 1.5rem 1.25rem !important;
+    }
+}
+
+/* ──────────────────────────────────────────────────────────── */
+/* RESPONSIVE REFINEMENTS PASS: CARD, GRID & OVERFLOW PREVENTION */
+/* ──────────────────────────────────────────────────────────── */
+
+/* Ensure html and body can never scroll horizontally */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* Ensure flex and grid items can shrink past their contents to prevent overflowing the screen */
+.grid, 
+.grid-2-cols, 
+.grid-3-cols, 
+.grid-4-cols, 
+.projects-grid, 
+.reviews-grid, 
+.services-list, 
+.journal-grid, 
+.media-grid, 
+.contact-grid, 
+.footer-grid, 
+.service-details-grid, 
+.project-details-grid, 
+.post-layout,
+.considerations-grid,
+.related-projects-row {
+    min-width: 0 !important;
+}
+
+/* Ensure cards and blocks shrink and fit their parents dynamically */
+.project-card, 
+.service-item, 
+.journal-card, 
+.step-card, 
+.small-project-card, 
+.media-sidebar, 
+.contact-info-block, 
+.form-container, 
+.consideration-card,
+.footer-brand, 
+.footer-links, 
+.footer-contact, 
+.footer-social {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Global responsive word wrapping for all text elements to prevent any horizontal overflow */
+p, span, h1, h2, h3, h4, h5, h6, li, label, input, textarea, button, form, td, th {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+}
+
+/* Specific long email and link wrapping styles across the entire site */
+a, 
+a[href^="mailto:"], 
+a[href^="http://"], 
+a[href^="https://"], 
+.break-word,
+.contact-item p a,
+.footer-contact p a,
+.media-sidebar-link,
+#cms-footer-email {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important; /* Supported in WebKit/Blink */
+}
+
+/* Ensure form labels and checkboxes wrap cleanly and never force single-line overflow */
+.form-group > label,
+.form-checkbox-label,
+.form-checkbox-label span,
+label {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+}
+
+/* Scale down large serif contact info text dynamically on smaller viewports */
+.contact-item p {
+    font-size: clamp(1.15rem, 5.5vw, 1.6rem) !important;
+    line-height: 1.45 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* For extremely narrow viewports (e.g. iPhone SE / 320px-375px), force break-all on raw emails to prevent overflow */
+@media (max-width: 480px) {
+    a[href^="mailto:"], 
+    a[href^="http://"], 
+    a[href^="https://"],
+    .contact-item p a,
+    .footer-contact p a,
+    #cms-footer-email {
+        word-break: break-all !important;
+    }
+}
+
+/* ──────────────────────────────────────────────────────────── */
+/* COMPREHENSIVE RESPONSIVE GRID & CARD REFINEMENTS (GLOBAL FIXES) */
+/* ──────────────────────────────────────────────────────────── */
+
+/* Ensure defensive scaling and overflow-wrap properties for card text and general elements */
+.project-card, 
+.service-item, 
+.journal-card, 
+.step-card, 
+.small-project-card, 
+.media-sidebar, 
+.contact-info-block, 
+.form-container, 
+.consideration-card,
+.plan-card,
+.footer-brand, 
+.footer-links, 
+.footer-contact, 
+.footer-social {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Enforce robust word-wrapping globally on all text within cards, grids and details */
+.project-card *,
+.service-item *,
+.journal-card *,
+.step-card *,
+.small-project-card *,
+.consideration-card *,
+.plan-card *,
+.contact-info-block *,
+.contact-item *,
+.footer-contact * {
+    overflow-wrap: anywhere !important;
+    word-wrap: break-word !important;
+}
+
+/* Ensure no page can scroll sideways under any circumstances */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+}
+
+/* Responsive adjustments for 768px - 1024px (Tablet Portrait & Landscape) */
+@media (max-width: 1024px) {
+    /* Set considerations grid to 2 columns on tablet so it remains readable */
+    .considerations-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+    
+    /* Related projects row should fit cleanly in 2 columns on tablet */
+    .related-projects-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem !important;
+    }
+    .related-projects-row.count-1 {
+        grid-template-columns: 1fr !important;
+    }
+    .related-projects-row.count-2 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Responsive adjustments for under 768px (Mobile Portrait & Landscape: 320px - 767px) */
+@media (max-width: 767px) {
+    /* Stack all cards/grids one per row on mobile portrait and mobile landscape */
+    .considerations-grid,
+    .services-list,
+    .journal-grid,
+    .projects-grid,
+    .reviews-grid,
+    .related-projects-row,
+    .related-projects-row.count-2,
+    .journal-checklist-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Ensure project cards inside grids stack cleanly */
+    .project-card {
+        grid-column: span 1 !important;
+        aspect-ratio: 1.2 / 1 !important;
+    }
+    
+    .project-card.large {
+        grid-column: span 1 !important;
+        aspect-ratio: 1.2 / 1 !important;
+    }
+    
+    /* Custom padding adjustment for considerations cards on mobile */
+    .consideration-card {
+        padding: 1.8rem !important;
+    }
+}
+
+/* Mobile Portrait Extra Fine-Tuning (320px - 430px wide) */
+@media (max-width: 430px) {
+    /* Slightly tighter padding for considerations cards on narrow screens to maximize reading space */
+    .consideration-card {
+        padding: 1.5rem !important;
+        gap: 1.2rem !important;
+    }
+}
+
