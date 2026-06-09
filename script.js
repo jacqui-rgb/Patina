@@ -337,26 +337,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // CUSTOM CURSOR (Desktop only)
     // ═══════════════════════════════════════════════════════
     if (window.matchMedia('(pointer: fine)').matches) {
-        const cursor    = document.createElement('div'); cursor.id    = 'cursor';
-        const cursorDot = document.createElement('div'); cursorDot.id = 'cursor-dot';
-        document.body.append(cursor, cursorDot);
+        const cursor = document.createElement('div'); cursor.id = 'cursor';
+        document.body.append(cursor);
 
-        let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0;
+        let mouseX = 0, mouseY = 0;
 
         document.addEventListener('mousemove', e => {
             mouseX = e.clientX; mouseY = e.clientY;
             cursor.style.left = mouseX + 'px';
             cursor.style.top  = mouseY + 'px';
         });
-
-        const animateDot = () => {
-            dotX += (mouseX - dotX) * 0.1;
-            dotY += (mouseY - dotY) * 0.1;
-            cursorDot.style.left = dotX + 'px';
-            cursorDot.style.top  = dotY + 'px';
-            requestAnimationFrame(animateDot);
-        };
-        animateDot();
 
         document.querySelectorAll('a, button, .project-card').forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('cursor-grow'));
