@@ -22,6 +22,25 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style type="text/css">
+        .newsletter-email-wrapper table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        .newsletter-email-wrapper img { border: 0; display: block; outline: none; text-decoration: none; }
+        .newsletter-email-wrapper a { color: #8C7355; text-decoration: none; }
+        .newsletter-email-wrapper .cta-cell { display: inline-block; }
+        @media only screen and (max-width: 620px) {
+            .newsletter-email-wrapper .wrapper { width: 100% !important; }
+            .newsletter-email-wrapper .content-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .highlight-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .blockquote-text { font-size: 18px !important; }
+            .newsletter-email-wrapper .story-intro { font-size: 16px !important; }
+            .newsletter-email-wrapper .cta-table { width: 100% !important; }
+            .newsletter-email-wrapper .cta-cell { display: block !important; padding-right: 0 !important; padding-bottom: 12px !important; text-align: center !important; }
+            .newsletter-email-wrapper .cta-cell a { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+            .newsletter-email-wrapper .bed-images-table { width: 100% !important; }
+            .newsletter-email-wrapper .bed-image-cell { display: block !important; width: 100% !important; padding-right: 0 !important; padding-bottom: 8px !important; }
+            .newsletter-email-wrapper .bed-image-cell img { width: 100% !important; max-width: 100% !important; }
+        }
+    </style>
 </head>
 <body class="subpage newsletter-page">
     <header id="main-header">
@@ -59,118 +78,285 @@
 
         <section class="subpage-content container">
             <div class="newsletter-email-wrapper">
-                <div class="newsletter-email-inner">
-                    
-                    <!-- Newsletter Header Block -->
-                    <div class="newsletter-header-block">
-                        <p class="newsletter-series-tag">The Invisible Layer Series NO.3 | April 2026</p>
-                        <div class="newsletter-logo-wrapper">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" class="newsletter-logo-img">
-                        </div>
-                        <div class="newsletter-bts-divider">
-                            <span class="divider-line"></span>
-                            <span class="bts-badge">Behind the Scenes</span>
-                            <span class="divider-line"></span>
-                        </div>
-                    </div>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FAF8F5; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin: 0 auto; max-width: 680px;">
+                    <tr>
+                        <td align="center">
+                            <table class="wrapper" width="680" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#FAF8F5;">
 
-                    <!-- Intro Section ("A note from Jacqui") -->
-                    <div class="newsletter-jacqui-note-block">
-                        <p class="jacqui-note-eyebrow">A note from Jacqui</p>
-                        <div class="jacqui-note-text">
-                            <p>We are about to remove a wall that was already finished. Painted. Complete.</p>
-                            <p>It was constructed before we were engaged, based on the original developer-led design.</p>
-                            <p>Our client later asked us to reimagine the space around how they actually wanted to live.</p>
-                            <p>There is a point in every project where decisions can be resolved simply. After that point, they require more coordination, time, and cost to rework.</p>
-                            <p>In this newsletter, I want to show you what that looks like in practice.</p>
-                        </div>
-                        <p class="jacqui-note-signoff">Warm regards,<br><span>Jacqui</span></p>
-                    </div>
+                                <!-- HEADER -->
+                                <tr>
+                                    <td class="content-pad" align="center" style="padding:48px 48px 36px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:#7A7267;">The Invisible Layer Series No.3 | April 2026</p>
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" width="280" style="display:inline-block; width:280px; max-width:280px; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
 
-                    <!-- Pull Quote Block -->
-                    <div class="newsletter-pullquote-block">
-                        <p class="pullquote-text">"What could have been resolved early became something to work around."</p>
-                    </div>
+                                <!-- SERIES TAG -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                                <td style="padding:20px 20px; white-space:nowrap; font-family:Helvetica,Arial,sans-serif; font-size:9px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:#8C7355;">Behind the Scenes</td>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                    <!-- Feature Header Block -->
-                    <div class="newsletter-feature-header-block">
-                        <p class="feature-series-no">The Invisible Layer Series NO.3</p>
-                        <h2 class="feature-title">What actually impacts time and cost on a project</h2>
-                    </div>
+                                <!-- INTRO LETTER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 40px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#7A7267;">A note from Jacqui</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">We are about to remove a wall that was already finished.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">Painted. Complete.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">It was constructed before we were engaged, based on the original developer-led design.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">Our client later asked us to reimagine the space around how they actually wanted to live.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">There is a point in every project where decisions can be resolved simply. After that point, they require more coordination, time, and cost to rework.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">In this newsletter, I want to show you what that looks like in practice.</p>
+                                        <p style="margin:32px 0 0 0; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:15px; color:#8C7355;">Warm regards, <br> Jacqui</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Newsletter Main Body -->
-                    <div class="newsletter-body">
-                        
-                        <p class="lead" style="font-size: 1.15rem; font-weight: 300; line-height: 1.85; color: #2C2925; margin-bottom: 2rem;">We are about to remove a wall that was already finished. Painted. Complete. It was constructed before we were engaged, based on the original developer-led design. Our client later asked us to reimagine the space around how they actually wanted to live. There is a point in every project where decisions can be resolved simply. After that point, they require more coordination, time, and cost to rework.</p>
+                                <!-- PULL QUOTE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:58px 48px; background-color:#F4EFE6; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                            <tr>
+                                                <td width="3" style="background-color:#8C7355;">&nbsp;</td>
+                                                <td style="padding-left:28px;">
+                                                    <p class="blockquote-text" style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:14px; font-weight:400; font-style:italic; line-height:1.6; color:#2C2925;">"What could have been resolved early became something to work around."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <h2>Timelines Change Everything</h2>
-                        <p>Two clients purchased apartments off plan, before construction was complete. Off plan apartments generally are designed for broad appeal, not for how a specific person will ultimately live in the space.</p>
-                        <p>In one project, we were engaged early, before construction had meaningfully progressed. In the other, we were brought in just before completion. The difference was not just aesthetic. It was structural in outcome.</p>
+                                <!-- STORY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 0 48px;">
+                                        <p class="story-intro" style="margin:0 0 28px 0; font-family:Georgia,'Times New Roman',serif; font-size:22px; font-weight:400; line-height:1.5; color:#2C2925;">Timelines Change Everything</p>
+                                    </td>
+                                </tr>
 
-                        <h2>Bellevue Hill</h2>
-                        <p>We were engaged towards the end of construction. At that stage, many decisions had already been locked in. Layouts were fixed, joinery and finishes had been manufactured and installed, and electrical points were no longer flexible. We were designing within an existing framework rather than shaping it.</p>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Two clients purchased apartments off plan, before construction was complete.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Off plan apartments generally are designed for broad appeal, not for how a specific person will ultimately live in the space.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">In one project, we were engaged early, before construction had meaningfully progressed. In the other, we were brought in just before completion.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The difference was not just aesthetic. It was structural in outcome.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777038488/IMG_6993_gglxa5.jpg" alt="Bellevue Hill residential project finished wall space">
-                            <div class="newsletter-image-caption">Bellevue Hill project. The completed space that now requires a coordinated intervention to modify.</div>
-                        </div>
+                                <!-- SEPARATOR -->
+                                <tr>
+                                    <td class="content-pad" style="padding:16px 48px 16px 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td style="border-top:1px solid #DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <p>The wall referenced at the beginning of this newsletter sits within this project. Our client wanted a light sculpture integrated into this location. However, the necessary power and structural support had not been anticipated by the developer.</p>
-                        <p>We developed multiple design concepts, including options that preserved the existing wall and ceiling. Yet the preferred direction required integrated lighting within the sculpture itself.</p>
-                        <p>To achieve this, a completed section now needs to be reopened, structurally reinforced, and have power redirected through surrounding walls and ceiling so the lighting can be controlled from the main switch on the opposite side of the room.</p>
-                        <p>At framing stage, this would have been a simple inclusion. At this stage, it becomes a coordinated intervention across multiple trades and finished elements. A completed space is now being carefully reworked to accommodate something that could have been easily integrated earlier. The outcome remains achievable, but it now carries impact across everything around it.</p>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:600; line-height:1.85; color:#3E3A35;">Bellevue Hill</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We were engaged towards the end of construction.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">At that stage, many decisions had already been locked in. Layouts were fixed, joinery and finishes had been manufactured and installed, and electrical points were no longer flexible.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We were designing within an existing framework rather than shaping it.</p>
+                                    </td>
+                                </tr>
 
-                        <h2>Rose Bay</h2>
-                        <p>We were engaged at the early stage, before major construction had commenced, when only the structural framework was in place. This allowed us to shape and control spatial flow, refine lighting strategy, and redesign joinery, electrical planning, and finishes from the outset. Furniture and artwork were considered as part of the overall design, not introduced afterwards.</p>
+                                <!-- BELLEVUE HILL IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 4px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777038488/IMG_6993_gglxa5.jpg" alt="Bellevue Hill project" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037837/IMG_4658_jrwc6p.jpg" alt="Rose Bay hallway interior architecture design">
-                            <div class="newsletter-image-caption">Rose Bay hallway layout, refined early to optimise structural flow.</div>
-                        </div>
+                                <!-- BELLEVUE HILL IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037355/IMG_6988_mblila.jpg" alt="Rose Bay open plan living area frame">
-                            <div class="newsletter-image-caption">Rose Bay living area, planned comprehensively from framing stage.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The wall referenced at the beginning of this newsletter sits within this project. Our client wanted a light sculpture integrated into this location. However, the necessary power and structural support had not been anticipated by the developer.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We developed multiple design concepts, including options that preserved the existing wall and ceiling. Yet the preferred direction required integrated lighting within the sculpture itself.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">To achieve this, a completed section now needs to be reopened, structurally reinforced, and have power redirected through surrounding walls and ceiling so the lighting can be controlled from the main switch on the opposite side of the room.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">At framing stage, this would have been a simple inclusion.<br>At this stage, it becomes a coordinated intervention across multiple trades and finished elements.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">A completed space is now being carefully reworked to accommodate something that could have been seamlessly embedded earlier.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The outcome remains achievable.<br>But it now carries impact across everything around it.</p>
+                                    </td>
+                                </tr>
 
-                        <p>Every power point, lighting position, and spatial relationship was resolved around how the client would actually inhabit the space.</p>
+                                <!-- SEPARATOR -->
+                                <tr>
+                                    <td class="content-pad" style="padding:16px 48px 16px 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td style="border-top:1px solid #DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="assets/images/journal-no3-hero.png" alt="Rose Bay Plan Markup with Purple and Blue Highlights" loading="lazy">
-                            <div class="newsletter-image-caption">The plan markup detailing Rose Bay's integrated curtain structural support with purple and blue highlights.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:600; line-height:1.85; color:#3E3A35;">Rose Bay</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We were engaged at the early stage, before major construction had commenced, when only the structural framework was in place.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">This allowed us to shape and control spatial flow, refine lighting strategy, and redesign joinery, electrical planning, and finishes from the outset. Furniture and artwork were considered as part of the overall design, not introduced afterwards.</p>
+                                    </td>
+                                </tr>
 
-                        <p>As this was also a development property, key features such as curtain integration had not been anticipated in the original developer-driven design. Because we were engaged early, we were able to ensure structural support was integrated above the windows so the ceiling could properly carry the load.</p>
+                                <!-- HALLWAY IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 4px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037837/IMG_4658_jrwc6p.jpg" alt="Rose Bay hallway" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777123940/IMG_6991_cno1rl.jpg" alt="Rose Bay custom architectural blinds solution">
-                            <div class="newsletter-image-caption">A tailored architectural blind solution implemented where structural constraints were already fixed.</div>
-                        </div>
+                                <!-- HALLWAY IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
 
-                        <p>The hallway layout and joinery were also refined early, including repositioning the powder room entry to improve privacy and flow, and reworking the kitchen, butler's pantry and laundry room to better suit our client's requirements.</p>
-                        <p>The decisions themselves are not complex. The difference is when they are made.</p>
-                        <p>In other areas, constraints were already fixed. The raked ceiling and corner junction detail made curtains in this space impractical. We resolved this with a tailored blind solution that maintained visual clarity while respecting the architecture.</p>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Every power point, lighting position, and spatial relationship was resolved around how the client would actually inhabit the space.</p>
+                                    </td>
+                                </tr>
 
-                        <h2>The Difference</h2>
-                        <p>In one project, decisions were made at the point where they could define the outcome. In the other, those same decisions began to impact what was already complete.</p>
-                        <p>What could have been resolved early became something that required adjustment, often introducing compromise across design intent, timeline efficiency, cost efficiency, and surrounding built elements.</p>
-                        <p>More importantly, the role of design shifts. It moves from shaping outcomes to resolving constraints. Finishes, furniture, and styling can always be refined. What is far harder to change is the underlying structure that determines how a space actually functions and feels to live in.</p>
+                                <!-- ADDITIONAL ROSE BAY IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
 
-                    </div>
+                                <!-- LIVING ROOM IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 4px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037355/IMG_6988_mblila.jpg" alt="Rose Bay living area" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
 
-                    <!-- Dark Manifesto Block -->
-                    <div class="newsletter-manifesto-block">
-                        <h3>The Invisible Layer</h3>
-                        <p>Every project has a decision-making window that sits ahead of construction. Within this window, decisions are direct and efficient. Once it begins to close, changes become progressively more complex, more costly in coordination, and more disruptive to already resolved elements.</p>
-                        <p>This is why we prioritise resolving design before construction or demolition begins. It reduces uncertainty, protects budget efficiency, and allows the build process to proceed with clarity and control.</p>
-                    </div>
+                                <!-- LIVING ROOM IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
 
-                    <!-- Full width Project Image -->
-                    <div class="newsletter-fullwidth-image">
-                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037837/IMG_4655_za1owy.jpg" alt="Patina Design Studio Project Interior Architecture Detail">
-                    </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">As this was also a development property, key features such as curtain integration had not been anticipated in the original developer driven design. Because we were engaged early, we were able to ensure structural support was integrated above the windows so the ceiling could properly carry the load.</p>
+                                    </td>
+                                </tr>
 
-                </div>
+                                <!-- CURTAIN SUPPORT IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 4px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037353/IMG_6986_ufdrp9.jpg" alt="Rose Bay curtain structural support" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+
+                                <!-- CURTAIN SUPPORT IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The hallway layout and joinery were also refined early, including repositioning the powder room entry to improve privacy and flow, and reworking the kitchen, butler's pantry and laundry room to better suite our clients requirements.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The decisions themselves are not complex.<br>The difference is when they are made.</p>
+                                    </td>
+                                </tr>
+
+                                <!-- BLINDS IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 4px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777123940/IMG_6991_cno1rl.jpg" alt="Rose Bay blinds solution" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+
+                                <!-- BLINDS IMAGE SPACER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">In other areas, constraints were already fixed. The raked ceiling and corner junction detail made curtains in this space impractical. We resolved this with a tailored blind solution that maintained visual clarity while respecting the architecture.</p>
+                                    </td>
+                                </tr>
+
+                                <!-- SEPARATOR -->
+                                <tr>
+                                    <td class="content-pad" style="padding:16px 48px 16px 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td style="border-top:1px solid #DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 16px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:600; line-height:1.85; color:#3E3A35;">The Difference</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">In one project, decisions were made at the point where they could define the outcome.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"> In the other, those same decisions began to impact what was already complete.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">What could have been resolved early became something that required adjustment, often introducing compromise across design intent, timeline efficiency, cost efficiency, and surrounding built elements.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">More importantly, the role of design shifts.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">It moves from shaping outcomes to resolving constraints.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Finishes, furniture, and styling can always be refined.<br>What is far harder to change is the underlying structure that determines how a space actually functions and feels to live in.</p>
+                                    </td>
+                                </tr>
+
+                                <!-- SEPARATOR -->
+                                <tr>
+                                    <td class="content-pad" style="padding:16px 48px 16px 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+                                            <tr>
+                                                <td style="border-top:1px solid #DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- INVISIBLE LAYER HIGHLIGHT -->
+                                <tr>
+                                    <td class="content-pad" style="padding:16px 48px 0 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#2C2925; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                            <tr>
+                                                <td class="highlight-pad" style="padding:40px;">
+                                                    <p style="margin:0 0 14px 0; font-family:Georgia,'Times New Roman',serif; font-size:20px; font-weight:400; font-style:italic; color:#C9BFB0;">The Invisible Layer</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">Every project has a decision-making window that sits ahead of construction.</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">Within this window, decisions are direct and efficient. Once it begins to close, changes become progressively more complex, more costly in coordination, and more disruptive to already resolved elements.</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">This is why we prioritise resolving design before construction or demolition begins. It reduces uncertainty, protects budget efficiency, and allows the build process to proceed with clarity and control.</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">Whether it is a renovation, a new build, or an off-plan purchase, the principle remains consistent.</p>
+                                                    <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">Timing is not a detail in a project.<br>It is what determines whether a space is merely completed, or truly resolved.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 48px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/a_exif/q_auto/v1777037837/IMG_4655_za1owy.jpg" alt="Project image" width="584" style="display:block; width:100%; max-width:584px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <!-- Newsletter Signup Block -->
@@ -195,9 +381,9 @@ Get behind-the-scenes stories, floor plan critiques and design insights delivere
                     <span class="nav-label">Previous Article</span>
                     <span class="nav-title">No.2 | Why a Perfect Floor Plan Can Still Feel Wrong</span>
                 </a>
-                <a class='project-nav-link next' href='/journal-no1-the-ascent-of-the-36m-concrete-table'>
+                <a class='project-nav-link next' href='/journal-no4-the-small-things-you-tolerate'>
                     <span class="nav-label">Next Article</span>
-                    <span class="nav-title">No.1 | The Ascent of the 3.6m Concrete Table</span>
+                    <span class="nav-title">No.4 | The Small Things You Tolerate</span>
                 </a>
             </div>
         </section>

@@ -22,6 +22,22 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style type="text/css">
+        .newsletter-email-wrapper table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        .newsletter-email-wrapper img { border: 0; display: block; outline: none; text-decoration: none; }
+        .newsletter-email-wrapper a { color: #8C7355; text-decoration: none; }
+        .newsletter-email-wrapper .cta-cell { display: inline-block; }
+        @media only screen and (max-width: 620px) {
+            .newsletter-email-wrapper .wrapper { width: 100% !important; }
+            .newsletter-email-wrapper .content-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .highlight-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .blockquote-text { font-size: 18px !important; }
+            .newsletter-email-wrapper .story-intro { font-size: 16px !important; }
+            .newsletter-email-wrapper .cta-table { width: 100% !important; }
+            .newsletter-email-wrapper .cta-cell { display: block !important; padding-right: 0 !important; padding-bottom: 12px !important; text-align: center !important; }
+            .newsletter-email-wrapper .cta-cell a { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+        }
+    </style>
 </head>
 <body class="subpage newsletter-page">
     <header id="main-header">
@@ -59,138 +75,267 @@
 
         <section class="subpage-content container">
             <div class="newsletter-email-wrapper">
-                <div class="newsletter-email-inner">
-                    
-                    <!-- Newsletter Header Block -->
-                    <div class="newsletter-header-block">
-                        <p class="newsletter-series-tag">The Invisible Layer Series NO.1 | March 2026</p>
-                        <div class="newsletter-logo-wrapper">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" class="newsletter-logo-img">
-                        </div>
-                        <div class="newsletter-bts-divider">
-                            <span class="divider-line"></span>
-                            <span class="bts-badge">Behind the Scenes</span>
-                            <span class="divider-line"></span>
-                        </div>
-                    </div>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #FAF8F5;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt; margin: 0 auto; max-width: 680px;">
+                    <tr>
+                        <td align="center">
+                            <table class="wrapper" width="680" cellpadding="0" cellspacing="0" border="0" style="background-color: #FAF8F5;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 
-                    <!-- Intro Section ("A note from Jacqui") -->
-                    <div class="newsletter-jacqui-note-block">
-                        <p class="jacqui-note-eyebrow">A note from Jacqui</p>
-                        <div class="jacqui-note-text">
-                            <p>I'm delighted to introduce our new newsletter. This marks the beginning of The Invisible Layer Series, where I'll share the stories behind our work and what unfolds behind the scenes at Patina Design Studio. We'll uncover the work that sits beneath the finished result, and the decisions, challenges and orchestration required to deliver highly tailored environments for our clients.</p>
-                            <p>Reach out if you have any questions, we would love to hear from you.</p>
-                        </div>
-                        <p class="jacqui-note-signoff">Warm regards,<br><span>Jacqui</span></p>
-                    </div>
+                                <!-- HEADER -->
+                                <tr>
+                                    <td class="content-pad" align="center" style="padding:48px 48px 36px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:#7A7267;">The Invisible Layer Series NO.1 | March 2026</p>
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" width="280" style="display: inline-block;width: 280px;max-width: 280px;border: 0;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
 
-                    <!-- Pull Quote Block -->
-                    <div class="newsletter-pullquote-block">
-                        <p class="pullquote-text">"We start with the feeling our client wants to experience in each space. It's not just about aesthetics. Our role is to design a space around that, alongside functionality and liveability, and to resolve how each element will be created and curated so the outcome is exactly as intended."</p>
-                    </div>
+                                <!-- SERIES TAG -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                                <td style="padding:20px 20px; white-space:nowrap; font-family:Helvetica,Arial,sans-serif; font-size:9px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:#8C7355;">Behind the Scenes</td>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                    <!-- Feature Header Block -->
-                    <div class="newsletter-feature-header-block">
-                        <p class="feature-series-no">The Invisible Layer Series NO.1</p>
-                        <h2 class="feature-title">The Concrete Tables</h2>
-                    </div>
+                                <!-- INTRO LETTER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 40px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#7A7267;">A note from Jacqui</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">I'm delighted to introduce our new newsletter. <br> This marks the beginning of <i>The Invisible Layer Series</i>, where I'll share the stories behind our work and what unfolds behind the scenes at Patina Design Studio. <br>We'll uncover the work that sits beneath the finished result, and the decisions, challenges and orchestration required to deliver highly tailored environments for our clients.</p>
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">Reach out if you have any questions, we would love to hear from you.</p>
+                                        <p style="margin:32px 0 0 0; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:15px; color:#8C7355;">Warm regards, <br> Jacqui</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Newsletter Main Body -->
-                    <div class="newsletter-body">
-                        
-                        <p class="lead" style="font-size: 1.15rem; font-weight: 300; line-height: 1.85; color: #2C2925; margin-bottom: 2rem;">For the first of our Invisible Layer Series, I want to share the story behind two monolithic concrete dining tables we designed and had made specifically for our client's home.</p>
-                        
-                        <p>The design of these tables in itself is a process. It involves extreme attention to detail, multiple iterations, technical drawings, ergonomic considerations, prototypes, 3D modelling, and extensive collaboration to get it perfect. But that side of what we do is known and expected, so I'm not going to focus on that today.</p>
+                                <!-- PULL QUOTE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:58px 48px; background-color:#F4EFE6; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td width="3" style="background-color:#8C7355;">&nbsp;</td>
+                                                <td style="padding-left:28px;">
+                                                    <p class="blockquote-text" style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:14px; font-weight:400; font-style:italic; line-height:1.6; color:#2C2925;">"We start with the feeling our client wants to experience in each space. It's not just about aesthetics. Our role is to design a space around that, alongside functionality and liveability, and to resolve how each element will be created and curated so the outcome is exactly as intended."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585548/No1.1_Patina_Design_Studio_lbakn2.jpg" alt="Custom 200kg table top suspended in the air">
-                            <div class="newsletter-image-caption">Our custom 200kg table top suspended in the air for installation.</div>
-                        </div>
+                                <!-- STORY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 0 48px;">
+                                        <p style="margin:0 0 8px 0; font-family:Helvetica,Arial,sans-serif; font-size:12px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase; color:#8C7355;">The Invisible Layer Series NO.1</p>
+                                        <p class="story-intro" style="margin:0 0 28px 0; font-family:Georgia,'Times New Roman',serif; font-size:22px; font-weight:400; line-height:1.5; color:#2C2925;">The Concrete Tables</p>
+                                    </td>
+                                </tr>
 
-                        <h2>The Challenge</h2>
-                        <p>There are many other elements that aren't initially obvious when designing and curating a space. One of the challenges on this project that we had to plan for from the initial concept, was getting our two custom dining tables from Brisbane, where we had them made, into our client's third story penthouse in Sydney and installed into position.</p>
-                        <p>The larger table measured 3.6m and weighed 200kg without the legs.</p>
+                                <!-- IMAGE 1: just after title "The Concrete Tables" -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585548/No1.1_Patina_Design_Studio_lbakn2.jpg" width="584" alt="Table suspended in the air for installation" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">Our custom 200kg table top suspended in the air for installation.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585591/No1.2_Patina_Design_Studio_usrxcc.jpg" alt="Team navigating around balustrades">
-                            <div class="newsletter-image-caption">The team had to navigate each table around trees and balustrades.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 0 48px;">
+                                        <p style="margin:0 0 18px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">For the first of our Invisible Layer Series, I want to share the story behind two seamless concrete dining tables we designed and had made specifically for our client's home.</p>
+                                        <p style="margin:0 0 18px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The design of these tables in itself is a process. It involves attention to detail, multiple iterations, drawings, ergonomic considerations, prototypes, 3D modelling and collaboration to get it perfect. But that side of what we do is known and expected, so I'm not going to focus on that today.</p>
+                                        <p style="margin:48px 0 28px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600; color:#2C2925;">The challenge.</span> There are many other elements that aren't initially obvious when designing and curating a space. One of the challenges on this project that we had to plan for from the initial concept, was getting our two custom dining tables from Brisbane, where we had them made, into our client's third story penthouse in Sydney and installed into position.<br>The larger table measured 3.6m and weighed 200kg without the legs.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585655/No1.3_Patina_Design_Studio_vpkn9y.jpg" alt="3.6m concrete dining table top in 1 solid piece">
-                            <div class="newsletter-image-caption">The 3.6m concrete dining table top, made in 1 solid piece to avoid joint lines.</div>
-                        </div>
+                                <!-- IMAGE 2: just after "200kg without the legs." -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585591/No1.2_Patina_Design_Studio_usrxcc.jpg" width="584" alt="Navigating the table around trees and balustrades" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The team had to navigate each table around trees and balustrades</p>
+                                    </td>
+                                </tr>
 
-                        <h2>Our Approach</h2>
-                        <p>Once on site, our installers could not carry the table tops up the stairs or fit them into the elevator, so a very specific approach was required and coordinated in advance. We reserved several parking spots alongside the property to position a crane as close to the building as possible.</p>
-                        <p>On the day of installation, it was also pouring with rain and our margin for error felt minimal. We waited for a break in the weather and lifted the first table above the trees and over the balcony.</p>
+                                <!-- IMAGE 3: just after image 2 -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585655/No1.3_Patina_Design_Studio_vpkn9y.jpg" width="584" alt="The 3.6m concrete dining table top" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The 3.6m concrete dining table top, made in 1 solid piece to avoid joint lines</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585592/No1.4_Patina_Design_Studio_xjxqwa.jpg" alt="Craning the table over trees">
-                            <div class="newsletter-image-caption">Craning the table above the tree line and over the balustrade.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 18px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600; color:#2C2925;">Our approach.</span> Once on site, our installers could not carry the table tops up the stairs or fit them into the elevator, so a very specific approach was required and coordinated in advance. We reserved several parking spots alongside the property to position a crane as close to the building as possible. On the day of installation, it was also pouring with rain and our margin for error felt minimal. We waited for a break in the weather and lifted the first table above the trees and over the balcony.</p>
+                                    </td>
+                                </tr>
 
-                        <p>Meanwhile inside, full-scale templates were laid out on the floor to map the exact location of the legs and the table's final position. With pieces of this size and weight, it is far easier to place them correctly the first time than to attempt to move them after installation.</p>
+                                <!-- IMAGE 4: after "above the trees and over the balcony." -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585592/No1.4_Patina_Design_Studio_xjxqwa.jpg" width="584" alt="Craning the table above the tree line and over the balustrade" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">Craning the table above the tree line and over the balustrade.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585584/No1.5_Patina_Design_Studio_iwrlkq.jpg" alt="Custom banquette area table legs">
-                            <div class="newsletter-image-caption">The custom legs of our smaller table design for the banquette area.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Meanwhile inside, full-scale templates were laid out on the floor to map the exact location of the legs and the table's final position. With pieces of this size and weight, it is far easier to place them correctly the first time than to attempt to move them after installation.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585579/No1.6_Patina_Design_Studio_qsgei7.jpg" alt="Attaching leg to table top">
-                            <div class="newsletter-image-caption">Lining up the leg to attach in the correct position to the table top.</div>
-                        </div>
+                                <!-- IMAGE 5: after "time than to attempt to move them after installation." -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585584/No1.5_Patina_Design_Studio_iwrlkq.jpg" width="584" alt="The custom legs of the smaller table" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The custom legs of our smaller table design for the banquette area</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585635/No1.7_Patina_Design_Studio_tklajd.jpg" alt="Formal dining area table legs">
-                            <div class="newsletter-image-caption">The custom legs of our larger table design for the formal dining area.</div>
-                        </div>
+                                <!-- IMAGE 6: after image 5 -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585579/No1.6_Patina_Design_Studio_qsgei7.jpg" width="584" alt="Lining up the leg to attach to the table top" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">Lining up the leg to attach in the correct position to the table top</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585587/No1.8_Patina_Design_Studio_x1eejh.jpg" alt="Full scale templates mapping final position">
-                            <div class="newsletter-image-caption">Full-scale floor templates mapping the table's exact final position.</div>
-                        </div>
+                                <!-- IMAGE 7: after image 6 -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585635/No1.7_Patina_Design_Studio_tklajd.jpg" width="584" alt="The custom legs of the larger table" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The custom legs of our larger table design for the formal dining area</p>
+                                    </td>
+                                </tr>
 
-                        <p>A team of six assisted our design team with the install. Every movement was calculated. A single misstep could have damaged the tables, the building or the surrounding landscape.</p>
+                                <!-- IMAGE 8: after image 7 -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585587/No1.8_Patina_Design_Studio_x1eejh.jpg" width="584" alt="Full-scale floor templates" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">Full-scale floor templates mapping the table&#39;s exact final position.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585577/No1.9_Patina_Design_Studio_giwpdm.jpg" alt="Installation team assembling the table top">
-                            <div class="newsletter-image-caption">A six-person team on the ground and inside the penthouse during installation.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">A team of six assisted our design team with the install. Every movement was calculated. A single misstep could have damaged the tables, the building or the surrounding landscape.</p>
+                                    </td>
+                                </tr>
 
-                        <h2>The Outcome</h2>
-                        <p>Once inside, each piece was positioned, assembled, inspected, and refined over several hours, adjusting the alignment until they were perfect. The result was what we had envisioned during the design phase: sculptural, effortless and resolved within the space.</p>
-                        
-                        <p>The entire process took approximately five hours. Our client simply provided access in the morning and returned to her completed dining spaces, ready for her and her family to build memories around.</p>
+                                <tr>
+                                    <td class="content-pad" style="padding:20px 48px 28px 48px;">
+                                        <p style="margin:0 0 18px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600; color:#2C2925;">The outcome.</span> Once inside, each piece was positioned, assembled, inspected, and refined over several hours, adjusting the alignment until they were perfect. The result was what we had envisioned during the design phase. <br> Sculptural, effortless and resolved within the space.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585638/No1.10_Patina_Design_Studio_2_hduaug.jpg" alt="Table perfectly in place">
-                            <div class="newsletter-image-caption">The larger table perfectly in place.</div>
-                        </div>
+                                <!-- IMAGE 9: after "Sculptural, effortless and resolved within the space." -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585577/No1.9_Patina_Design_Studio_giwpdm.jpg" width="584" alt="Six-person team during installation" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">A six-person team on the ground and inside the penthouse during installation</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585728/No1.11_Patina_Design_Studio_yslare.jpg" alt="Completed dining space">
-                            <div class="newsletter-image-caption">The completed dining space, ready for the client's first evening at the table.</div>
-                        </div>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">The entire process took approximately five hours. <br> Our client simply provided access in the morning and returned to her completed dining spaces, ready for her and her family to build memories around.</p>
+                                    </td>
+                                </tr>
 
-                        <p style="font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; font-style: italic; color: #7A7267; margin: 3.5rem 0 2rem 0; line-height: 1.8;">For us, considered design means understanding how every element is made, transported and ultimately lives within a space, beyond how it looks.</p>
+                                <!-- IMAGE 10: after "and her family to build memories around." -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585638/No1.10_Patina_Design_Studio_2_hduaug.jpg" width="584" alt="The larger table perfectly in place" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The larger table perfectly in place</p>
+                                    </td>
+                                </tr>
 
-                    </div>
+                                <!-- IMAGE 11: after image 10 -->
+                                <tr>
+                                    <td style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774585728/No1.11_Patina_Design_Studio_yslare.jpg" width="584" alt="The completed dining space" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:0 48px 36px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The completed dining space, ready for the client&#39;s first evening at the table.</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Dark Manifesto Block -->
-                    <div class="newsletter-manifesto-block">
-                        <h3>The Invisible Layer</h3>
-                        <p>This is the invisible layer of design, where careful planning, foresight and problem solving shape outcomes that feel effortless.</p>
-                        <p>Across new builds, renovations and furnishing projects, we orchestrate every layer and decision with precision to deliver cohesive, highly considered interiors.</p>
-                    </div>
+                                <!-- CLOSING LINE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 48px 48px;">
+                                        <p style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:16px; font-weight:400; font-style:italic; line-height:1.8; color:#7A7267;">For us, considered design means understanding how every element is made, transported and ultimately lives within a space, beyond how it looks.</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Full width Vaucluse Kitchen Image -->
-                    <div class="newsletter-fullwidth-image">
-                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774595432/Patina_Design_Studio-Vaucluse4433_c6azyo.jpg" alt="Patina Design Studio Vaucluse Residence Interior">
-                    </div>
+                                <!-- INVISIBLE LAYER HIGHLIGHT -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #2C2925;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td class="highlight-pad" style="padding:40px;">
+                                                    <p style="margin:0 0 14px 0; font-family:Georgia,'Times New Roman',serif; font-size:20px; font-weight:400; font-style:italic; color:#C9BFB0;">The Invisible Layer</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">This is the invisible layer of design, where careful planning, foresight and problem solving shape outcomes that feel effortless.</p>
+                                                    <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">Across new builds, renovations and furnishing projects, we orchestrate every layer and decision with precision to deliver cohesive, highly considered interiors.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                </div>
+                                <!-- IMAGE 12: between dark box and CTA, no caption -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 48px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1774595432/Patina_Design_Studio-Vaucluse4433_c6azyo.jpg" alt="Patina Design Studio" style="width: 100%;display: block;border: 1px solid #DDD5C8;outline: none;text-decoration: none;">
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <!-- Newsletter Signup Block -->
@@ -211,9 +356,9 @@ Get behind-the-scenes stories, floor plan critiques and design insights delivere
             
             <!-- Article Navigation -->
             <div class="project-navigation reveal">
-                <a class='project-nav-link prev' href='/journal-no3-what-actually-impacts-time-and-cost-on-a-project'>
+                <a class='project-nav-link prev' href='/journal-no4-the-small-things-you-tolerate'>
                     <span class="nav-label">Previous Article</span>
-                    <span class="nav-title">No.3 | What actually impacts time and cost on a project</span>
+                    <span class="nav-title">No.4 | The Small Things You Tolerate</span>
                 </a>
                 <a class='project-nav-link next' href='/journal-no2-why-a-perfect-floor-plan-can-still-feel-wrong'>
                     <span class="nav-label">Next Article</span>
