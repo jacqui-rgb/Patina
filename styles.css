@@ -3057,8 +3057,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-series-tag {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.28em;
     text-transform: uppercase;
@@ -3101,8 +3101,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-bts-divider .bts-badge {
-    font-family: var(--font-body);
-    font-size: 0.5625rem; /* Exactly 9px to match newsletter */
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 9px; /* Exactly 9px to match newsletter */
     font-weight: 500;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -3127,8 +3127,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .jacqui-note-eyebrow {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #7A7267;
@@ -3136,8 +3136,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .jacqui-note-text p {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
     color: #2C2925;
@@ -3145,17 +3145,17 @@ body.newsletter-page .subpage-hero {
 }
 
 .jacqui-note-signoff {
-    font-family: var(--font-heading);
+    font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 15px;
     color: #8C7355;
     margin-top: 2rem;
     line-height: 1.5;
 }
 
 .jacqui-note-signoff span {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: normal;
 }
 
 /* Pull Quote Block */
@@ -3168,8 +3168,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .pullquote-text {
-    font-family: var(--font-heading);
-    font-size: 1.15rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 14px;
     font-weight: 400;
     font-style: italic;
     line-height: 1.6;
@@ -3183,7 +3183,7 @@ body.newsletter-page .subpage-hero {
 }
 
 .feature-series-no {
-    font-family: var(--font-body);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.28em;
@@ -3193,8 +3193,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .feature-title {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
     font-weight: 400;
     line-height: 1.5;
     color: #2C2925;
@@ -3207,12 +3207,16 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-body p {
-    font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
     color: #3E3A35;
     margin-bottom: 1.2rem;
+}
+
+.newsletter-body p.lead {
+    font-family: Helvetica, Arial, sans-serif !important;
 }
 
 .newsletter-body p strong, .newsletter-body p span[style*="font-weight:600"] {
@@ -3221,19 +3225,29 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-body h2 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #2C2925;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3E3A35;
     margin: 3rem 0 1rem 0;
+    line-height: 1.85;
 }
 
 .newsletter-body h3 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #2C2925;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #3E3A35;
     margin: 2.5rem 0 1rem 0;
+    line-height: 1.85;
+}
+
+.journal-checklist-grid h4 {
+    font-family: Helvetica, Arial, sans-serif !important;
+}
+
+.journal-checklist-grid ul {
+    font-family: Helvetica, Arial, sans-serif !important;
 }
 
 /* Image styles in newsletter */
@@ -3249,7 +3263,7 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-image-caption {
-    font-family: var(--font-body);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 0.75rem;
     font-weight: 300;
     line-height: 1.6;
@@ -3267,8 +3281,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-manifesto-block h3 {
-    font-family: var(--font-heading);
-    font-size: 1.35rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
     font-weight: 400;
     font-style: italic;
     color: #C9BFB0;
@@ -3277,8 +3291,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-manifesto-block p {
-    font-family: var(--font-body);
-    font-size: 0.88rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.9;
     color: #C9BFB0;
@@ -3312,9 +3326,9 @@ body.newsletter-page .subpage-hero {
 
 .newsletter-cta-btn {
     display: inline-block;
-    padding: 1rem 2rem;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
+    padding: 14px 32px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
     font-weight: 500;
     letter-spacing: 0.28em;
     text-transform: uppercase;
@@ -3351,8 +3365,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-feedback-block p {
-    font-family: var(--font-body);
-    font-size: 0.88rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
     font-weight: 300;
     line-height: 1.85;
     color: #7A7267;
@@ -3372,7 +3386,7 @@ body.newsletter-page .subpage-hero {
 }
 
 .teaser-eyebrow {
-    font-family: var(--font-body);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 0.28em;
@@ -3382,7 +3396,7 @@ body.newsletter-page .subpage-hero {
 }
 
 .teaser-title {
-    font-family: var(--font-heading);
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.15rem;
     font-weight: 400;
     color: #2C2925;
@@ -3390,7 +3404,7 @@ body.newsletter-page .subpage-hero {
 }
 
 .teaser-desc {
-    font-family: var(--font-body);
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 0.85rem;
     font-weight: 300;
     line-height: 1.75;
@@ -3408,10 +3422,10 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-footer-compliance p {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
     color: #606060;
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 0.5rem;
 }
 
@@ -3426,8 +3440,8 @@ body.newsletter-page .subpage-hero {
 }
 
 .newsletter-footer-compliance .compliance-address {
-    font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
     color: #606060;
     margin-top: 0.75rem;
     line-height: 1.5;
@@ -3448,6 +3462,12 @@ body.newsletter-page .subpage-hero {
     }
     .newsletter-pullquote-block {
         padding: 2rem 1.5rem;
+    }
+    .pullquote-text {
+        font-size: 18px !important;
+    }
+    .feature-title {
+        font-size: 16px !important;
     }
     .newsletter-manifesto-block {
         padding: 1.5rem;

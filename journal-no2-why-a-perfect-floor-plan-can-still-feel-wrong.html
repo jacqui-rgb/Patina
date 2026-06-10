@@ -22,6 +22,22 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <style type="text/css">
+        .newsletter-email-wrapper table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        .newsletter-email-wrapper img { border: 0; display: block; outline: none; text-decoration: none; }
+        .newsletter-email-wrapper a { color: #8C7355; text-decoration: none; }
+        .newsletter-email-wrapper .cta-cell { display: inline-block; }
+        @media only screen and (max-width: 620px) {
+            .newsletter-email-wrapper .wrapper { width: 100% !important; }
+            .newsletter-email-wrapper .content-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .highlight-pad { padding-left: 24px !important; padding-right: 24px !important; }
+            .newsletter-email-wrapper .blockquote-text { font-size: 18px !important; }
+            .newsletter-email-wrapper .story-intro { font-size: 16px !important; }
+            .newsletter-email-wrapper .cta-table { width: 100% !important; }
+            .newsletter-email-wrapper .cta-cell { display: block !important; padding-right: 0 !important; padding-bottom: 12px !important; text-align: center !important; }
+            .newsletter-email-wrapper .cta-cell a { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+        }
+    </style>
 </head>
 <body class="subpage newsletter-page">
     <header id="main-header">
@@ -59,185 +75,347 @@
 
         <section class="subpage-content container">
             <div class="newsletter-email-wrapper">
-                <div class="newsletter-email-inner">
-                    
-                    <!-- Newsletter Header Block -->
-                    <div class="newsletter-header-block">
-                        <p class="newsletter-series-tag">The Invisible Layer Series NO.2 | April 2026</p>
-                        <div class="newsletter-logo-wrapper">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" class="newsletter-logo-img">
-                        </div>
-                        <div class="newsletter-bts-divider">
-                            <span class="divider-line"></span>
-                            <span class="bts-badge">Behind the Scenes</span>
-                            <span class="divider-line"></span>
-                        </div>
-                    </div>
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FAF8F5; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; margin: 0 auto; max-width: 680px;">
+                    <tr>
+                        <td align="center">
+                            <table class="wrapper" width="680" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#FAF8F5;">
 
-                    <!-- Intro Section ("A note from Jacqui") -->
-                    <div class="newsletter-jacqui-note-block">
-                        <p class="jacqui-note-eyebrow">A note from Jacqui</p>
-                        <div class="jacqui-note-text">
-                            <p>A floor plan can include every desired element and still feel wrong when you actually live in it. True luxury is not about the finishes or features on a checklist. It is about how a space works, how it feels, and how it supports your daily routine.</p>
-                            <p>Next week, I will be travelling to the iconic design cities of London, Milan and New York. I will share my design insights in a future newsletter, but if you want to see what I'm looking at in real time, I'll be sharing on Patina Design Studio's Instagram story. Follow along there for a preview.</p>
-                            <p>If you have any questions or comments, please get in touch. We would love to hear from you.</p>
-                        </div>
-                        <p class="jacqui-note-signoff">Warm regards,<br><span>Jacqui</span></p>
-                    </div>
+                                <!-- HEADER -->
+                                <tr>
+                                    <td class="content-pad" align="center" style="padding:48px 48px 36px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; letter-spacing:0.28em; text-transform:uppercase; color:#7A7267;">The Invisible Layer Series No.2 | April 2026</p>
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/v1773977424/Patina_Design_Studio_Logo_n5m1ml.jpg" alt="Patina Design Studio" width="280" style="display:inline-block; width:280px; max-width:280px; border:0; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
 
-                    <!-- Pull Quote Block -->
-                    <div class="newsletter-pullquote-block">
-                        <p class="pullquote-text">"Luxurious design is about the experience of a space that works with you and your routine, not about cramming in a checklist without thought."</p>
-                    </div>
+                                <!-- SERIES TAG -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                                <td style="padding:20px 20px; white-space:nowrap; font-family:Helvetica,Arial,sans-serif; font-size:9px; font-weight:500; letter-spacing:0.3em; text-transform:uppercase; color:#8C7355;">Behind the Scenes</td>
+                                                <td style="height:1px; background-color:#DDD5C8;">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                    <!-- Feature Header Block -->
-                    <div class="newsletter-feature-header-block">
-                        <p class="feature-series-no">The Invisible Layer Series NO.2</p>
-                        <h2 class="feature-title">Why a Perfect Floor Plan Can Still Feel Wrong</h2>
-                    </div>
+                                <!-- INTRO LETTER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 40px; border-bottom:1px solid #DDD5C8;">
+                                        <p style="margin:0 0 24px 0; font-family:Georgia,'Times New Roman',serif; font-size:12px; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#7A7267;">A note from Jacqui</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">A floor plan can include every desired element and still feel wrong when you actually live in it. True luxury is not about the finishes or features on a checklist. It is about how a space works, how it feels, and how it supports your daily routine.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">Next week, I will be traveling to the iconic design cities of London, Milan and New York. I'll talk about in a future newsletter, but if you want to see what I'm looking at in real time, I'll be sharing on <a href="https://www.instagram.com/patina.design.studio/" style="color:#8C7355; text-decoration:none;">Patina Design Studio's Instagram story</a>, follow along there for a preview.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#2C2925;">If you have any questions or comments reply to this email, we would love to hear from you.</p>
+                                        <p style="margin:32px 0 0 0; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:15px; color:#8C7355;">Warm regards, <br> Jacqui</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Newsletter Main Body -->
-                    <div class="newsletter-body">
-                        
-                        <p class="lead" style="font-size: 1.15rem; font-weight: 300; line-height: 1.85; color: #2C2925; margin-bottom: 2rem;">A floor plan can include every desired element and still feel wrong when you actually live in it. True luxury is not about the finishes or features on a checklist. It is about how a space works, how it feels, and how it supports your daily routine.</p>
+                                <!-- PULL QUOTE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:58px 48px; background-color:#F4EFE6; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td width="3" style="background-color:#8C7355;">&nbsp;</td>
+                                                <td style="padding-left:28px;">
+                                                    <p class="blockquote-text" style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:14px; font-weight:400; font-style:italic; line-height:1.6; color:#2C2925;">"Luxurious design is about the experience of a space that works with you and your routine, not about cramming in a checklist without thought."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                        <h2>The Power of a Plan</h2>
-                        <p>Critique this layout with me. The original floor plan for this bedroom suite included a comprehensive set of premium features:</p>
-                        
-                        <div style="margin: 2rem 0; background: #F4EFE6; border: 1px solid #DDD5C8; padding: 2rem;">
-                            <div class="journal-checklist-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-                                <div>
-                                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-weight: bold; font-size: 1.1rem; color: #1a1a1a;">The Ensuite Checklist</h4>
-                                    <ul style="list-style: none; padding: 0; line-height: 1.8; font-size: 0.9rem; font-weight: 300;">
-                                        <li>✓ Double Vanity</li>
-                                        <li>&nbsp;✓ Make-up counter</li>
-                                        <li>&nbsp;✓ Large shower</li>
-                                        <li>&nbsp;✓ Oversized free-standing bathtub by the window</li>
-                                        <li>&nbsp;✓ Separate toilet</li>
-                                        <li>&nbsp;✓ Heated towel rails</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 style="font-family: var(--font-heading); margin-bottom: 0.75rem; font-weight: bold; font-size: 1.1rem; color: #1a1a1a;">The Bedroom Checklist</h4>
-                                    <ul style="list-style: none; padding: 0; line-height: 1.8; font-size: 0.9rem; font-weight: 300;">
-                                        <li>✓ Walk-in robes with defined storage for his &amp; her</li>
-                                        <li>&nbsp;✓ Integrated mini bar</li>
-                                        <li>&nbsp;✓ Bed positioned facing the views</li>
-                                        <li>&nbsp;✓ Fireplace</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                                <!-- STORY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 0 48px;">
+                                        <p style="margin:0 0 8px 0; font-family:Helvetica,Arial,sans-serif; font-size:12px; font-weight:500; letter-spacing:0.28em; text-transform:uppercase; color:#8C7355;">The Invisible Layer Series No.2</p>
+                                        <p class="story-intro" style="margin:0 0 28px 0; font-family:Georgia,'Times New Roman',serif; font-size:22px; font-weight:400; line-height:1.5; color:#2C2925;">The Power of a Plan</p>
+                                    </td>
+                                </tr>
 
-                        <p>Yes, it is all there on the checklist... So what is the problem?</p>
+                                <!-- STORY BODY - INTRO -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:700; line-height:1.85; color:#3E3A35;">Critique this layout with me.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/ORIGINAL_PLAN_msv8e1.jpg" alt="Original bedroom suite floor plan layout showing bedroom, robes and ensuite">
-                            <div class="newsletter-image-caption">The original floor plan for the bedroom suite.</div>
-                        </div>
+                                <!-- IMAGE 1: Original floor plan without notes -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/ORIGINAL_PLAN_msv8e1.jpg" width="584" alt="Original bedroom suite floor plan showing ensuite, walk-in robes, and bedroom layout" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The original floor plan for the bedroom suite.</p>
+                                    </td>
+                                </tr>
 
-                        <p>This layout has many issues, but for now I will stick to the most jarring problems with the original floor plan, not even mentioning the compromised storage or the shower head in the wrong location.</p>
+                                <!-- STORY BODY - CLIENT REQUIREMENTS -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 8px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:600; line-height:1.85; color:#3E3A35;">Ensuite</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Double Vanity</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Make-up counter</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Large shower</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Oversized free-standing bathtub by the window</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Separate toilet</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Heated towel rails</p>
+                                        <p style="margin:0 0 8px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:600; line-height:1.85; color:#3E3A35;">Bedroom</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Walk in robes with defined storage for his and her items</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Mini bar</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Bed facing the view</p>
+                                        <p style="margin:0 0 4px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">&#10003; Fireplace</p>
+                                        <br><br>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">Yes, it is all there...</span> So what is the problem?</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635074/Original_layout_with_notes_jxxha8.jpg" alt="Original floor plan annotated with design notes highlighting problem areas">
-                            <div class="newsletter-image-caption">The original layout annotated with the key issues we identified.</div>
-                        </div>
+                                <!-- IMAGE 2: Original floor plan with notes -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635074/Original_layout_with_notes_jxxha8.jpg" width="584" alt="Original floor plan annotated with design notes highlighting problem areas" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The original layout annotated with the key issues.</p>
+                                    </td>
+                                </tr>
 
-                        <h2>The Issues</h2>
-                        
-                        <h3>1. The Mini Bar</h3>
-                        <p>A luxury addition that is not convenient. It might seem like a luxury to have a built-in mini bar in your bedroom for tea, coffee or wine, but without enough space to store both glassware and a fridge, you'd still need to go back to the kitchen. There is also the risk of being pinned behind the door while handling a hot drink.</p>
+                                <!-- STORY BODY - FIVE PROBLEMS -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">This layout has many issues, but for now I will stick to the most jarring problems with the original floor plan,  not even mentioning the compromised storage or the shower head in the wrong location.</p>
+                                        <p id="minibar" style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">A luxury addition that is not convenient.</span> It might seem like a luxury to have a built-in mini bar in your bedroom for tea, coffee or wine, but without enough space to store both glassware and a fridge, you'd still need to go back to the kitchen. There is also the risk of being pinned behind the door while handling a hot drink.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_32_n7v6yg.jpg" alt="Floor plan detail showing bedroom door opening directly onto the mini bar area">
-                            <div class="newsletter-image-caption">The door swings directly into the mini bar, creating a safety concern with hot drinks.</div>
-                        </div>
+                                <!-- IMAGE 3: Door opening onto mini bar -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_32_n7v6yg.jpg" width="584" alt="Floor plan detail showing bedroom door opening directly onto the mini bar area" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The door swings directly into the mini bar, creating a safety concern with hot drinks.</p>
+                                    </td>
+                                </tr>
 
-                        <h3>2. The Wardrobe</h3>
-                        <p>A wardrobe that doubles as a corridor. Imagine the morning rush! When a walk-in wardrobe is used as a passage to the ensuite, it can create a scenario where one person is trying to access their clothing, while the other is pushing past. Daily routines are disrupted, and in this layout, doors can easily be left open, exposing you to the hallway while you are getting changed.</p>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p id="wardrobe" style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">A wardrobe that doubles as a corridor.</span> Imagine the morning rush! When a walk-in wardrobe is used as a passage to the ensuite, it can create a scenario where one person is trying to access their clothing, while the other is pushing past. Daily routines are disrupted, and in this layout, doors can easily be left open, exposing you to the hallway while you are getting changed.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_25_r3y5wx.jpg" alt="View from hallway looking into the walk-in wardrobe that doubles as a passage to the bathroom">
-                            <div class="newsletter-image-caption">The walk-in wardrobe becomes a thoroughfare, compromising privacy and creating tension points.</div>
-                        </div>
+                                <!-- IMAGE 4: Wardrobe as hallway -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_25_r3y5wx.jpg" width="584" alt="View from hallway looking into the walk-in wardrobe that doubles as a passage to the bathroom" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The walk-in wardrobe becomes a thoroughfare, compromising privacy and creating tension points.</p>
+                                    </td>
+                                </tr>
 
-                        <p>Less obvious is the long-term impact of bathroom moisture, which can slowly damage clothes, shoes, and bags.</p>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Less obvious is the long-term impact of bathroom moisture, which can slowly damage clothes, shoes, and bags.</p>
+                                    </td>
+                                </tr>
 
-                        <h3>3. The Ensuite Entry</h3>
-                        <p>The first thing you see. You enter the ensuite to relax after a long day and the first thing in your line of sight are damp towels hanging on the wall. That is not the feeling of calm this space should offer.</p>
+                                <!-- IMAGE 5: View of hanging towels -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_18_jwyni2.jpg" width="584" alt="First view upon entering the ensuite showing damp towels hanging on heated rails as the focal point" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The first impression upon entering the ensuite is the view of hanging towels rather than a calming focal point.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/Image_18_jwyni2.jpg" alt="First view upon entering the ensuite showing damp towels hanging on heated rails as the focal point">
-                            <div class="newsletter-image-caption">The first impression upon entering the ensuite is the view of hanging towels rather than a calming focal point.</div>
-                        </div>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p id="firstthing" style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">The first thing you see.</span> You enter the ensuite to relax after a long day and the first thing in your line of sight are damp towels hanging on the wall. That is not the feeling of calm this space should offer. </p>
+                                    </td>
+                                </tr>
 
-                        <h3>4. The Bath</h3>
-                        <p>How will this be kept clean? Having a beautiful freestanding bath pushed up against the wall, it is impossible to clean behind properly. This creates a constant threat of mould or water sitting behind it, which over time can cause structural problems.</p>
+                                <!-- IMAGE 6: Bath pushed against wall -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635903/Image_21_kkm6lx.jpg" width="584" alt="Freestanding bathtub pushed directly against the wall making it impossible to clean behind" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The freestanding bath sits hard against the wall, creating a moisture trap in the corner.</p>
+                                    </td>
+                                </tr>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p id="firstthing_clean" style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">How will this be kept clean?</span> Having a beautiful freestanding bath pushed up against the wall, it is impossible to clean behind properly. This creates a constant threat of mould or water sitting behind it, which over time can cause structural problems.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635903/Image_21_kkm6lx.jpg" alt="Freestanding bathtub pushed directly against the wall making it impossible to clean behind">
-                            <div class="newsletter-image-caption">The freestanding bath sits hard against the wall, creating a moisture trap in the corner.</div>
-                        </div>
+                                <!-- PULL QUOTE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:58px 48px; background-color:#F4EFE6; border-bottom:1px solid #DDD5C8;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
+                                            <tr>
+                                                <td width="3" style="background-color:#8C7355;">&nbsp;</td>
+                                                <td style="padding-left:28px;">
+                                                    <p class="blockquote-text" style="margin:0; font-family:Georgia,'Times New Roman',serif; font-size:14px; font-weight:400; font-style:italic; line-height:1.6; color:#2C2925;">"In daily life, even in a home designed and built specifically for you, small problems can quietly undermine the sense of luxury and calm."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                
+                                <!-- STORY BODY - TRANSITION TO SOLUTION -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px 28px 48px;">
+                                        <p id="redesign" style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;"><span style="font-weight:600;">Redesigning the layout.</span> Patina Design Studio was engaged to review the above floor plan and uncover why it did not quite work, even with all the elements our clients wanted. This first concept-stage iteration focused on resolving those problems and improving flow and function.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We created a defined and welcoming entry to the bedroom, with a clear path of travel through to the ensuite, separate walk-in robes, and sleeping zones. This layout provides privacy and minimises light bleed from the robes, allowing one partner to sleep uninterrupted while the other gets ready for an early morning start.</p>
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We relocated and redesigned the mini bar, integrating storage, a sink, and a fridge, and positioned it with plenty of space to move around without risk of being hit. It now feels like a deliberate, considered, and practical feature rather than a compromised last-minute addition.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-pullquote-block" style="margin: 3rem 0;">
-                            <p class="pullquote-text">"In daily life, even in a home designed and built specifically for you, small problems can quietly undermine the sense of luxury and calm."</p>
-                        </div>
+                                <!-- IMAGE 7: New proposed entry -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635073/CONCEPT_PLAN_entry_patina_design_studio_mku84l.jpg" width="584" alt="Proposed concept plan showing a defined entry to the bedroom suite with improved mini bar location and separated wardrobes" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The new concept creates a welcoming entry, a larger and better located mini bar, reduced light bleed, and wardrobes separated from the wet area.</p>
+                                    </td>
+                                </tr>
 
-                        <h2>Redesigning the Layout</h2>
-                        <p>Patina Design Studio was engaged to review the above floor plan and uncover why it did not quite work, even with all the elements our clients wanted. This first concept-stage iteration focused on resolving those problems and improving flow and function.</p>
-                        
-                        <p>We created a defined and welcoming entry to the bedroom, with a clear path of travel through to the ensuite, separate walk-in robes, and sleeping zones. This layout provides privacy and minimises light bleed from the robes, allowing one partner to sleep uninterrupted while the other gets ready for an early morning start.</p>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">As you step into the ensuite, the impressive freestanding bathtub comes into view first, inviting relaxation. We positioned it away from the wall, so it serves as the central feature while still allowing easy access behind for cleaning.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635073/CONCEPT_PLAN_entry_patina_design_studio_mku84l.jpg" alt="Proposed concept plan showing a defined entry to the bedroom suite with improved mini bar location and separated wardrobes">
-                            <div class="newsletter-image-caption">The new concept creates a welcoming entry, a larger and better located mini bar, reduced light bleed, and wardrobes separated from the wet area.</div>
-                        </div>
+                                <!-- IMAGE 8: New ensuite with bath view -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635072/CONCEPT_PLAN_view_of_bath_patina_design_studio_kzn3yk.jpg" width="584" alt="Proposed ensuite layout with the freestanding bath as the first view upon entry, positioned away from the wall for easy cleaning" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The freestanding bath is now the first thing you see, positioned away from the wall with towels in a convenient but discreet location.</p>
+                                    </td>
+                                </tr>
 
-                        <p>We relocated and redesigned the mini bar, integrating storage, a sink, and a fridge, and positioned it with plenty of space to move around without risk of being hit. It now feels like a deliberate, considered, and practical feature rather than a compromised last-minute addition.</p>
-                        <p>As you step into the ensuite, the impressive freestanding bathtub comes into view first, inviting relaxation. We positioned it away from the wall, so it serves as the central feature while still allowing easy access behind for cleaning.</p>
+                                <!-- STORY BODY -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">We moved the toilet to the exterior wall to allow direct ventilation outside, preventing its reflection in the vanity mirror, and maintained easy access and privacy. We also added a small basin for convenience.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635072/CONCEPT_PLAN_view_of_bath_patina_design_studio_kzn3yk.jpg" alt="Proposed ensuite layout with the freestanding bath as the first view upon entry, positioned away from the wall for easy cleaning">
-                            <div class="newsletter-image-caption">The proposed ensuite layout with the freestanding bath as the first view upon entry, positioned away from the wall for easy cleaning.</div>
-                        </div>
+                                <!-- IMAGE 9: Toilet relocated -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635073/CONCEPT_PLAN_we_patina_design_studio_fftlqp.jpg" width="584" alt="Proposed layout with toilet relocated to the exterior wall for direct ventilation and an added separate basin" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The toilet now sits on the exterior wall with direct ventilation, with its own small basin.</p>
+                                    </td>
+                                </tr>
 
-                        <p>The toilet was relocated to the exterior wall for direct ventilation and to prevent its reflection in the vanity mirror, while an additional custom layout was designed to optimise spacing.</p>
+                                <!-- STORY BODY - CONCLUSION -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">Luxurious design is about the experience of a space that works with you and your routine, not about cramming in a checklist without thought. What was once fragmented now feels calm, intuitive, and quietly indulgent.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635073/CONCEPT_PLAN_we_patina_design_studio_fftlqp.jpg" alt="Proposed layout with toilet relocated to the exterior wall for direct ventilation and an added separate basin">
-                            <div class="newsletter-image-caption">Proposed layout with toilet relocated to the exterior wall for direct ventilation and an added separate basin.</div>
-                        </div>
+                                <!-- IMAGE 10: Concept plan with notes -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635075/CONCEPT_PLAN_with_notes_patina_design_studio_q8cbkg.jpg" width="584" alt="Patina Design Studio proposed concept layout annotated with notes showing all improvements" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">Our proposed concept layout with annotations highlighting resolved solutions.</p>
+                                    </td>
+                                </tr>
 
-                        <p>Here is our proposed concept layout annotated with all improvements, followed by the complete resolved floor plan.</p>
+                                <!-- STORY BODY - INVISIBLE LAYER -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0 0 16px 0; font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:300; line-height:1.85; color:#3E3A35;">This is the invisible layer of design. When a space is properly resolved, you simply feel at ease within it, and I have not even mentioned the finishes yet.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635075/CONCEPT_PLAN_with_notes_patina_design_studio_q8cbkg.jpg" alt="Patina Design Studio proposed concept layout annotated with notes showing all improvements">
-                            <div class="newsletter-image-caption">Proposed concept layout annotated with improvements.</div>
-                        </div>
+                                <!-- IMAGE 11: Concept plan without notes -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635097/CONCEPT_PLAN_Patina_Design_Studio_sp3pzo.jpg" width="584" alt="Patina Design Studio proposed concept layout showing the complete resolved floor plan" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 28px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">The proposed concept layout by Patina Design Studio.</p>
+                                    </td>
+                                </tr>
 
-                        <div class="newsletter-image-block">
-                            <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635097/CONCEPT_PLAN_Patina_Design_Studio_sp3pzo.jpg" alt="Patina Design Studio proposed concept layout showing the complete resolved floor plan">
-                            <div class="newsletter-image-caption">The complete resolved floor plan.</div>
-                        </div>
+                                <!-- CLOSING ITALIC LINE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 48px 48px; border-bottom:1px solid #DDD5C8;">
+                                    </td>
+                                </tr>
 
-                        <h2>The Outcome</h2>
-                        <p>With the layout fully resolved, we created a concept rendering of the ensuite to help our clients visualise how the freestanding bath works within the overall design, creating a striking focal point upon entry.</p>
+                                <!-- INVISIBLE LAYER HIGHLIGHT -->
+                                <tr>
+                                    <td class="content-pad" style="padding:48px 48px;">
+                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#2C2925; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                            <tr>
+                                                <td class="highlight-pad" style="padding:40px;">
+                                                    <p style="margin:0 0 14px 0; font-family:Georgia,'Times New Roman',serif; font-size:20px; font-weight:400; font-style:italic; color:#C9BFB0;">The Invisible Layer</p>
+                                                    <p style="margin:0 0 14px 0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">A floor plan can tick every box and still fall short. The invisible layer is what separates a layout that simply contains the right elements from one that genuinely supports how you live, move, and feel within your home.</p>
+                                                    <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:14px; font-weight:300; line-height:1.9; color:#C9BFB0;">It is the careful resolution of flow, privacy, light, and daily routine that transforms a collection of rooms into a space that feels calm, intuitive, and quietly indulgent. That is the work we do at Patina Design Studio.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                    </div>
+                                <!-- STUDIO IMAGE -->
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 8px 48px;">
+                                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/VIEW_TO_BATH_huofj8.jpg" width="584" alt="Concept rendering of the freestanding bath in the resolved ensuite design by Patina Design Studio" style="width:100%; display:block; border:1px solid #DDD5C8; outline:none; text-decoration:none;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-pad" style="padding:0 48px 48px 48px;">
+                                        <p style="margin:0; font-family:Helvetica,Arial,sans-serif; font-size:11px; font-weight:300; line-height:1.6; color:#7A7267; font-style:italic;">A concept view of the freestanding bath in the resolved ensuite.</p>
+                                    </td>
+                                </tr>
 
-                    <!-- Dark Manifesto Block -->
-                    <div class="newsletter-manifesto-block">
-                        <h3>The Invisible Layer</h3>
-                        <p>A floor plan can tick every box and still fall short. The invisible layer is what separates a layout that simply contains the right elements from one that genuinely supports how you live, move, and feel within your home.</p>
-                        <p>It is the careful resolution of flow, privacy, light, and daily routine that transforms a collection of rooms into a space that feels calm, intuitive, and quietly indulgent. That is the work we do at Patina Design Studio.</p>
-                    </div>
-
-                    <!-- Full width Freestanding Bath rendering -->
-                    <div class="newsletter-fullwidth-image">
-                        <img src="https://res.cloudinary.com/dwwyn8r75/image/upload/q_auto/v1775635148/VIEW_TO_BATH_huofj8.jpg" alt="Concept rendering of the freestanding bath in the resolved ensuite design by Patina Design Studio">
-                    </div>
-
-                </div>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <!-- Newsletter Signup Block -->
