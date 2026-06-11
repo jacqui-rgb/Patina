@@ -316,11 +316,17 @@
 
             <div class="form-container">
                 <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); margin-bottom: 3.5rem;"><strong>Before you begin</strong><br><br><em>We review every enquiry personally. The information provided helps us understand your project, priorities and objectives before our initial conversation so we can provide more considered guidance from the outset.</em></p>
-                <form method='POST' name='enquiries'><input type='hidden' name='form-name' value='enquiries' />
+                <form method='POST' name='enquiries' data-netlify='true' netlify-honeypot='bot-field'><input type='hidden' name='form-name' value='enquiries' />
                     <!-- Spam Prevention honeypot -->
                     <p style="display: none !important;" aria-hidden="true">
                         <label>Don't fill this: <input name="bot-field" /></label>
                     </p>
+
+                    <!-- Hidden fields to robustly capture multi-select checkbox groups as comma-separated values -->
+                    <input type="hidden" name="property_type" id="property_type_hidden" value="" />
+                    <input type="hidden" name="project_type" id="project_type_hidden" value="" />
+                    <input type="hidden" name="areas_of_assistance" id="areas_of_assistance_hidden" value="" />
+                    <input type="hidden" name="discover_source" id="discover_source_hidden" value="" />
 
                     <!-- SECTION 1: Personal Details -->
                     <h2 class="form-section-title" style="margin-top: 0;">01. Personal Details</h2>
@@ -360,28 +366,28 @@
                         <label>Property Type *</label>
                         <div class="form-checkbox-group grid-3-cols">
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Single Residential" class="form-checkbox"><span class="form-checkbox-text">Single Residential</span>
+                                <input type="checkbox" name="property_type_option" value="Single Residential" class="form-checkbox"><span class="form-checkbox-text">Single Residential</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Apartment" class="form-checkbox"><span class="form-checkbox-text">Apartment</span>
+                                <input type="checkbox" name="property_type_option" value="Apartment" class="form-checkbox"><span class="form-checkbox-text">Apartment</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Multi-Residential" class="form-checkbox"><span class="form-checkbox-text">Multi-Residential</span>
+                                <input type="checkbox" name="property_type_option" value="Multi-Residential" class="form-checkbox"><span class="form-checkbox-text">Multi-Residential</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Development" class="form-checkbox"><span class="form-checkbox-text">Development</span>
+                                <input type="checkbox" name="property_type_option" value="Development" class="form-checkbox"><span class="form-checkbox-text">Development</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Commercial" class="form-checkbox"><span class="form-checkbox-text">Commercial</span>
+                                <input type="checkbox" name="property_type_option" value="Commercial" class="form-checkbox"><span class="form-checkbox-text">Commercial</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Hospitality" class="form-checkbox"><span class="form-checkbox-text">Hospitality</span>
+                                <input type="checkbox" name="property_type_option" value="Hospitality" class="form-checkbox"><span class="form-checkbox-text">Hospitality</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Health &amp; Wellness" class="form-checkbox"><span class="form-checkbox-text">Health &amp; Wellness</span>
+                                <input type="checkbox" name="property_type_option" value="Health &amp; Wellness" class="form-checkbox"><span class="form-checkbox-text">Health &amp; Wellness</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="property_type" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
+                                <input type="checkbox" name="property_type_option" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
                             </label>
                         </div>
                     </div>
@@ -390,31 +396,31 @@
                         <label>Project Type *</label>
                         <div class="form-checkbox-group grid-2-cols">
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Renovation" class="form-checkbox"><span class="form-checkbox-text">Renovation</span>
+                                <input type="checkbox" name="project_type_option" value="Renovation" class="form-checkbox"><span class="form-checkbox-text">Renovation</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Extension" class="form-checkbox"><span class="form-checkbox-text">Extension</span>
+                                <input type="checkbox" name="project_type_option" value="Extension" class="form-checkbox"><span class="form-checkbox-text">Extension</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="New Build" class="form-checkbox"><span class="form-checkbox-text">New Build</span>
+                                <input type="checkbox" name="project_type_option" value="New Build" class="form-checkbox"><span class="form-checkbox-text">New Build</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Apartment Fitout" class="form-checkbox"><span class="form-checkbox-text">Apartment Fitout</span>
+                                <input type="checkbox" name="project_type_option" value="Apartment Fitout" class="form-checkbox"><span class="form-checkbox-text">Apartment Fitout</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Furnishing &amp; Procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing &amp; Procurement</span>
+                                <input type="checkbox" name="project_type_option" value="Furnishing &amp; Procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing &amp; Procurement</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Property Purchase Review" class="form-checkbox"><span class="form-checkbox-text">Property Purchase Review</span>
+                                <input type="checkbox" name="project_type_option" value="Property Purchase Review" class="form-checkbox"><span class="form-checkbox-text">Property Purchase Review</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Developing Property For Sale" class="form-checkbox"><span class="form-checkbox-text">Developing Property For Sale</span>
+                                <input type="checkbox" name="project_type_option" value="Developing Property For Sale" class="form-checkbox"><span class="form-checkbox-text">Developing Property For Sale</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Commercial Fitout" class="form-checkbox"><span class="form-checkbox-text">Commercial Fitout</span>
+                                <input type="checkbox" name="project_type_option" value="Commercial Fitout" class="form-checkbox"><span class="form-checkbox-text">Commercial Fitout</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="project_type" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
+                                <input type="checkbox" name="project_type_option" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
                             </label>
                         </div>
                     </div>
@@ -457,22 +463,22 @@
                         <span class="form-helper">Select any areas you are currently considering. If unsure, we can determine the most appropriate service during the discovery call.</span>
                         <div class="form-checkbox-group grid-2-cols">
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Planning a renovation or new build" class="form-checkbox"><span class="form-checkbox-text">Planning a renovation or new build</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Planning a renovation or new build" class="form-checkbox"><span class="form-checkbox-text">Planning a renovation or new build</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Reviewing a property before purchase" class="form-checkbox"><span class="form-checkbox-text">Reviewing a property before purchase</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Reviewing a property before purchase" class="form-checkbox"><span class="form-checkbox-text">Reviewing a property before purchase</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Improving functionality or layout" class="form-checkbox"><span class="form-checkbox-text">Improving functionality or layout</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Improving functionality or layout" class="form-checkbox"><span class="form-checkbox-text">Improving functionality or layout</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Furnishing and procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing and procurement</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Furnishing and procurement" class="form-checkbox"><span class="form-checkbox-text">Furnishing and procurement</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Developing a property for sale" class="form-checkbox"><span class="form-checkbox-text">Developing a property for sale</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Developing a property for sale" class="form-checkbox"><span class="form-checkbox-text">Developing a property for sale</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="areas_of_assistance" value="Clarifying the best path forward" class="form-checkbox"><span class="form-checkbox-text">Clarifying the best path forward</span>
+                                <input type="checkbox" name="areas_of_assistance_option" value="Clarifying the best path forward" class="form-checkbox"><span class="form-checkbox-text">Clarifying the best path forward</span>
                             </label>
                         </div>
                     </div>
@@ -618,37 +624,37 @@
                         <label>Discovery Source</label>
                         <div class="form-checkbox-group grid-3-cols">
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Previous Client" class="form-checkbox"><span class="form-checkbox-text">Previous Client</span>
+                                <input type="checkbox" name="discover_source_option" value="Previous Client" class="form-checkbox"><span class="form-checkbox-text">Previous Client</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Architect" class="form-checkbox"><span class="form-checkbox-text">Architect</span>
+                                <input type="checkbox" name="discover_source_option" value="Architect" class="form-checkbox"><span class="form-checkbox-text">Architect</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Builder" class="form-checkbox"><span class="form-checkbox-text">Builder</span>
+                                <input type="checkbox" name="discover_source_option" value="Builder" class="form-checkbox"><span class="form-checkbox-text">Builder</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Buyers Agent" class="form-checkbox"><span class="form-checkbox-text">Buyers Agent</span>
+                                <input type="checkbox" name="discover_source_option" value="Buyers Agent" class="form-checkbox"><span class="form-checkbox-text">Buyers Agent</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Real Estate Agent" class="form-checkbox"><span class="form-checkbox-text">Real Estate Agent</span>
+                                <input type="checkbox" name="discover_source_option" value="Real Estate Agent" class="form-checkbox"><span class="form-checkbox-text">Real Estate Agent</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Google Search" class="form-checkbox"><span class="form-checkbox-text">Google Search</span>
+                                <input type="checkbox" name="discover_source_option" value="Google Search" class="form-checkbox"><span class="form-checkbox-text">Google Search</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Instagram" class="form-checkbox"><span class="form-checkbox-text">Instagram</span>
+                                <input type="checkbox" name="discover_source_option" value="Instagram" class="form-checkbox"><span class="form-checkbox-text">Instagram</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="LinkedIn" class="form-checkbox"><span class="form-checkbox-text">LinkedIn</span>
+                                <input type="checkbox" name="discover_source_option" value="LinkedIn" class="form-checkbox"><span class="form-checkbox-text">LinkedIn</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Media Feature" class="form-checkbox"><span class="form-checkbox-text">Media Feature</span>
+                                <input type="checkbox" name="discover_source_option" value="Media Feature" class="form-checkbox"><span class="form-checkbox-text">Media Feature</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Podcast" class="form-checkbox"><span class="form-checkbox-text">Podcast</span>
+                                <input type="checkbox" name="discover_source_option" value="Podcast" class="form-checkbox"><span class="form-checkbox-text">Podcast</span>
                             </label>
                             <label class="form-checkbox-label">
-                                <input type="checkbox" name="discover_source" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
+                                <input type="checkbox" name="discover_source_option" value="Other" class="form-checkbox"><span class="form-checkbox-text">Other</span>
                             </label>
                         </div>
                     </div>
@@ -782,7 +788,7 @@
             updatePriorityOptions();
 
             // ═══════════════════════════════════════════════════════
-            // FORM SUBMISSION VALIDATION
+            // FORM SUBMISSION VALIDATION & MULTI-SELECT CHOOSE GROUPS CONSOLIDATION
             // ═══════════════════════════════════════════════════════
             const form = document.querySelector('form[name="enquiries"]');
             if (form) {
@@ -800,7 +806,7 @@
 
                     // Validate required checkbox groups:
                     // 1. Property Type *
-                    const checkedPropertyTypes = form.querySelectorAll('input[name="property_type"]:checked');
+                    const checkedPropertyTypes = form.querySelectorAll('input[name="property_type_option"]:checked');
                     if (checkedPropertyTypes.length === 0) {
                         e.preventDefault();
                         alert('Please select at least one Property Type.');
@@ -808,12 +814,32 @@
                     }
 
                     // 2. Project Type *
-                    const checkedProjectTypes = form.querySelectorAll('input[name="project_type"]:checked');
+                    const checkedProjectTypes = form.querySelectorAll('input[name="project_type_option"]:checked');
                     if (checkedProjectTypes.length === 0) {
                         e.preventDefault();
                         alert('Please select at least one Project Type.');
                         return false;
                     }
+
+                    // Consolidate checked values for all multi-select checkbox groups into hidden fields
+                    
+                    // 1. Property Type
+                    const propertyTypeValues = Array.from(checkedPropertyTypes).map(cb => cb.value).join(', ');
+                    document.getElementById('property_type_hidden').value = propertyTypeValues;
+
+                    // 2. Project Type
+                    const projectTypeValues = Array.from(checkedProjectTypes).map(cb => cb.value).join(', ');
+                    document.getElementById('project_type_hidden').value = projectTypeValues;
+
+                    // 3. Areas You Would Like Assistance With (Optional)
+                    const checkedAreas = form.querySelectorAll('input[name="areas_of_assistance_option"]:checked');
+                    const areasValues = Array.from(checkedAreas).map(cb => cb.value).join(', ');
+                    document.getElementById('areas_of_assistance_hidden').value = areasValues;
+
+                    // 4. Discovery Source (Optional)
+                    const checkedSources = form.querySelectorAll('input[name="discover_source_option"]:checked');
+                    const sourcesValues = Array.from(checkedSources).map(cb => cb.value).join(', ');
+                    document.getElementById('discover_source_hidden').value = sourcesValues;
                 });
             }
         });
