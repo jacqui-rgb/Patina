@@ -22,6 +22,45 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://patinadesignstudio.com/#jacqui",
+          "name": "Jacqui Hurwitz",
+          "jobTitle": "Founder & Principal",
+          "worksFor": {
+            "@type": "ProfessionalService",
+            "@id": "https://patinadesignstudio.com/#organization",
+            "name": "Patina Design Studio",
+            "url": "https://patinadesignstudio.com/"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "UNSW"
+          },
+          "knowsAbout": [
+            "Interior Architecture",
+            "Interior Design",
+            "Residential Design",
+            "Spatial Planning"
+          ],
+          "description": "Founder & Principal of Patina Design Studio, with a Bachelor of Interior Architecture from UNSW and 15+ years of international experience across Australia, London, Russia, Miami, Toronto and China."
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://patinadesignstudio.com/#organization",
+          "name": "Patina Design Studio",
+          "url": "https://patinadesignstudio.com/",
+          "founder": {
+            "@id": "https://patinadesignstudio.com/#jacqui"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="subpage">
     <header id="main-header">
