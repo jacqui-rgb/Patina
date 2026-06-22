@@ -29,6 +29,63 @@
     <link rel="preload" href="_data/services.json" as="fetch" crossorigin>
     <link rel="preload" href="_data/studio.json" as="fetch" crossorigin>
     <link rel="preload" href="_data/settings.json" as="fetch" crossorigin>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://patinadesignstudio.com/#organization",
+          "name": "Patina Design Studio",
+          "url": "https://patinadesignstudio.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://patinadesignstudio.com/assets/images/favicon.jpg"
+          },
+          "image": "https://patinadesignstudio.com/assets/images/patina-design-studio-kitchen-for-web.png",
+          "description": "Patina Design Studio is a Sydney-based interior architecture and design studio specialising in high-end residential projects, including new builds, renovations, off-plan apartments, curated furnishing, spatial planning, design consultation, design documentation and design management during construction.",
+          "email": "hello@patinadesignstudio.com",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://patinadesignstudio.com/#jacqui",
+            "name": "Jacqui Hurwitz"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Sydney",
+            "addressRegion": "New South Wales",
+            "addressCountry": "Australia"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Sydney"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "New South Wales"
+            },
+            {
+              "@type": "Country",
+              "name": "Australia"
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/patina.design.studio/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://patinadesignstudio.com/#website",
+          "url": "https://patinadesignstudio.com/",
+          "name": "Patina Design Studio",
+          "publisher": {
+            "@id": "https://patinadesignstudio.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header id="main-header">
