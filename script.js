@@ -99,10 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!list || !services?.length) return;
         list.innerHTML = services.map(s => `
             <a href="${s.link || '#'}" class="service-item">
-                <div class="service-content">
-                    <h3>${s.title}</h3>
+                <h3>${s.title}</h3>
+                <div class="service-desc">
                     <p>${s.description}</p>
-                    <span class="learn-more">Learn More <span class="arrow">→</span></span>
                 </div>
             </a>
         `).join('');
