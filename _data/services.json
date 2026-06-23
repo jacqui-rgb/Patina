@@ -2,33 +2,33 @@
   "services": [
     {
       "title": "Full Service Design",
-      "description": "Comprehensive design service coordinating interior architecture, furnishings and installation from start to finish.",
-      "link": "services-full-service-design"
+      "description": "For substantial residential projects requiring interior architecture, spatial planning, furnishing and design management from early planning through completion.",
+      "link": "/services-full-service-design"
     },
     {
       "title": "Furnishing & Procurement",
-      "description": "Furniture, lighting, artwork and custom pieces selected, procured and installed through a complete furnishing service.",
-      "link": "services-furnishing-procurement"
+      "description": "For homes or defined areas requiring furniture, lighting, rugs, artwork, custom pieces, procurement, installation and final placement.",
+      "link": "/services-furnishing-procurement"
     },
     {
       "title": "Pre-Purchase Design Review",
-      "description": "Professional design advice before purchasing a property, helping assess potential, limitations and overall suitability before committing.",
-      "link": "services-pre-purchase-design-review"
+      "description": "For clients seeking design insight before committing to a property, including its spatial potential, limitations and likely implications.",
+      "link": "/services-pre-purchase-design-review"
     },
     {
       "title": "Layout Assessment",
-      "description": "An independent review of your floor plan to identify opportunities for improved functionality, flow and long-term liveability.",
-      "link": "services-layout-assessment"
+      "description": "For existing plans that need closer review before key decisions are fixed, with attention to function, flow, proportion and long-term liveability.",
+      "link": "/services-layout-assessment"
     },
     {
       "title": "Design Positioning Strategy",
-      "description": "Strategic design guidance to help position a property for its intended buyer and maximise market appeal.",
-      "link": "services-design-positioning-strategy"
+      "description": "For properties being prepared for sale, development or market positioning, where design direction needs to support the intended buyer.",
+      "link": "/services-design-positioning-strategy"
     },
     {
       "title": "Design Consultation",
-      "description": "The starting point for Patina Design Studio projects, helping clarify the scope, service pathway and most appropriate next steps.",
-      "link": "services-design-consultation"
+      "description": "For clients who require a considered starting point before the appropriate scope, service pathway and next steps are confirmed.",
+      "link": "/services-design-consultation"
     }
   ]
 }

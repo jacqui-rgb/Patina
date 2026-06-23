@@ -428,50 +428,198 @@ nav a:hover {
 }
 
 /* Services Section */
-#services {
-    padding-top: var(--p-section);
-    padding-bottom: var(--p-section);
+.services-section {
+    background-color: var(--white); /* Premium clean background tint */
+    padding-top: 7rem; /* Generous vertical gap from #about to feel intentional */
+    padding-bottom: 9.5rem; /* Generous breathing room before CTA */
+    width: 100%;
+    border-top: 1px solid rgba(36, 40, 40, 0.04); /* Fine subtle transition line */
+}
+
+.services-header-group {
+    display: grid;
+    grid-template-columns: 1fr; /* Default stack on mobile */
+    gap: 2rem;
+    margin-bottom: 5rem; /* Cohesive connection to the services list */
+}
+
+@media (min-width: 1025px) {
+    .services-header-group {
+        grid-template-columns: 310px 1fr; /* Perfect editorial spacing and alignment */
+        gap: 3.5rem; /* Exactly matches the desktop list gap */
+        max-width: none;
+        align-items: start;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .services-header-group {
+        grid-template-columns: 240px 1fr; /* Matching tablet list */
+        gap: 2.5rem;
+        max-width: none;
+        align-items: start;
+    }
+}
+
+.services-title-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.5vw, 2.75rem); /* Elegant, not oversized, premium size */
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.services-intro-text {
+    font-size: 1.15rem;
+    line-height: 1.7; /* Softened, beautiful line-height */
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin: 0;
+    max-width: 680px; /* Restrict line length for superior editorial legibility */
+}
+
+@media (min-width: 769px) {
+    .services-intro-text {
+        margin-top: 2.2rem; /* Fine alignment with headline first baseline */
+    }
 }
 
 .services-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0; /* Handled by header margin-bottom */
+    border-top: 1px solid rgba(36, 40, 40, 0.05); /* Warm-toned, ultra-subtle top divider */
 }
 
 .service-item {
-    padding: 3rem;
-    background: var(--white);
-    border: 1px solid rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
-    display: block;
-    color: inherit;
+    display: grid;
+    grid-template-columns: 1fr; /* Stacks on mobile */
+    gap: 0.6rem; /* Clear tight vertical spacing on mobile so title & description feel cohesive */
+    padding: 2rem 1rem; /* Generous horizontal padding for cardless card effect */
+    margin: 0 -1rem; /* Pull margins out to perfectly align content with container grid lines */
+    border-bottom: 1px solid rgba(36, 40, 40, 0.05); /* Warm-toned, ultra-subtle bottom divider */
     text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 4px;
+    /* Combined transition handles both entrance fade-in and hover transitions seamlessly */
+    transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1), 
+                transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), 
+                background-color 0.35s ease, 
+                border-color 0.35s ease;
 }
 
+/* Subtle, ultra-premium hover state: very soft warm tonal shift */
 .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    background-color: rgba(36, 40, 40, 0.018);
+    border-color: rgba(36, 40, 40, 0.08); /* Softly define the hovered item boundaries */
+}
+
+@media (min-width: 1025px) {
+    .service-item {
+        grid-template-columns: 310px 1fr; /* Clean desktop columns */
+        gap: 3.5rem; /* Perfect distance to feel close but structured */
+        padding: 2.8rem 1.5rem; /* Designed generous vertical spacing on desktop */
+        margin: 0 -1.5rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .service-item {
+        grid-template-columns: 240px 1fr; /* Tablet columns */
+        gap: 2.5rem;
+        padding: 2.4rem 1.2rem;
+        margin: 0 -1.2rem;
+    }
 }
 
 .service-item h3 {
-    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.7vw, 1.85rem); /* Increased visual presence, editorial serif style */
+    font-weight: 400;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.25;
+    letter-spacing: -0.01em; /* Elegant premium letter-spacing */
+    transition: color 0.3s ease;
 }
 
-.service-item .learn-more {
-    display: inline-block;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    color: var(--accent);
-    transition: transform 0.3s ease, color 0.3s ease;
+.service-item:hover h3 {
+    color: var(--accent); /* Signature accent hover */
 }
 
-.service-item:hover .learn-more {
-    color: var(--accent-light);
+.service-desc {
+    margin: 0;
+}
+
+.service-desc p {
+    font-size: 1.12rem; /* Highly legible */
+    line-height: 1.7; /* Editorial line-height */
+    color: hsl(0, 0%, 32%); /* Restrained, highly legible tone that is never faint */
+    font-weight: 400; /* Regular weight of Inter for crisp, clear rendering on all devices */
+    margin: 0;
+    max-width: 680px; /* Prevent overly long lines for superior legibility */
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-desc p {
+    color: var(--text-primary); /* Transitions to darker/clearer on hover for extra delight */
+}
+
+/* Mobile Refinements for Services Section */
+@media (max-width: 768px) {
+    .services-header-group {
+        gap: 1rem; /* Tighten spacing within the intro paragraph block */
+        margin-bottom: 3.5rem; /* Increase separation between intro and first card */
+    }
+
+    .services-intro-text {
+        font-size: 1.02rem; /* Slightly reduce size and weight */
+        line-height: 1.6; /* Tighten spacing */
+        font-weight: 300;
+        color: var(--text-secondary);
+    }
+
+    .services-list {
+        border-top: none; /* Clean start without a flat list line */
+    }
+
+    .service-item {
+        background-color: rgba(36, 40, 40, 0.022); /* Subtly tinted premium card */
+        border: 1px solid rgba(36, 40, 40, 0.07); /* Defensively higher contrast, extremely subtle */
+        border-radius: 4px;
+        padding: 1.75rem 1.25rem;
+        margin: 0; /* Reset negative margins for clean container alignment */
+        gap: 0.75rem; /* Beautiful title-to-body spacing */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-item h3 {
+        font-size: 1.45rem; /* More prominent title */
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    .service-desc p {
+        font-size: 0.98rem; /* Slightly reduced description size */
+        line-height: 1.6;
+        color: hsl(0, 0%, 35%); /* Soft support color, non-competing */
+    }
+
+    /* Tactile responsive active tap feedback */
+    .service-item:active {
+        background-color: rgba(36, 40, 40, 0.04);
+        border-color: rgba(36, 40, 40, 0.12);
+    }
 }
 
 /* CTA Section */
@@ -705,11 +853,19 @@ footer a:hover {
 }
 
 /* Project card and service item entrance */
-.project-card,
-.service-item {
+.project-card {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.4s ease;
+}
+
+.service-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1), 
+                transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), 
+                background-color 0.35s ease, 
+                border-color 0.35s ease;
 }
 
 .project-card.visible,
@@ -2728,9 +2884,6 @@ body.menu-active {
 
 /* Service Item list card paddings */
 @media (max-width: 768px) {
-    .service-item {
-        padding: 2rem 1.5rem;
-    }
     .step-card {
         padding: 1.75rem var(--p-gutter);
     }
@@ -3612,17 +3765,7 @@ h1 {
     }
 }
 
-/* --- Medium Width (768px - 1200px) Layout Refinements --- */
-@media (max-width: 1200px) {
-    /* 2 columns for services on tablet/medium screen width (avoid 3-col squashing and 1-col dropping) */
-    .services-list {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 2rem !important;
-    }
-    .service-item {
-        padding: 2.25rem !important;
-    }
-}
+
 
 /* --- Tablet Portrait / Mobile Landscape Height/Scroll Refinements --- */
 @media (max-width: 1024px) {
@@ -3672,14 +3815,7 @@ h1 {
         font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
     }
     
-    /* Ensure the services list collapses to single-column on mobile */
-    .services-list {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-    }
-    .service-item {
-        padding: 1.75rem 1.5rem !important;
-    }
+
     
     /* Overwrite inline styles on about & services pages for margins and section paddings */
     .split[style*="gap: 4rem"] {
