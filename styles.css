@@ -194,6 +194,10 @@ nav ul {
     gap: 2.5rem;
 }
 
+nav li {
+    position: relative;
+}
+
 nav a {
     text-decoration: none;
     color: var(--text-primary);
@@ -205,6 +209,48 @@ nav a {
 
 nav a:hover {
     color: var(--accent);
+}
+
+.services-nav-item {
+    padding-bottom: 0.75rem;
+    margin-bottom: -0.75rem;
+}
+
+nav .services-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    min-width: 16rem;
+    padding: 0.85rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    background: rgba(253, 253, 251, 0.98);
+    border: 1px solid rgba(38, 38, 38, 0.08);
+    box-shadow: 0 1.25rem 2.5rem rgba(38, 38, 38, 0.08);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 0.4rem);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.services-nav-item:hover .services-dropdown,
+.services-nav-item.is-open .services-dropdown,
+.services-nav-item:focus-within .services-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+nav .services-dropdown-link {
+    display: block;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.45;
+    text-transform: none;
+    white-space: nowrap;
 }
 
 .cta-link {
@@ -837,6 +883,38 @@ footer a:hover {
         gap: 2.5rem;
     }
     nav a { font-size: 1rem; }
+    .services-nav-item {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    nav .services-dropdown {
+        position: static;
+        min-width: 0;
+        width: min(19rem, 82vw);
+        max-height: 0;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        transition: max-height 0.3s ease, padding-top 0.3s ease;
+    }
+    .services-nav-item.is-open .services-dropdown {
+        max-height: 22rem;
+        padding-top: 1rem;
+    }
+    nav .services-dropdown-link {
+        padding: 0.45rem 0;
+        font-size: 0.9rem;
+        letter-spacing: 0.08rem;
+        white-space: normal;
+    }
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.large { aspect-ratio: 1/1; }
     .services-list { grid-template-columns: 1fr; }
@@ -3713,6 +3791,39 @@ h1 {
     nav a {
         font-size: 1.1rem !important;
     }
+    .services-nav-item {
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    nav .services-dropdown {
+        position: static;
+        min-width: 0;
+        width: min(19rem, 82vw);
+        max-height: 0;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        transition: max-height 0.3s ease, padding-top 0.3s ease;
+    }
+    .services-nav-item.is-open .services-dropdown {
+        max-height: 22rem;
+        padding-top: 1rem;
+    }
+    nav .services-dropdown-link {
+        padding: 0.45rem 0;
+        font-size: 0.9rem !important;
+        letter-spacing: 0.08rem;
+        line-height: 1.4;
+        white-space: normal;
+    }
     
     /* Collapse Two-Column layouts that feel squeezed on Tablet Landscape/Portrait */
     .service-details-grid,
@@ -4124,4 +4235,3 @@ html, body {
         gap: 1.2rem !important;
     }
 }
-
