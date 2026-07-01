@@ -221,6 +221,60 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══════════════════════════════════════════════════════
     const menuToggle = document.getElementById('menu-toggle');
     const mobileNav  = document.querySelector('nav');
+    const servicesNavItem = document.querySelector('.services-nav-item');
+    const servicesNavTrigger = document.querySelector('.services-nav-trigger');
+
+    function closeMobileMenu() {
+        menuToggle.classList.remove('open');
+        mobileNav.classList.remove('mobile-open');
+        document.body.classList.remove('menu-active');
+        if (servicesNavItem && servicesNavTrigger) {
+            servicesNavItem.classList.remove('is-open');
+            servicesNavTrigger.setAttribute('aria-expanded', 'false');
+        }
+    }
+
+    if (servicesNavItem && servicesNavTrigger) {
+        const isServicesMenuMobile = () => window.matchMedia('(max-width: 1100px)').matches;
+
+        const openServicesMenu = () => {
+            servicesNavItem.classList.add('is-open');
+            servicesNavTrigger.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeServicesMenu = () => {
+            servicesNavItem.classList.remove('is-open');
+            servicesNavTrigger.setAttribute('aria-expanded', 'false');
+        };
+
+        servicesNavItem.addEventListener('mouseenter', () => {
+            if (!isServicesMenuMobile()) openServicesMenu();
+        });
+
+        servicesNavItem.addEventListener('mouseleave', () => {
+            if (!isServicesMenuMobile()) closeServicesMenu();
+        });
+
+        servicesNavTrigger.addEventListener('click', (e) => {
+            if (!isServicesMenuMobile()) {
+                closeServicesMenu();
+                return;
+            }
+
+            e.preventDefault();
+            if (servicesNavItem.classList.contains('is-open')) {
+                closeServicesMenu();
+            } else {
+                openServicesMenu();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!servicesNavItem.contains(e.target)) {
+                closeServicesMenu();
+            }
+        });
+    }
 
     menuToggle.addEventListener('click', () => {
         const isOpen = menuToggle.classList.toggle('open');
@@ -230,10 +284,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.nav-link, .cta-link').forEach(link => {
         link.addEventListener('click', () => {
-            menuToggle.classList.remove('open');
-            mobileNav.classList.remove('mobile-open');
-            document.body.classList.remove('menu-active');
+            if (link.classList.contains('services-nav-trigger')) return;
+            closeMobileMenu();
         });
+    });
+
+    document.querySelectorAll('.services-dropdown-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
     });
 
     // ═══════════════════════════════════════════════════════
