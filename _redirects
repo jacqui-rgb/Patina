@@ -1,0 +1,18 @@
+/full-service-design /services-full-service-design 301
+/full-service-design1 /services-full-service-design 301
+
+/layout-assessment /services-layout-assessment 301
+/layout-assessment1 /services-layout-assessment 301
+
+/portfolio /projects 301
+/projects-old /projects 301
+
+/portfolio-collections/my-portfolio/project-vaucluse-residence /projects-vaucluse-residence 301
+/portfolio-collections/my-portfolio/north-bondi-studio /projects-north-bondi-studio 301
+/portfolio-collections/my-portfolio/project-dover-heights-duplex /projects-dover-heights-duplex 301
+/portfolio-collections/my-portfolio/project-rose-bay-penthouse /projects-rose-bay-penthouse 301
+/portfolio-collections/my-portfolio/project-lp-residence /projects-lp-residence 301
+/portfolio-collections/my-portfolio/newcastle-waterfront /projects-newcastle-waterfront 301
+
+/portfolio-collections/my-portfolio/* /projects 301
+/portfolio-collections/* /projects 301
