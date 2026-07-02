@@ -212,13 +212,14 @@ nav a:hover {
 }
 
 .services-nav-item {
-    padding-bottom: 0.75rem;
-    margin-bottom: -0.75rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: -1.5rem;
 }
 
 nav .services-dropdown {
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: 100%;
     left: 50%;
     min-width: 16rem;
     padding: 0.85rem 0;
@@ -3181,6 +3182,14 @@ body.menu-active {
     color: var(--text-secondary);
     line-height: 1.65;
     font-weight: 300;
+}
+
+.outcome-block .service-supporting-note {
+    font-size: 0.92rem;
+    color: hsl(0, 0%, 46%);
+    line-height: 1.55;
+    font-weight: 300;
+    margin-top: 0.35rem;
 }
 
 .outcome-single-column .outcome-block p {
