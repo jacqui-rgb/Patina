@@ -2370,6 +2370,15 @@ input[type="radio"].form-checkbox:hover {
     margin-bottom: 0.8rem;
 }
 
+.journal-date {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin: -0.35rem 0 1rem;
+}
+
 .journal-card h3 {
     font-size: 1.4rem;
     line-height: 1.4;
