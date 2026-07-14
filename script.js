@@ -330,7 +330,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // and the bottom of the title is below the top of the hero image.
                 const isOverlapping = titleRect.top < heroRect.bottom && titleRect.bottom > heroRect.top;
                 
-                selectedProjectsTitle.classList.toggle('over-image', isOverlapping);
+                // Ensure the title is strictly on white and doesn't toggles color now that we have solid backgrounds
+                selectedProjectsTitle.classList.toggle('over-image', false);
             }
         };
 

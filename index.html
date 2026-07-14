@@ -128,28 +128,40 @@
         </div>
     </header>
 
-    <main>
+    <main style="position: relative; z-index: 1;">
         <!-- ── Hero ─────────────────────────────────────────── -->
-        <section id="hero" class="full-bleed">
-            <div class="hero-bg" id="cms-hero-bg"></div>
-            <div class="hero-content">
+        <section id="hero" class="full-bleed" style="position: relative; z-index: 1;">
+            <div class="hero-bg" id="cms-hero-bg" style="position: absolute;"></div>
+            <div class="hero-content" style="position: relative; z-index: 2;">
                 <h1 class="reveal-text">
-                    <span id="cms-hero-headline">Spatially Intelligent Homes,</span>
-                    <br><em id="cms-hero-headline-em">Thoughtfully Designed</em>
+                    <span id="cms-hero-headline">Spatial intelligence</span>
+                    <br><span id="cms-hero-headline-em">from first plans to final placement</span>
                 </h1>
-                <p class="fade-in" id="cms-hero-sub">Patina Design Studio creates considered residential interiors shaped by thoughtful spatial planning, functionality and the way people live every day.</p>
-                <div class="scroll-indicator">
-                    <div class="line"></div>
+                <p class="fade-in" id="cms-hero-sub" style="margin-bottom: 4rem;">Patina Design Studio identifies the spatial and interior decisions that will shape how a home works, feels and is experienced, then carries one connected design direction through planning, documentation, construction, furnishing and final placement.</p>
+            </div>
+            <div class="scroll-indicator">
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <!-- ── Positioning Section ───────────────────────────── -->
+        <section id="positioning" style="position: relative; z-index: 10; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding: 4.5rem 0 2rem 0; background-color: var(--bg-primary);">
+            <div class="container" style="max-width: 720px; margin: 0 auto; text-align: center;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; margin-bottom: 1.5rem; color: var(--text-primary); text-align: center;">Designed from the inside</h2>
+                <div style="font-family: var(--font-body); font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); font-weight: 300; text-align: center;">
+                    <p style="margin-bottom: 1.5rem;">The success of a home is established before finishes and furniture are selected. Floor plans, room relationships, circulation, storage, lighting, joinery and furniture placement need to be understood together while there is still time to improve them.</p>
+                    <p style="margin-bottom: 0;">Patina Design Studio brings focused interior spatial judgement to renovations, new builds and properties designed by others, refining the planning and carrying the interior direction through the detailed decisions that shape the completed home.</p>
                 </div>
             </div>
         </section>
 
         <!-- ── Projects ──────────────────────────────────────── -->
-        <section id="projects" class="container">
-            <div class="section-header">
-                <h2 class="section-title">Selected Projects</h2>
-            </div>
-            <div class="projects-grid" id="cms-projects-grid">
+        <section id="projects" style="position: relative; z-index: 10; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding-top: 2rem; padding-bottom: 4rem; background-color: var(--bg-primary);">
+            <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 var(--p-gutter);">
+                <div class="section-header">
+                    <h2 class="section-title">Selected Projects</h2>
+                </div>
+                <div class="projects-grid" id="cms-projects-grid">
                 <!-- Populated by script.js from _data/projects.json -->
                 <!-- Fallback static cards shown until JS runs -->
                 <div class="project-card large">
@@ -158,11 +170,11 @@
                 </div>
                 <div class="project-card">
                     <img src="https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg" alt="Dover Heights Duplex dining area with custom interior architecture">
-                    <div class="project-info"><h3>Dover Heights Duplex</h3><p>Bespoke Residential</p></div>
+                    <div class="project-info"><h3>Dover Heights Duplex</h3><p>Interior Architecture & Furnishing</p></div>
                 </div>
                 <div class="project-card">
                     <img src="https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg" alt="LP Residence modern living room and fireplace designed by Patina Design Studio">
-                    <div class="project-info"><h3>LP Residence</h3><p>Interior Design</p></div>
+                    <div class="project-info"><h3>LP Residence</h3><p>Full Service Design</p></div>
                 </div>
             </div>
         </section>
@@ -172,10 +184,10 @@
             <div class="container split">
                 <div class="split-content">
                     <h2 class="section-title" id="cms-studio-title">The Studio</h2>
-                    <p class="lead" id="cms-studio-lead">We believe the success of a home is determined long before finishes and furnishings are selected.</p>
+                    <p class="lead" id="cms-studio-lead">Patina Design Studio is a Sydney interior architecture studio specialising in substantial residential projects, complete furnishing and independent design reviews.</p>
                     <div id="cms-studio-body">
-                        <p style="margin-bottom: 1.5rem;">Spatial planning is one of the most important and often overlooked aspects of residential design. Patina Design Studio is frequently engaged to review, refine and improve floor plans, helping clients identify opportunities that influence how a home functions long before details become fixed.</p>
-                        <p style="margin-bottom: 1.5rem;">Through years of reviewing proposed layouts for new builds, renovations and off-plan properties, the studio has developed a reputation for identifying opportunities, resolving spatial challenges and improving the way homes are experienced every day.</p>
+                        <p style="margin-bottom: 1.5rem;">Led by founder and principal Jacqui Hurwitz, the studio examines how the interior will work at every scale, from the relationship between rooms to joinery, lighting, material transitions and furniture placement. Plans are not treated as fixed simply because they have already been drawn.</p>
+                        <p style="margin-bottom: 1.5rem;">Early involvement allows Patina Design Studio to strengthen the planning and coordinate the decisions that will shape the completed home before approvals, documentation, budgets or construction limit the opportunity for change. The same interior direction is then carried through the project rather than being divided between separate stages and contributors.</p>
                     </div>
                     <a class='text-link' href='/about' id='cms-studio-cta'>About the Studio →</a>
                 </div>
@@ -192,44 +204,44 @@
                     <div class="services-title-block">
                         <span class="category-eyebrow">OUR SERVICES</span>
                     </div>
-                    <p class="services-support-line">The appropriate level of design involvement depends on the property, the project stage and the decisions still to be resolved.</p>
+                    <p class="services-support-line">Services are structured around the decisions that need to be made, the stage at which those decisions can still be influenced and the level of continuity required to protect the final outcome.</p>
                 </div>
                 <div class="services-list" id="cms-services-list">
                     <!-- Populated by script.js from _data/services.json -->
                     <a class="service-item" href="/services-full-service-design">
                         <h3>Full Service Design</h3>
                         <div class="service-desc">
-                            <p>For substantial residential projects requiring interior architecture, spatial planning, furnishing and design management from early planning through completion.</p>
+                            <p>Substantial renovations and new builds are shaped from early planning through to handover, with spatial planning, documentation, site decisions, furnishing, installation and final placement developed with cohesive direction. The project feels connected from the larger planning decisions through to the final pieces.</p>
                         </div>
                     </a>
                     <a class="service-item" href="/services-furnishing-procurement">
                         <h3>Furnishing & Procurement</h3>
                         <div class="service-desc">
-                            <p>For homes or defined areas requiring furniture, lighting, rugs, artwork, custom pieces, procurement, installation and final placement.</p>
+                            <p>Furniture, lighting, rugs, artwork and custom pieces are planned, selected, procured and installed in relation to the architecture, room proportions and the way each area is used. The furnished areas feel settled, comfortable, well scaled and ready to live in from installation.</p>
                         </div>
                     </a>
                     <a class="service-item" href="/services-pre-purchase-design-review">
                         <h3>Pre-Purchase Design Review</h3>
                         <div class="service-desc">
-                            <p>For clients seeking design insight before committing to a property, including its spatial potential, limitations and likely implications.</p>
+                            <p>Before a property is purchased, Patina Design Studio assesses whether its layout, light, storage, proportions and renovation potential can support the buyer’s requirements. The review looks beyond presentation to identify both opportunity and limitation before commitment.</p>
                         </div>
                     </a>
                     <a class="service-item" href="/services-layout-assessment">
                         <h3>Layout Assessment</h3>
                         <div class="service-desc">
-                            <p>For existing plans that need closer review before key decisions are fixed, with attention to function, flow, proportion and long-term liveability.</p>
+                            <p>An existing floor plan may satisfy approvals or construction requirements without fully supporting the people who will live there. Patina Design Studio independently reviews flow, room relationships, furniture planning, storage and daily use before the plan is relied on.</p>
                         </div>
                     </a>
                     <a class="service-item" href="/services-design-positioning-strategy">
                         <h3>Design Positioning Strategy</h3>
                         <div class="service-desc">
-                            <p>For properties being prepared for sale, development or market positioning, where design direction needs to support the intended buyer.</p>
+                            <p>Properties being renovated, built or developed for sale need design decisions shaped around the intended buyer rather than broad assumptions about the market. The focus is on layout, finishes, furnishing direction and presentation choices that support buyer appeal and perceived value. The same approach may also be applied to selected rental developments where the intended tenant materially affects the design direction.</p>
                         </div>
                     </a>
                     <a class="service-item" href="/services-design-consultation">
                         <h3>Design Consultation</h3>
                         <div class="service-desc">
-                            <p>For clients who require a considered starting point before the appropriate scope, service pathway and next steps are confirmed.</p>
+                            <p>Before a larger scope or design work begins, Patina Design Studio takes time to understand the property, priorities and brief. The consultation provides the context to identify the right service pathway, scope, fee estimate and next steps.</p>
                         </div>
                     </a>
                 </div>
@@ -241,7 +253,7 @@
             <div class="hero-bg" id="cms-cta-bg" style="background-image: url('assets/images/cta-background.png');"></div>
             <div class="cta-content container text-center">
                 <h2 id="cms-cta-heading">Considering a Project?</h2>
-                <p id="cms-cta-sub">If you are planning a renovation, new build, property review or furnishing project, we invite you to register your interest with Patina Design Studio.</p>
+                <p id="cms-cta-sub">Share your property, project stage, timing and requirements through the enquiry form. Where there is clear alignment, the next formal step is a paid Design Consultation with Jacqui to review the property, identify the key design considerations and define the most appropriate way forward.</p>
                 <a class='button' href='/enquiries' id='cms-cta-btn'>REGISTER YOUR INTEREST</a>
             </div>
         </section>
