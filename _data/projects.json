@@ -2,7 +2,7 @@
   "projects": [
     {
       "name": "Vaucluse Residence",
-      "category": "Renovation Residential",
+      "category": "Interior Architecture",
       "image": "https://static.wixstatic.com/media/9dda45_70f17f9847a24c94859db54abd786239~mv2.jpg",
       "image_alt": "Vaucluse Residence",
       "featured": true,
@@ -10,7 +10,7 @@
     },
     {
       "name": "Dover Heights Duplex",
-      "category": "New-Build Residential",
+      "category": "Interior Architecture & Furnishing",
       "image": "https://static.wixstatic.com/media/9dda45_b7af8a3661a64938b895d8d2cfb258f0~mv2.jpg",
       "image_alt": "Dover Heights Duplex",
       "featured": false,
@@ -18,7 +18,7 @@
     },
     {
       "name": "LP Residence",
-      "category": "Renovation Residential",
+      "category": "Full Service Design",
       "image": "https://static.wixstatic.com/media/9dda45_6a0281fefb704386b0c34f8fc6fdd266~mv2.jpg",
       "image_alt": "LP Residence",
       "featured": false,

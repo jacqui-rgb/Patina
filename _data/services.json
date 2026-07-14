@@ -2,32 +2,32 @@
   "services": [
     {
       "title": "Full Service Design",
-      "description": "For substantial residential projects requiring interior architecture, spatial planning, furnishing and design management from early planning through completion.",
+      "description": "Substantial renovations and new builds are shaped from early planning through to handover, with spatial planning, documentation, site decisions, furnishing, installation and final placement developed with cohesive direction. The project feels connected from the larger planning decisions through to the final pieces.",
       "link": "/services-full-service-design"
     },
     {
       "title": "Furnishing & Procurement",
-      "description": "For homes or defined areas requiring furniture, lighting, rugs, artwork, custom pieces, procurement, installation and final placement.",
+      "description": "Furniture, lighting, rugs, artwork and custom pieces are planned, selected, procured and installed in relation to the architecture, room proportions and the way each area is used. The furnished areas feel settled, comfortable, well scaled and ready to live in from installation.",
       "link": "/services-furnishing-procurement"
     },
     {
       "title": "Pre-Purchase Design Review",
-      "description": "For clients seeking design insight before committing to a property, including its spatial potential, limitations and likely implications.",
+      "description": "Before a property is purchased, Patina Design Studio assesses whether its layout, light, storage, proportions and renovation potential can support the buyer’s requirements. The review looks beyond presentation to identify both opportunity and limitation before commitment.",
       "link": "/services-pre-purchase-design-review"
     },
     {
       "title": "Layout Assessment",
-      "description": "For existing plans that need closer review before key decisions are fixed, with attention to function, flow, proportion and long-term liveability.",
+      "description": "An existing floor plan may satisfy approvals or construction requirements without fully supporting the people who will live there. Patina Design Studio independently reviews flow, room relationships, furniture planning, storage and daily use before the plan is relied on.",
       "link": "/services-layout-assessment"
     },
     {
       "title": "Design Positioning Strategy",
-      "description": "For properties being prepared for sale, development or market positioning, where design direction needs to support the intended buyer.",
+      "description": "Properties being renovated, built or developed for sale need design decisions shaped around the intended buyer rather than broad assumptions about the market. The focus is on layout, finishes, furnishing direction and presentation choices that support buyer appeal and perceived value. The same approach may also be applied to selected rental developments where the intended tenant materially affects the design direction.",
       "link": "/services-design-positioning-strategy"
     },
     {
       "title": "Design Consultation",
-      "description": "For clients who require a considered starting point before the appropriate scope, service pathway and next steps are confirmed.",
+      "description": "Before a larger scope or design work begins, Patina Design Studio takes time to understand the property, priorities and brief. The consultation provides the context to identify the right service pathway, scope, fee estimate and next steps.",
       "link": "/services-design-consultation"
     }
   ]

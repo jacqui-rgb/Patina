@@ -298,14 +298,26 @@ nav .services-dropdown-link {
 }
 
 .hero-content h1 {
-    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.hero-content h1 span,
+.hero-content h1 em {
+    font-style: normal;
+    font-family: var(--font-heading);
+    font-weight: 400;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.7;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0.9;
 }
 
 .scroll-indicator {
@@ -808,6 +820,16 @@ footer a:hover {
     line-height: 1.4;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+}
+
+footer #cms-footer-email,
+footer .footer-contact a[href^="mailto:"] {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--text-secondary);
 }
 
 .footer-bottom {
@@ -1393,6 +1415,55 @@ body.subpage header {
     margin: 0 auto;
 }
 
+.process-stage-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+    margin-bottom: 7rem;
+}
+
+.process-stage-card {
+    border-top: 1px solid rgba(0,0,0,0.12);
+    padding-top: 1.8rem;
+}
+
+.process-stage-card .process-step-num {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.process-stage-card h2 {
+    font-size: 2.3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.process-stage-card p {
+    font-size: 1.08rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.process-framework-intro {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 4rem;
+    margin-bottom: 4.5rem;
+}
+
+.process-framework-intro h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.process-framework-intro p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
 .process-phase {
     margin-bottom: 6rem;
 }
@@ -1461,7 +1532,115 @@ body.subpage header {
     font-weight: 500;
 }
 
+.process-framework-phase {
+    margin-bottom: 4.5rem;
+}
+
+.process-framework-phase .process-phase-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.process-framework-phase .process-phase-header h2 {
+    font-size: 1.35rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.process-framework-phase .process-steps {
+    gap: 3rem;
+}
+
+.process-accordion {
+    gap: 1rem;
+}
+
+.process-accordion-item {
+    display: block;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-accordion-item:hover,
+.process-accordion-item[open] {
+    border-color: rgba(0,0,0,0.12);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.025);
+}
+
+.process-accordion-summary {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 1.75rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.process-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.process-accordion-summary:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: -4px;
+}
+
+.process-accordion-summary .process-step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.process-step-title {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    line-height: 1.35;
+}
+
+.process-accordion-icon {
+    margin-left: auto;
+}
+
+.process-accordion-item[open] .process-accordion-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.process-accordion-item[open] .process-accordion-icon::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.process-accordion-panel {
+    padding: 0 1.75rem 1.75rem 8.05rem;
+}
+
+.process-accordion-panel p {
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.process-framework-phase .process-step-num {
+    font-size: 2.2rem;
+    min-width: 56px;
+}
+
+.process-framework-phase .process-step-content h3 {
+    font-size: 1.35rem;
+}
+
 @media (max-width: 768px) {
+    .process-stage-overview {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
     .process-step {
         flex-direction: column;
         gap: 0.8rem;
@@ -1469,6 +1648,17 @@ body.subpage header {
     .process-step-num {
         font-size: 2.2rem;
         min-width: auto;
+    }
+    .process-accordion-summary {
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.35rem;
+    }
+    .process-accordion-panel {
+        padding: 0 1.35rem 1.5rem 1.35rem;
+    }
+    .process-step-title {
+        font-size: 1.2rem;
     }
 }
 
@@ -4183,6 +4373,26 @@ label {
 .footer-contact * {
     overflow-wrap: anywhere !important;
     word-wrap: break-word !important;
+}
+
+footer #cms-footer-email,
+footer .footer-contact a[href^="mailto:"] {
+    font-family: var(--font-body);
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    line-height: 1.4;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--text-secondary);
+    display: inline;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    word-break: normal !important;
 }
 
 /* Ensure no page can scroll sideways under any circumstances */
