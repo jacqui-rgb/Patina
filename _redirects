@@ -1,3 +1,7 @@
+# Domain Redirects from old .com domain
+https://patinadesignstudio.com/* https://www.patinadesignstudio.com.au/:splat 301!
+https://www.patinadesignstudio.com/* https://www.patinadesignstudio.com.au/:splat 301!
+
 /full-service-design /services-full-service-design 301
 /full-service-design1 /services-full-service-design 301
 
