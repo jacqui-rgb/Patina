@@ -312,7 +312,7 @@
             <div class="container">
                 <h1 class="reveal-text">Project Enquiry</h1>
                 <p>Every project begins with understanding the property, client, priorities and brief.</p>
-                <p style="margin-top: 1.5rem;">Share details about your project before arranging a complimentary introductory call with Patina Design Studio. The call confirms whether a paid Design Consultation is the right next formal step.</p>
+                <p style="margin-top: 1.5rem;">Share details about your project and choose whether to book a Design Consultation or speak with us first.</p>
             </div>
         </section>
 
@@ -330,8 +330,8 @@
                     </div>
                     <div class="process-overview-step">
                         <span class="step-num">02</span>
-                        <h3>Complimentary Introductory Call</h3>
-                        <p>A short introductory call to understand the nature of your project, answer process-related questions and determine whether one of our services is the right next step.</p>
+                        <h3>Reserve a time</h3>
+                        <p>Book a Design Consultation directly, or ask Patina Design Studio to contact you before booking.</p>
                     </div>
                     <div class="process-overview-step">
                         <span class="step-num">03</span>
@@ -347,8 +347,7 @@
             </div>
 
             <div class="form-container">
-                <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); margin-bottom: 3.5rem;"><strong>Before you begin</strong><br><br><em>We review every enquiry personally. The information provided helps us understand your project, priorities and objectives before our initial conversation so we can provide more considered guidance from the outset.</em></p>
-                <form method='POST' name='enquiries' data-netlify='true' netlify-honeypot='bot-field'><input type='hidden' name='form-name' value='enquiries' />
+                <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); margin-bottom: 3.5rem;"><strong>Before you begin</strong><br><br><em>We review every enquiry personally. The information provided helps us understand your project, priorities and objectives so we can consider the project in context before you proceed.</em></p>                <form method='POST' name='enquiries' data-netlify='true' netlify-honeypot='bot-field'><input type='hidden' name='form-name' value='enquiries' />
                     <!-- Spam Prevention honeypot -->
                     <p style="display: none !important;" aria-hidden="true">
                         <label>Don't fill this: <input name="bot-field" /></label>
@@ -491,8 +490,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Areas You Would Like Assistance With</label>
-                        <span class="form-helper">Select any areas you are currently considering. If unsure, we can determine the most appropriate service during the introductory call.</span>
+                        <label>Services You Would Like Assistance With</label>
+                        <span class="form-helper">Select any services you are currently considering. If unsure, we can confirm the most appropriate service after reviewing your enquiry.</span>
                         <div class="form-checkbox-group grid-2-cols">
                             <label class="form-checkbox-label">
                                 <input type="checkbox" name="areas_of_assistance_option" value="Planning a renovation or new build" class="form-checkbox"><span class="form-checkbox-text">Planning a renovation or new build</span>
@@ -704,8 +703,20 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="enquiry-preferred-time">Preferred time for a short introductory call</label>
-                        <span class="form-helper">Please let us know a few suitable days and times for us to contact you. This introductory call is used to understand the nature of your project and determine the most appropriate next step.</span>
+                        <label>Preferred next step *</label>
+                        <div class="form-checkbox-group grid-2-cols">
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="preferred_next_step" value="Book a Design Consultation" class="form-checkbox" required><span class="form-checkbox-text">Book a Design Consultation</span>
+                            </label>
+                            <label class="form-checkbox-label">
+                                <input type="radio" name="preferred_next_step" value="Speak with us first" class="form-checkbox" required><span class="form-checkbox-text">Speak with us first</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiry-preferred-time">Preferred time for a call</label>
+                        <span class="form-helper">Please let us know a few suitable days and times for us to contact you.</span>
                         <textarea id="enquiry-preferred-time" name="preferred_time" class="form-control" rows="3" placeholder="For example: Mondays after 10am, Tuesdays between 1pm–3pm, or Thursday mornings." style="resize: none;"></textarea>
                     </div>
 
@@ -721,10 +732,8 @@
                     <!-- WHAT HAPPENS NEXT? -->
                     <div class="what-happens-next-box">
                         <h2>What Happens Next?</h2>
-                        <p>Once your enquiry has been submitted, we will review the information provided and contact you to arrange a complimentary introductory call.</p>
-                        <p>This initial conversation allows us to understand the nature of your project, answer process-related questions and determine whether Patina Design Studio is the right fit.</p>
-                        <p>Project-specific design advice, layout feedback, concepts, sourcing and recommendations are provided through a paid Design Consultation, rather than during the introductory call.</p>
-                        <p>Where there is clear alignment, the next step is a paid Design Consultation. This is the first formal stage of the Patina Design Studio process and clarifies your objectives, the opportunities and constraints of your property, and the most appropriate path forward.</p>
+                        <p>Once your enquiry has been submitted, we will review the information provided. If you selected Book a Design Consultation, the booking calendar will appear so you can choose a time and pay the consultation fee. If you selected Speak with us first, we will contact you before you book.</p>
+                        <p>The Design Consultation is the first formal stage of the Patina Design Studio process. It clarifies your objectives, the opportunities and constraints of the property, and the most appropriate way forward.</p>
                         <p>Design Consultations are $1,200 inc GST.</p>
                     </div>
 
@@ -888,6 +897,74 @@
                     const checkedSources = form.querySelectorAll('input[name="discover_source_option"]:checked');
                     const sourcesValues = Array.from(checkedSources).map(cb => cb.value).join(', ');
                     document.getElementById('discover_source_hidden').value = sourcesValues;
+
+                    e.preventDefault();
+
+                    const submitButton = form.querySelector('.button-submit');
+                    const originalButtonText = submitButton.textContent;
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+
+                    const formData = new FormData(form);
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        
+                        const selectedNextStep = form.querySelector('input[name="preferred_next_step"]:checked').value;
+                        const formContainer = document.querySelector('.form-container');
+                        
+                        if (selectedNextStep === 'Book a Design Consultation') {
+                            formContainer.innerHTML = `
+                                <div style="text-align: center; margin-bottom: 3rem;">
+                                    <h2 style="font-family: var(--font-heading); font-size: 2rem; color: var(--accent); margin-bottom: 1.5rem;">Thank You</h2>
+                                    <p style="font-size: 1.1rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Thank you. Your enquiry has been received. Please select a suitable time below to book and pay for your Design Consultation.</p>
+                                </div>
+                                <div style="display: flex; justify-content: center; width: 100%; margin: 3rem 0;">
+                                    <!-- Calendly inline widget begin -->
+                                    <div class="calendly-inline-widget"
+                                         data-url="https://calendly.com/patinadesignstudio/consultation?hide_event_type_details=1&background_color=faf8f5&text_color=2b2724&primary_color=b28763"
+                                         style="min-width:320px; width:100%; max-width:1000px; height:700px;">
+                                    </div>
+                                    <!-- Calendly inline widget end -->
+                                </div>
+                            `;
+                            
+                            // Dynamically load the Calendly script only once
+                            const script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.src = 'https://assets.calendly.com/assets/external/widget.js';
+                            script.async = true;
+                            document.body.appendChild(script);
+                        } else {
+                            formContainer.innerHTML = `
+                                <div style="text-align: center; margin-bottom: 3rem; padding: 4rem 1rem;">
+                                    <h2 style="font-family: var(--font-heading); font-size: 2rem; color: var(--accent); margin-bottom: 1.5rem;">Thank You</h2>
+                                    <p style="font-size: 1.1rem; line-height: 1.7; font-weight: 300; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Thank you. Your enquiry has been received. We will review the details of your project and contact you shortly.</p>
+                                </div>
+                            `;
+                        }
+
+                        // Scroll smoothly back to form area top
+                        const formSection = document.querySelector('.form-container');
+                        if (formSection) {
+                            window.scrollTo({
+                                top: formSection.offsetTop - 120,
+                                behavior: 'smooth'
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Form submission error:', error);
+                        alert('There was an issue submitting your enquiry. Please try again.');
+                        submitButton.textContent = originalButtonText;
+                        submitButton.disabled = false;
+                    });
                 });
             }
         });
