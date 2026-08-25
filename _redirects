@@ -2,12 +2,33 @@
 https://patinadesignstudio.com/* https://www.patinadesignstudio.com.au/:splat 301!
 https://www.patinadesignstudio.com/* https://www.patinadesignstudio.com.au/:splat 301!
 
+# Legacy Service & Strategy URLs
 /full-service-design /services-full-service-design 301
 /full-service-design1 /services-full-service-design 301
 
 /layout-assessment /services-layout-assessment 301
 /layout-assessment1 /services-layout-assessment 301
 
+/furnishing /services-furnishing-procurement 301
+/furnishing1 /services-furnishing-procurement 301
+/curated-furnishing /services-furnishing-procurement 301
+/copy-of-furnishing /services-design-positioning-strategy 301
+/target-buyer-strategy /services-design-positioning-strategy 301
+
+/services /services-full-service-design 301
+/book-online /enquiries 301
+/careers /about 301
+
+# Legacy Wix-style Service URLs
+/services/layout-assessment /services-layout-assessment 301
+/services/cosmetic-laser /services-design-positioning-strategy 301
+/services/facial /services-design-consultation 301
+/services/foundations-workshop /services-pre-purchase-design-review 301
+/services/manicure /services-layout-assessment 301
+/services/professional-makeup-consultation /services-full-service-design 301
+/services/skin-product-consultation /services-furnishing-procurement 301
+
+# Legacy Portfolio URLs
 /portfolio /projects 301
 /projects-old /projects 301
 
