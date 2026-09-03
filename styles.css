@@ -738,11 +738,47 @@ nav .services-dropdown-link {
 
 @media (max-width: 768px) {
     #cta {
-        height: 45vh;
-        min-height: 400px;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 4.5rem 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        z-index: 1 !important;
+        overflow: hidden !important;
     }
     #cms-cta-bg {
-        background-position: center; /* Keep the new background image centered on mobile */
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-position: center !important;
+        background-size: cover !important;
+        z-index: -1 !important;
+    }
+    .cta-content {
+        position: relative !important;
+        z-index: 2 !important;
+        width: 100% !important;
+    }
+    .cta-content h2 {
+        font-size: clamp(1.8rem, 6.5vw, 2.5rem) !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .cta-content p {
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.75rem !important;
+        max-width: 600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #cta .button {
+        margin-top: 0 !important;
+        padding: 1.1rem 2.5rem !important;
     }
 }
 
@@ -907,36 +943,53 @@ footer .footer-contact a[href^="mailto:"] {
     }
     nav a { font-size: 1rem; }
     .services-nav-item {
-        width: 100%;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        text-align: center;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    nav .services-dropdown,
+    .services-nav-item.is-open .services-dropdown,
+    .services-nav-item:hover .services-dropdown,
+    .services-nav-item:focus-within .services-dropdown {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
     }
     nav .services-dropdown {
-        position: static;
-        min-width: 0;
-        width: min(19rem, 82vw);
         max-height: 0;
-        margin: 0 auto;
         padding: 0;
         overflow: hidden;
-        border: 0;
-        box-shadow: none;
-        background: transparent;
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-        transition: max-height 0.3s ease, padding-top 0.3s ease;
+        transition: max-height 0.35s ease, padding-top 0.35s ease;
     }
     .services-nav-item.is-open .services-dropdown {
-        max-height: 22rem;
-        padding-top: 1rem;
+        max-height: 35rem !important;
+        padding-top: 0.85rem !important;
+        padding-bottom: 0.5rem !important;
     }
     nav .services-dropdown-link {
-        padding: 0.45rem 0;
-        font-size: 0.9rem;
-        letter-spacing: 0.08rem;
-        white-space: normal;
+        display: block !important;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.08rem !important;
+        line-height: 1.45 !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.large { aspect-ratio: 1/1; }
@@ -4006,9 +4059,11 @@ h1 {
         justify-content: flex-start;
         padding: 5.5rem var(--p-gutter) 3rem var(--p-gutter);
         overflow-y: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         gap: 2rem;
         z-index: 999;
+        box-sizing: border-box;
     }
     nav.mobile-open {
         display: flex !important;
@@ -4018,42 +4073,62 @@ h1 {
         align-items: center;
         gap: 1.75rem !important;
         width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
     }
     nav a {
         font-size: 1.1rem !important;
     }
     .services-nav-item {
-        width: 100%;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        text-align: center;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+    nav .services-dropdown,
+    .services-nav-item.is-open .services-dropdown,
+    .services-nav-item:hover .services-dropdown,
+    .services-nav-item:focus-within .services-dropdown {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
     }
     nav .services-dropdown {
-        position: static;
-        min-width: 0;
-        width: min(19rem, 82vw);
         max-height: 0;
-        margin: 0 auto;
         padding: 0;
         overflow: hidden;
-        border: 0;
-        box-shadow: none;
-        background: transparent;
-        opacity: 1;
-        pointer-events: auto;
-        transform: none;
-        transition: max-height 0.3s ease, padding-top 0.3s ease;
+        transition: max-height 0.35s ease, padding-top 0.35s ease;
     }
     .services-nav-item.is-open .services-dropdown {
-        max-height: 22rem;
-        padding-top: 1rem;
+        max-height: 35rem !important;
+        padding-top: 0.85rem !important;
+        padding-bottom: 0.5rem !important;
     }
     nav .services-dropdown-link {
-        padding: 0.45rem 0;
-        font-size: 0.9rem !important;
-        letter-spacing: 0.08rem;
-        line-height: 1.4;
-        white-space: normal;
+        display: block !important;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.08rem !important;
+        line-height: 1.45 !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
     
     /* Collapse Two-Column layouts that feel squeezed on Tablet Landscape/Portrait */
@@ -4226,7 +4301,135 @@ h1 {
     }
     .subpage-content {
         padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+    
+    /* Service details & sidebar blocks on mobile */
+    .service-details-grid {
+        gap: 2rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    .sidebar-block {
+        padding: 2rem 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .sidebar-block h3 {
+        margin-bottom: 1.25rem !important;
+        padding-bottom: 0.75rem !important;
+        font-size: 1.1rem !important;
+    }
+    .deliverables-list li {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.9rem !important;
+    }
+
+    /* Related projects row section spacing inside subpages */
+    .related-projects-row-section {
+        margin-top: 2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .related-projects-row-section h3 {
+        font-size: 1.35rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .small-project-card {
+        margin-bottom: 0.5rem !important;
+    }
+    .small-project-card .image-wrapper {
+        margin-bottom: 0.75rem !important;
+    }
+    .small-project-card .project-title {
+        font-size: 1.15rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Service Consultation Banner ("Before the review", "How Full Service Design begins", etc.) */
+    .service-consultation-banner,
+    section.service-consultation-banner {
+        padding: 2.25rem 0 2.5rem 0 !important;
+        text-align: center !important;
+    }
+    .service-consultation-banner h2 {
+        font-size: clamp(1.4rem, 5.2vw, 1.85rem) !important;
+        margin-bottom: 1rem !important;
+    }
+    .service-consultation-banner p {
+        font-size: 1.05rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .service-consultation-banner .text-link {
+        margin-top: 0 !important;
+    }
+
+    /* Subpage previous / next navigation */
+    .subpage-navigation-section {
+        padding: 0 !important;
+    }
+    .project-navigation {
+        margin: 2.5rem 0 2rem 0 !important;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Process closing section */
+    .process-closing-section {
+        padding-top: 3rem !important;
         padding-bottom: 3.5rem !important;
+    }
+    .process-closing-content h2 {
+        font-size: clamp(1.5rem, 5.5vw, 1.85rem) !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .process-closing-content p {
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    /* Case study sections on duplex review & penthouse review */
+    .case-study-intro {
+        padding: 2.5rem 0 1.5rem 0 !important;
+    }
+    .case-study-image-section {
+        padding: 1rem 0 2.5rem 0 !important;
+    }
+    .review-considerations {
+        padding: 3rem 0 !important;
+    }
+    .review-considerations .section-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+    .client-received-section {
+        padding: 2.5rem 0 !important;
+    }
+    .case-study-outcome {
+        padding: 3rem 0 1.5rem 0 !important;
+    }
+    .case-study-purpose {
+        padding: 3rem 0 1.5rem 0 !important;
+    }
+    .bottom-banner-section {
+        padding: 1.5rem 0 3rem 0 !important;
+    }
+    .banner-box {
+        padding: 2rem 1.5rem !important;
+        gap: 1.5rem !important;
+    }
+    .banner-text h3 {
+        font-size: 1.4rem !important;
+    }
+
+    /* Homepage services section */
+    .services-section {
+        padding-top: 3.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+    .services-header-group {
+        margin-bottom: 2.5rem !important;
     }
     
     /* Overwrite inline styles on about & services pages for margins and section paddings */
@@ -4256,14 +4459,11 @@ h1 {
     h2[style*="font-size: 2rem"] {
         font-size: 1.6rem !important;
     }
-    .service-details-grid {
-        gap: 2.5rem !important;
-    }
     .contact-info-block {
         gap: 2rem !important;
     }
     footer {
-        padding: 4rem 0 2.5rem !important;
+        padding: 3.5rem 0 2.5rem !important;
     }
     .footer-grid {
         gap: 2.5rem !important;
@@ -4308,11 +4508,11 @@ h1 {
     
     /* Ensure small subpage hero elements have elegant breathing room */
     .subpage-hero {
-        padding: 7rem 0 3.5rem 0 !important;
+        padding: 6.5rem 0 2.5rem 0 !important;
     }
     .subpage-content {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
     }
     
     /* Squeezed text inside cards optimization */
