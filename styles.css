@@ -3999,11 +3999,15 @@ h1 {
         left: 0;
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         background: var(--bg-primary);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 3rem;
+        justify-content: flex-start;
+        padding: 5.5rem var(--p-gutter) 3rem var(--p-gutter);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 2rem;
         z-index: 999;
     }
     nav.mobile-open {
@@ -4012,7 +4016,8 @@ h1 {
     nav ul {
         flex-direction: column !important;
         align-items: center;
-        gap: 2.5rem !important;
+        gap: 1.75rem !important;
+        width: 100%;
     }
     nav a {
         font-size: 1.1rem !important;
@@ -4094,7 +4099,7 @@ h1 {
 }
 
 /* --- Laptop / Small Desktop (1200px–1366px wide) Spacing Refinements --- */
-@media (max-width: 1366px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
     /* Narrow the grid gap for Split rows so text columns don't feel too narrow */
     .split {
         gap: 3.5rem !important;
@@ -4175,7 +4180,54 @@ h1 {
         font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
     }
     
+    /* Ensure Header padding adheres to --p-gutter on mobile */
+    header {
+        padding: 1.25rem var(--p-gutter) !important;
+    }
+    header.scrolled {
+        padding: 1rem var(--p-gutter) !important;
+    }
 
+    /* Hero adjustments on mobile portrait */
+    #hero {
+        height: auto !important;
+        min-height: calc(100vh - 60px) !important;
+        min-height: calc(100dvh - 60px) !important;
+        padding: 6.5rem var(--p-gutter) 4.5rem var(--p-gutter) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    #hero .hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    #hero .hero-content p {
+        margin-bottom: 2rem !important;
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+    }
+    #hero .scroll-indicator {
+        display: none !important;
+    }
+
+    /* Subpage hero & content balanced spacing on mobile */
+    .subpage-hero {
+        padding: 6.5rem 0 2.5rem 0 !important;
+    }
+    .subpage-hero h1 {
+        margin-bottom: 1rem !important;
+    }
+    .subpage-hero p {
+        font-size: 1.05rem !important;
+        line-height: 1.6 !important;
+    }
+    .subpage-content {
+        padding-top: 2.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
     
     /* Overwrite inline styles on about & services pages for margins and section paddings */
     .split[style*="gap: 4rem"] {
@@ -4183,16 +4235,39 @@ h1 {
     }
     section[style*="padding: 6rem 0"],
     section[style*="padding: 3.6rem 0"] {
-        padding: 3.5rem 0 !important;
+        padding: 3rem 0 !important;
+    }
+    section[style*="padding-top: 4rem"][style*="padding-bottom: 4rem"],
+    section[style*="padding-top: 3rem"] {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
     }
     div[style*="max-width: 800px"] {
         max-width: 100% !important;
     }
+    div[style*="margin-bottom: 4rem"],
     div[style*="margin-bottom: 3rem"] {
         margin-bottom: 2rem !important;
     }
-    h2[style*="font-size: 2.5rem"] {
-        font-size: 1.8rem !important;
+    div[style*="margin-top: 4rem"] {
+        margin-top: 2.5rem !important;
+    }
+    h2[style*="font-size: 2.5rem"],
+    h2[style*="font-size: 2rem"] {
+        font-size: 1.6rem !important;
+    }
+    .service-details-grid {
+        gap: 2.5rem !important;
+    }
+    .contact-info-block {
+        gap: 2rem !important;
+    }
+    footer {
+        padding: 4rem 0 2.5rem !important;
+    }
+    .footer-grid {
+        gap: 2.5rem !important;
+        margin-bottom: 2.5rem !important;
     }
 }
 
@@ -4445,7 +4520,6 @@ html, body {
 @media (max-width: 767px) {
     /* Stack all cards/grids one per row on mobile portrait and mobile landscape */
     .considerations-grid,
-    .services-list,
     .journal-grid,
     .projects-grid,
     .reviews-grid,
@@ -4454,6 +4528,13 @@ html, body {
     .journal-checklist-grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
+    }
+
+    /* Keep services list continuous without detached gaps */
+    .services-list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
     }
     
     /* Ensure project cards inside grids stack cleanly */
