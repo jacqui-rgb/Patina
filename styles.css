@@ -2738,6 +2738,152 @@ input[type="radio"].form-checkbox:hover {
     background: var(--accent-light);
 }
 
+/* ─── Journal Related FAQs Section ──────────────────────── */
+.journal-related-faqs {
+    max-width: 680px;
+    margin: 5rem auto 0 auto;
+    padding: 3.5rem 3rem;
+    background: #FAF8F5;
+    border: 1px solid #DDD5C8;
+    text-align: left;
+}
+
+.journal-related-faqs + .newsletter-signup-box {
+    margin-top: 4rem;
+}
+
+.journal-related-faqs-header {
+    margin-bottom: 2rem;
+}
+
+.journal-related-faqs-header .category-eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.journal-related-faqs-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.journal-related-faqs-header p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+.journal-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.journal-faq-card {
+    display: block;
+    padding: 1.35rem 1.6rem;
+    background: var(--white);
+    border: 1px solid rgba(221, 213, 200, 0.7);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.journal-faq-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.journal-faq-card-category {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+}
+
+.journal-faq-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--text-primary);
+    margin: 0 0 0.6rem 0;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.journal-faq-card:hover h4 {
+    color: var(--accent);
+}
+
+.journal-faq-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    transition: gap 0.3s ease;
+}
+
+.journal-faq-card:hover .journal-faq-card-cta {
+    gap: 0.65rem;
+    color: var(--accent-light);
+}
+
+.journal-faqs-footer {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #DDD5C8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.journal-faqs-footer a {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.journal-faqs-footer a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .journal-related-faqs {
+        padding: 2.25rem 1.25rem;
+        margin-top: 3.5rem;
+    }
+    .journal-related-faqs-header h2 {
+        font-size: 1.45rem;
+    }
+    .journal-faq-card {
+        padding: 1.15rem 1.15rem;
+    }
+}
+
 /* Individual Post Styling */
 .post-header {
     margin-bottom: 4rem;

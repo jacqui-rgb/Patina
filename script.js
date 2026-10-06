@@ -592,9 +592,70 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initialize FAQ accordions and category navigation
+    // ═══════════════════════════════════════════════════════
+    // FAQ DEEP LINKING (URL Hash Support)
+    // ═══════════════════════════════════════════════════════
+    function handleFAQHash() {
+        const hash = window.location.hash;
+        if (!hash) return;
+
+        let targetItem = null;
+        try {
+            targetItem = document.querySelector(hash);
+        } catch (e) {
+            return;
+        }
+
+        if (!targetItem || !targetItem.classList.contains('faq-item')) return;
+
+        const category = targetItem.closest('.faq-category');
+        const faqList = document.querySelector('.faq-list');
+        const faqNavContainer = document.getElementById('faq-categories-nav');
+
+        if (category && faqList && faqNavContainer) {
+            const categories = Array.from(faqList.querySelectorAll('.faq-category'));
+            const categoryIndex = categories.indexOf(category);
+
+            if (categoryIndex !== -1) {
+                const navBtns = faqNavContainer.querySelectorAll('.faq-nav-btn');
+                navBtns.forEach(b => b.classList.remove('active'));
+                categories.forEach(c => c.classList.remove('active-category'));
+
+                if (navBtns[categoryIndex]) {
+                    navBtns[categoryIndex].classList.add('active');
+                }
+                category.classList.add('active-category');
+
+                category.querySelectorAll('.reveal').forEach(item => {
+                    item.classList.add('visible');
+                });
+            }
+        }
+
+        // Open target accordion item
+        const trigger = targetItem.querySelector('.faq-trigger');
+        if (trigger) {
+            targetItem.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+        }
+
+        // Smooth scroll to the target FAQ item after render
+        setTimeout(() => {
+            const headerOffset = 110;
+            const rect = targetItem.getBoundingClientRect();
+            const targetY = rect.top + window.scrollY - headerOffset;
+            window.scrollTo({
+                top: targetY,
+                behavior: 'smooth'
+            });
+        }, 150);
+    }
+
+    // Initialize FAQ accordions, category navigation, and deep linking
     initFAQAccordions();
     initFAQCategoryNav();
+    handleFAQHash();
+    window.addEventListener('hashchange', handleFAQHash);
 
     // ═══════════════════════════════════════════════════════
     // KICK OFF CONTENT LOAD
